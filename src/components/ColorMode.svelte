@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import { writable } from "svelte/store";
 
     import { theme, STORAGE_KEY, getSystemTheme } from "../stores/theme";
 
@@ -61,6 +60,8 @@
 
         applyTheme(newPreference);
     };
+
+    const handleKeydown = () => {}
 
     // 6. COMPUTED: Current theme value for display
     $: currentDisplayTheme = $theme === "system" ? getSystemTheme() : $theme;

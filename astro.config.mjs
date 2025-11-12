@@ -1,17 +1,30 @@
 // astro.config.ts
 // @ts-check
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import svelte from '@astrojs/svelte';
-import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import svelte from "@astrojs/svelte";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx(), svelte()],
-  markdown: {
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-  },
-});
+    // for rendering markdown
+    integrations: [mdx(), svelte()],
+    markdown: {
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex],
+    },
 
+    // for static site rendering
+    output: "static",
+    base: "",
+
+    // for making content alias
+    vite: {
+        resolve: {
+            alias: {
+                "@components": "/src/components",
+            },
+        },
+    },
+});
