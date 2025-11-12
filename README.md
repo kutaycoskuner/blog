@@ -1,46 +1,54 @@
-# Astro Starter Kit: Basics
+<h1 align="center">
+    Astro + Svelte Blog Template
+</h1>
 
-```sh
-pnpm create astro@latest -- --template basics
+<p align="center">
+    A modern blog template combining Astro, Svelte, KaTeX, and D3 for dynamic and interactive content. Designed for rendering Markdown, math notation, and interactive visualizations directly in your posts.
+</p>
+
+As I wanted to add more detailed functionality to my blog posts, I found a solution in this template that satisfies my needs.
+
+<p align="right">
+    <img alt="Start Date" src="https://img.shields.io/badge/project_start-12_Nov_2025-blue" />
+    <img alt="Last Update" src="https://img.shields.io/github/last-commit/kutaycoskuner/blog" />
+</p>
+
+
+## Features
+
+- [x] Markdown rendering
+- [x] Math notation rendering with KaTeX
+- [x] Embedding Svelte components inside Markdown
+- [x] Drawing graphs with D3.js
+- [x] Interactive sliders to change parameters dynamically
+
+
+## Structure
+
+```bash
+blog_template/
+├── public/               # Static assets
+├── src/
+│   ├── components/       # Svelte components for embedding
+│   ├── layouts/          # Astro layouts
+│   └── content/          # Markdown files (blog, tutorials, micro)
+├── package.json
+├── astro.config.mjs
+└── README.md
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Run
+```bash
+# Clone repository
+git clone <repository-url>
+cd blog
 
-## 🚀 Project Structure
+# Install dependencies
+pnpm install
 
-Inside of your Astro project, you'll see the following folders and files:
+# Start development server
+pnpm dev
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+# Open your browser
+# Visit: http://localhost:3000/test-toc to inspect structure
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
