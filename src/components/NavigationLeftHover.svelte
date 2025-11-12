@@ -1,15 +1,16 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
+    import { theme, STORAGE_KEY, getSystemTheme } from "../stores/theme";
+    import { get } from "svelte/store";
 
     // props (optional)
-    export let colorMode: "light" | "dark" = "light";
 
     let prevScrollpos = 0;
     let toggleNavigation = false;
-    let invertedColor = colorMode;
 
     // reactive derived state (Vue's computed)
-    $: invertedColorComputed = colorMode === "dark";
+    $: currentDisplayTheme = $theme === "system" ? getSystemTheme() : $theme;
+    $: invertedColorComputed = currentDisplayTheme === "dark";
 
     // methods
     function toggleLeft() {
@@ -50,6 +51,10 @@
         class:closed={toggleNavigation}
         class:inverted-color={invertedColorComputed}
         on:click={openLeft}
+        role="button"
+        tabindex="0"
+        on:keydown={(e) => e.key === "Enter" && openLeft()}
+        aria-label="Open navigation"
     >
         <img
             src="/icons/menu-grid-256.png"
@@ -61,19 +66,51 @@
         class="navigation hover-trans-visible touch-leftslide"
         class:open={toggleNavigation}
     >
-        <div on:click|stopPropagation={closeLeft}>
+        <div
+            on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
+        >
             <a href="https://kutaycoskuner.github.io/">architecture</a>
         </div>
-        <div on:click|stopPropagation={closeLeft}>
-            <a href="/port/computer_science">computer science</a>
+        <div
+            on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
+        >
+            <a href="https://kutaycoskuner.github.io/port/computer_science">computer science</a>
         </div>
-        <div on:click|stopPropagation={closeLeft}>
-            <a href="https://kutaycoskuner.github.io/port/game_design">game design</a>
+        <div
+            on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
+        >
+            <a href="https://kutaycoskuner.github.io/port/game_design"
+                >game design</a
+            >
         </div>
-        <div on:click|stopPropagation={closeLeft}>
+        <div
+            on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
+        >
             <a href="https://kutaycoskuner.github.io/content_tree">blog</a>
         </div>
-        <div on:click|stopPropagation={closeLeft}>
+        <div
+            on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
+        >
             <a href="https://kutaycoskuner.github.io/about">about</a>
         </div>
 
@@ -81,6 +118,10 @@
             class="touch-only"
             class:open={toggleNavigation}
             on:click|stopPropagation={closeLeft}
+            role="button"
+            tabindex="0"
+            on:keydown={(e) => e.key === "Enter" && closeLeft()}
+            aria-label="Close navigation"
         >
             <img
                 src="/icons/arrow_left-256.png"
@@ -159,13 +200,6 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: calc(2 * var(--font-size));
-    }
-
-    .navigation-icons img {
-        object-fit: contain;
-        width: calc(2 * var(--font-size));
-        height: calc(2 * var(--font-size));
-        filter: grayscale(1);
     }
 
     .touch-only {

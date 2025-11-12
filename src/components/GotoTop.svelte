@@ -1,7 +1,12 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { theme, STORAGE_KEY, getSystemTheme } from "../stores/theme";
 
     let top: HTMLDivElement;
+
+    // reactive derived state (Vue's computed)
+    $: currentDisplayTheme = $theme === "system" ? getSystemTheme() : $theme;
+    $: invertedColorComputed = currentDisplayTheme === "dark";
 
     // reusable scroll-to-top function
     export function scrollToTop() {
@@ -62,6 +67,7 @@
 >
     <img
         src="/icons/arrow_left-256.png"
+        class:inverted-color={invertedColorComputed}
         alt="arrow"
     />
 </div>

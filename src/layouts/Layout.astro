@@ -1,6 +1,7 @@
 ---
 import NavigationLeftHover from "../components/NavigationLeftHover.svelte";
 import GotoTop from "../components/GotoTop.svelte";
+import ColorMode from "../components/ColorMode.svelte";
 ---
 
 <!doctype html>
@@ -25,6 +26,7 @@ import GotoTop from "../components/GotoTop.svelte";
     <body>
         <NavigationLeftHover client:load />
         <GotoTop client:load />
+        <ColorMode client:load />
         <div class="slot">
             <slot />
         </div>

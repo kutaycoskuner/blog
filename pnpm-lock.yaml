@@ -29,9 +29,18 @@ importers:
       remark-math:
         specifier: ^6.0.0
         version: 6.0.0
+      remark-mdx:
+        specifier: ^3.1.1
+        version: 3.1.1
+      remark-parse:
+        specifier: ^11.0.0
+        version: 11.0.0
       svelte:
         specifier: ^5.43.6
         version: 5.43.6
+      unified:
+        specifier: ^11.0.5
+        version: 11.0.5
 
 packages:
 
