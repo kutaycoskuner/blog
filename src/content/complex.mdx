@@ -17,8 +17,8 @@ visibility: true
 sort_order: 1
 ---
 
-import BarChart from '../components/BarChart.svelte'
-import LerpSlider from '../components/LerpSlider.svelte';
+import BarChart from '../components/TestBarChart.svelte'
+import LerpSlider from '../components/TestLerpSlider.svelte';
 
 
 
@@ -34,17 +34,14 @@ import LerpSlider from '../components/LerpSlider.svelte';
 
 ### 1. Quadratic Formula (Display Mode)
 
-This shows complex fractions and roots.
+This shows complex fractions and roots. 
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 $$
 
 ### 2. Logical Statements (Display Mode)
 
-An example of a conditional logical statement.
-$$
-P \implies (Q \lor \neg R)
-$$
+An example of a conditional logical statement. $P \implies (Q \lor \neg R)$
 
 ### 3. Matrix and Systems of Equations (Display Mode)
 
@@ -88,9 +85,14 @@ Even without the `<script>` block, standard MDX still lets you use imported comp
 
 ## Interactive Component Examples
 
+
+<div style="display:flex; justify-content:center; margin-top:2rem;">
 <BarChart 
     data={[100, 2200, 1800, 2900]}
 />
+</div>
 
 
-<LerpSlider client:load label="Primary Slider" min={0} max={3} step={0.01} />
+<div style="display:flex; justify-content:center; margin-top:2rem;">
+  <LerpSlider client:load label="Primary Slider" min={0} max={3} step={0.01} />
+</div>
