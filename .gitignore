@@ -7,6 +7,8 @@ _documentation/
 temp.*
 src/content/tutorials
 src/content/tutorials/
+src/
+public/
 
 # ----------------------------------------------------------------------------------------
 #               main
