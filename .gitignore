@@ -7,9 +7,6 @@ _documentation/
 temp.*
 src/content/tutorials
 src/content/tutorials/
-linked_assets/
-public/
-src/
 
 # ----------------------------------------------------------------------------------------
 #               main
