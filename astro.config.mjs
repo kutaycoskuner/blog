@@ -26,7 +26,7 @@ export default defineConfig({
 
     // for static site rendering
     site: 'https://kutaycoskuner.github.io',
-    base: "/blog",
+    base: "/blog/",
     output: "static",
 
     // for making content alias

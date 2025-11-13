@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { theme, STORAGE_KEY, getSystemTheme } from "../stores/theme";
 
+    const BASE_URL = import.meta.env.BASE_URL;
     let top: HTMLDivElement;
 
     // reactive derived state (Vue's computed)
@@ -66,7 +67,7 @@
     aria-label="Go to top"
 >
     <img
-        src="/icons/arrow_left-256.png"
+        src={BASE_URL + "/icons/arrow_left-256.png"}
         class:inverted-color={invertedColorComputed}
         alt="arrow"
     />

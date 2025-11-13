@@ -2,6 +2,7 @@
     import { onMount, onDestroy } from "svelte";
     import { theme, STORAGE_KEY, getSystemTheme } from "../stores/theme";
     import { get } from "svelte/store";
+    const BASE_URL = import.meta.env.BASE_URL;
 
     // props (optional)
 
@@ -57,7 +58,7 @@
         aria-label="Open navigation"
     >
         <img
-            src="/icons/menu-grid-256.png"
+            src={BASE_URL + 'icons/menu-grid-256.png'}
             alt="menu"
         />
     </div>
@@ -124,7 +125,7 @@
             aria-label="Close navigation"
         >
             <img
-                src="/icons/arrow_left-256.png"
+                src={BASE_URL + 'icons/arrow_left-256.png'}
                 alt="arrow"
                 class:inverted-color={invertedColorComputed}
             />
