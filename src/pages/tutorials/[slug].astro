@@ -3,6 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import { getToc } from "../../utils/getToc";
 import { getEntry, getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import fs from "node:fs";
+import path from "node:path";
 
 // Tell TypeScript what MDX files export
 
@@ -18,18 +20,41 @@ if (!post) {
 const { data, render } = post as CollectionEntry<"tutorials">;
 const { Content } = await render();
 // Build the table of contents (assuming getToc takes a file path)
-const postToc = await getToc(`src/content/tutorials/${slug}.mdx`);
+const baseDir = path.resolve("src/content/tutorials");
+const potentialFiles = [
+    path.join(baseDir, `${slug}.mdx`),
+    path.join(baseDir, `${slug}.md`),
+];
+
+// Find the actual file path that exists
+let filePath = potentialFiles.find((p) => fs.existsSync(p));
+
+if (!filePath) {
+    // Handle the case where neither file is found
+    console.error(`Content not found for slug: ${slug}`);
+    return;
+}
+
+// Now call your custom function with the found path
+const postToc = await getToc(filePath);
 
 export async function getStaticPaths() {
-    const allPosts = import.meta.glob("../../content/tutorials/*.mdx");
+    const allPosts = import.meta.glob(`../../content/tutorials/*.{mdx,md}`);
 
-    return Object.keys(allPosts).map((path) => {
-        const slug = path
-            .split("/")
-            .pop()
-            ?.replace(/\.mdx$/, "");
-        return { params: { slug } };
-    });
+    return Object.keys(allPosts)
+        .map((path) => {
+            const slug = path
+                .split("/")
+                .pop()
+                // ✅ FIX: Replace EITHER .mdx OR .md at the end of the string
+                ?.replace(/\.(mdx|md)$/, "");
+
+            // You should also ensure the slug is valid (not null/undefined)
+            if (!slug) return null;
+
+            return { params: { slug } };
+        })
+        .filter(Boolean); // Filter out any entries that returned null
 }
 
 // console.log(post)
@@ -91,7 +116,9 @@ function getLanguageDescription(languageCode: string): string {
             data?.visibility && (
                 <>
                     <div class="toc-title">
-                        <span style="color: var(--col)"><b>{data?.title}</b></span>
+                        <span style="color: var(--col)">
+                            <b>{data?.title}</b>
+                        </span>
                     </div>
 
                     {postToc.map((link) => (
@@ -124,5 +151,4 @@ function getLanguageDescription(languageCode: string): string {
 
 <style>
     @import "../../styles/markdown.css";
-
 </style>
