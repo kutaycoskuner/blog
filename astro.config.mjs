@@ -25,8 +25,9 @@ export default defineConfig({
     },
 
     // for static site rendering
+    site: 'https://kutaycoskuner.github.io',
+    base: "/blog",
     output: "static",
-    base: "",
 
     // for making content alias
     vite: {
