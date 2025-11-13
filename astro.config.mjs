@@ -26,7 +26,7 @@ export default defineConfig({
 
     // for static site rendering
     output: "static",
-    base: "",
+    base: "/blog/",
 
     // for making content alias
     vite: {
