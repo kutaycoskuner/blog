@@ -16,11 +16,13 @@ export default defineConfig({
 
         syntaxHighlight: "shiki",
         shikiConfig: {
-            themes: {
-                light: "slack-ochin", // vitesse-light
-                sepia: "rose-pine-dawn",
-                dark: "rose-pine",
-            },
+            theme: 'vitesse-dark',
+            // themes: {                   // https://shiki.style/
+            //     light: "vitesse-light",   // vitesse-light
+            //     sepia: "rose-pine-dawn",
+            //     dark: "vitesse-dark",
+            // },
+            
 
         },
     },

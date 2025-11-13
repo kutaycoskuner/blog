@@ -3,8 +3,8 @@
 --------------------------------------------------------------------------------------- */
 /*
     Description : General css template 
-    Version     : 2.4
-    Last Update : 15.10.2025
+    Version     : 2.6
+    Last Update : 13.11.2025
     Author      : lichzelg
     License     : MIT
     License URL : https://www.tldrlegal.com/license/mit-license
@@ -104,8 +104,8 @@
 	--col-highlight-tr-1: #e8eced99;
 	--col-highlight-tr-2: #e8eced33;
 	--icon-glow: #cccccc;
-	--bg: #f6f6f6ff; /* #f1e7d0 */
-	--bg-1: #f2f2f2;
+	--bg: #f2f2f2; /* #f1e7d0 #f6f6f6ffs */
+	--bg-1: #f6f6f6;
 	--bg-2: #e8eced;
 	--bg-transparent: #f6f6f6cc;
 	--bg-transparent-2: #f6f6f666;
@@ -219,15 +219,15 @@
 	--col-transparent: #5c605f99;
 	--col-transparent-1: #5c605f66;
 	--col-transparent-2: #5c605f33;
-	--col-border: #626262;
+	--col-border: #242526;
 	--col-highlight: rgba(32, 32, 32, 1);
 	--col-highlight-tr: #e8ecedcc;
 	--col-highlight-tr-1: #e8eced99;
 	--col-highlight-tr-2: #e8eced33;
 	--icon-glow: #aaaaaa;
-	--bg: #181818; /* 121212*/
-	--bg-1: #242526;
-	--bg-2: #282828;
+	--bg: #121212; /* 121212*/
+	--bg-1: #161616;
+	--bg-2: #202020;
 	--bg-transparent: #121212cc;
 	--bg-transparent-2: #12121266;
 	--bg-img: url('../images/web_bg/noisy-background_dark_1k.jpg');

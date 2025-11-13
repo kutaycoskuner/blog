@@ -492,5 +492,9 @@ article.article.content pre.astro-code.github-dark {
     padding: 1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
-    /* background: var(--bg-2) !important; */
+    background: var(--bg-1) !important;
+}
+
+:global([color-scheme='light'] code span) {
+    color: var(--col-transparent);
 }
