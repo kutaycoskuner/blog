@@ -21,11 +21,12 @@ export default defineConfig({
                 sepia: "rose-pine-dawn",
                 dark: "rose-pine",
             },
+
         },
     },
 
     // for static site rendering
-    site: 'https://kutaycoskuner.github.io',
+    site: "https://kutaycoskuner.github.io",
     base: "/blog/",
     output: "static",
 
