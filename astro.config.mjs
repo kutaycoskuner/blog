@@ -13,6 +13,15 @@ export default defineConfig({
     markdown: {
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex],
+
+        syntaxHighlight: "shiki",
+        shikiConfig: {
+            themes: {
+                light: "slack-ochin", // vitesse-light
+                sepia: "rose-pine-dawn",
+                dark: "rose-pine",
+            },
+        },
     },
 
     // for static site rendering

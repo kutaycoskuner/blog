@@ -1,12 +1,12 @@
 <h1 align="center">
-    Astro + Svelte Blog Template
+    Astro + Svelte Blog
 </h1>
 
 <p align="center">
-    A modern blog template combining Astro, Svelte, KaTeX, and D3 for dynamic and interactive content. Designed for rendering Markdown, math notation, and interactive visualizations directly in your posts.
+    This is my blog template combining Astro, Svelte, KaTeX, and D3 for dynamic and interactive content. Designed for rendering Markdown, math notation, and interactive visualizations directly in the posts.
 </p>
 
-As I wanted to add more detailed functionality to my blog posts, I found a solution in this template that satisfies my needs.
+As I wanted to add more detailed functionality to my blog posts, I found a solution in this template that satisfies my needs. 
 
 <p align="right">
     <img alt="Start Date" src="https://img.shields.io/badge/project_start-12_Nov_2025-blue" />

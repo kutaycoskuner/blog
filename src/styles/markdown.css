@@ -14,28 +14,34 @@
                 install fonts
 --------------------------------------------------------------------------------------- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:global(h1),
+:global(h2),
+:global(h3),
+:global(h4),
+:global(h5),
+:global(h6) {
     margin: 0;
 }
 
+:global(.markdown) {
+    font-size: 0.9rem !important;
+}
 
-.inverted-color {
+:global(.markdown .article-meta h1) {
+    font-size: 2rem !important;
+}
+
+:global(.inverted-color) {
     filter: invert(0.5) !important;
 }
 
-
-.markdown pre span {
+:global(.markdown pre span) {
     padding: 0 !important;
     text-transform: normal;
     font-size: calc(var(--font-size));
 }
 
-.markdown-highlight {
+:global(.markdown-highlight) {
     position: relative;
     background: var(--bg-2);
     box-shadow: 0px 0px 4px var(--col-border);
@@ -43,11 +49,11 @@ h6 {
     /* background: var(--bg-2); */
 }
 
-.markdown div {
+:global(.markdown div) {
     position: relative;
 }
 
-.markdown div pre {
+:global(.markdown div pre) {
     position: relative;
     display: block;
     background: var(--bg-1);
@@ -59,7 +65,7 @@ h6 {
   padding-right: calc(2 * var(--font-size)); */
 }
 
-.markdown div pre button {
+:global(.markdown div pre button) {
     all: unset;
     align-items: center;
     justify-content: center;
@@ -74,22 +80,22 @@ h6 {
     opacity: 0.7;
 }
 
-.copy-active {
+:global(.copy-active) {
     color: #3498db; /* Inherit the color of the parent button */
 }
 
-.markdown h1 {
+:global(.markdown h1) {
     color: var(--col-transparent2);
     font-size: calc(1.2 * var(--font-size));
     margin-top: calc(var(--font-size));
     margin-bottom: calc(0.2 * var(--font-size));
 }
 
-.markdown h1 a {
+:global(.markdown h1 a) {
     display: none;
 }
 
-.markdown h2 {
+:global(.markdown h2) {
     color: var(--col-primary);
     opacity: var(--level2-opacity);
     font-size: calc(1.2 * var(--font-size));
@@ -97,11 +103,11 @@ h6 {
     margin-bottom: calc(0.2 * var(--font-size));
 }
 
-.markdown h2 a {
+:global(.markdown h2 a) {
     display: none;
 }
 
-.markdown h3 {
+:global(.markdown h3) {
     color: #734c8c;
     /* color: #c1841f; */
     font-size: calc(1.2 * var(--font-size));
@@ -109,12 +115,12 @@ h6 {
     margin-bottom: calc(0.2 * var(--font-size));
 }
 
-.markdown h4 {
+:global(.markdown h4) {
     color: #734c8c;
     padding-bottom: var(--font-size);
 }
 
-.markdown h5 {
+:global(.markdown h5) {
     color: #249bb2;
 }
 
@@ -122,11 +128,11 @@ h6 {
   margin-top: calc(var(--font-size));
 } */
 
-.markdown p {
+:global(.markdown p) {
     margin-bottom: var(--font-size);
 }
 
-.markdown table {
+:global(.markdown table) {
     width: 100%;
     margin-bottom: calc(3 * var(--font-size));
     margin-top: calc(3 * var(--font-size));
@@ -134,7 +140,7 @@ h6 {
     border-collapse: collapse;
 }
 
-.markdown table td {
+:global(.markdown table td) {
     padding: 4px 6px 4px 6px;
     border: 1px solid var(--col-transparent4);
     border-top: 0px;
@@ -198,43 +204,43 @@ h6 {
     color: var(--col-link-active);
 }
 
-.markdown img {
+:global(.markdown img) {
     width: 100%;
     height: 100%;
     /* border-radius: 2px; */
 }
 
-.markdown .img40 {
+:global(.markdown .img40) {
     margin: calc(2 * var(--font-size)) auto 0 auto;
     width: 40%;
 }
 
-.markdown .img60 {
+:global(.markdown .img60) {
     margin: calc(2 * var(--font-size)) auto 0 auto;
     width: 60%;
 }
 
-.markdown .img80 {
+:global(.markdown .img80) {
     margin: calc(2 * var(--font-size)) auto 0 auto;
     width: 80%;
 }
 
-.markdown .caption {
+:global(.markdown .caption) {
     font-weight: bold;
     font-family: "Walter Turncoat", sans-serif;
     text-align: center;
     margin-bottom: calc(3 * var(--font-size));
 }
 
-.markdown .img40 sub,
-.markdown .img60 sub,
-.markdown .img80 sub,
-.markdown .img100 sub {
+:global(.markdown .img40 sub),
+:global(.markdown .img60 sub),
+:global(.markdown .img80 sub),
+:global(.markdown .img100 sub) {
     display: block;
     font-weight: bold;
     /* font-family: "Walter Turncoat", sans-serif; */
     text-align: center !important;
-    margin-top: calc(1 * var(--font-size));
+    margin-top: calc(0 * var(--font-size));
     margin-bottom: calc(2 * var(--font-size));
 }
 
@@ -267,7 +273,7 @@ h6 {
     .article .article-meta {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
         position: relative;
     }
 
@@ -281,6 +287,7 @@ h6 {
     }
 
     .article .article-meta span {
+        font-size: 0.8rem;
         /* margin: auto 0 0 auto; */
         opacity: 0.4;
     }
@@ -305,6 +312,7 @@ h6 {
     }
 
     .article .article-meta span {
+        font-size: 0.5rem !important;
         margin: auto 0 0 auto;
         opacity: 0.4;
     }
@@ -363,7 +371,7 @@ h6 {
     /* top: calc(var(--navigation-height)*3); */
     left: calc(
         (100% - var(--page-width) * 8 / 10) / 2 + (var(--page-width) * 8 / 10) +
-            var(--font-size) * 4
+            var(--font-size) * 2
     );
     /* right: calc(var(--page-width)/4); */
 }
@@ -374,13 +382,14 @@ h6 {
 }
 
 .toc-container .toc-title {
+    font-size: 0.8rem;
     text-decoration: none;
     opacity: 0.8;
     color: var(--col-primary);
 }
 
 .toc-container .toc-content {
-    font-size: .8rem;
+    font-size: 0.8rem;
     text-decoration: none;
     color: var(--col-primary);
     opacity: 0.8;
@@ -445,10 +454,9 @@ dd {
 /* ------------------------------------------------------------------------------------ */
 /*        override prism                                                                */
 /* ------------------------------------------------------------------------------------ */
-code[class*="language-"],
+/* code[class*="language-"],
 pre[class*="language-"] {
     padding: 0.5rem 1rem 1rem 1rem !important;
-    /* margin-top: 0 !important; */
     text-shadow: none !important;
 }
 
@@ -461,4 +469,28 @@ pre[class*="language-"] {
 
 .token.operator {
     background: var(--bg-1) !important;
+} */
+
+/* global.css or component CSS */
+pre.astro-code.github-dark {
+    padding: 2rem !important;
+}
+
+article.article.content pre.astro-code.github-dark {
+    padding: 2rem !important;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/*        astro overrides                                                               */
+/* ------------------------------------------------------------------------------------ */
+
+:global(.markdown pre) {
+    border: 1px solid var(--col-border);
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px var(--col-border);
+
+    padding: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    /* background: var(--bg-2) !important; */
 }

@@ -5,6 +5,10 @@ _documentation
 _documentation/
 */temp.*
 temp.*
+src/content/tutorials
+src/content/tutorials/
+linked_assets/
+
 
 # ----------------------------------------------------------------------------------------
 #               main
