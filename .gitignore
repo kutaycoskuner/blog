@@ -9,6 +9,7 @@ src/content/tutorials
 src/content/tutorials/
 src/
 public/
+dist/
 
 # ----------------------------------------------------------------------------------------
 #               main
