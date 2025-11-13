@@ -1,0 +1,1 @@
+import{w as e}from"./store.Boyzvhcm.js";const r=e("system"),s="theme-preference",o=()=>typeof window<"u"&&window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";export{s as S,o as g,r as t};

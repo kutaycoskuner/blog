@@ -8,7 +8,8 @@ temp.*
 src/content/tutorials
 src/content/tutorials/
 linked_assets/
-
+public/
+src/
 
 # ----------------------------------------------------------------------------------------
 #               main
@@ -16,7 +17,7 @@ linked_assets/
 
 
 # build output
-dist/
+# dist/
 
 # generated types
 .astro/
