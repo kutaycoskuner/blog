@@ -1,0 +1,155 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getToc } from "../../utils/getToc";
+import { getEntry, getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import fs from "node:fs";
+import path from "node:path";
+
+// Tell TypeScript what MDX files export
+interface PostEntry {
+    slug: string;
+    filePath: string; // NOT optional
+}
+
+const COLLECTION_NAME = "tutorials";
+
+// Load all entries from a folder
+const allEntries = await getCollection(COLLECTION_NAME);
+// Select all markdowns inside tutorials/slug/*
+const posts = allEntries.filter(
+    (entry) => entry.id.endsWith(".md") || entry.id.endsWith(".mdx")
+);
+
+// guard
+if (!posts || posts.length === 0) {
+    return new Response("No posts found", { status: 404 });
+}
+
+const baseDir = path.resolve("src/content/" + COLLECTION_NAME);
+const postTocs = await Promise.all(
+    posts.map(async (post) => {
+        const filePath = path.join(baseDir, post.id); // full path
+        return {
+            postData: post.data,
+            toc: getToc(filePath),
+        };
+    })
+);
+
+// console.log(JSON.stringify(postTocs, null, 2));
+function formatDate(date: Date): String {
+    const options: any = {
+        weekday: "short",
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    };
+    return new Date(date).toLocaleDateString("en-de", options);
+}
+
+function getLanguageDescription(languageCode: string): string {
+    const languageMap: Record<string, string> = {
+        en: "This content is in English.",
+        tr: "This content is in Turkish.",
+        de: "This content is in German.",
+        // ... add more languages here
+    };
+
+    return languageMap[languageCode] ?? "";
+}
+---
+
+<Layout>
+    <div class="main markdown">
+        {
+            await Promise.all(
+                posts.map(async (post) => {
+                    const postData = post.data;
+
+                    // Skip hidden posts
+                    if (!postData.visibility) return null;
+
+                    const { Content } = await post.render();
+
+                    return (
+                        <article class="article content">
+                            <div class="article-meta">
+                                <h1>{postData.title}</h1>
+                                <span>
+                                    Published: {formatDate(postData.created)}
+                                </span>
+                                <span>
+                                    Revision: {formatDate(postData.updated)}, v
+                                    {postData.revision}
+                                </span>
+                                <span>
+                                    Language:{" "}
+                                    {getLanguageDescription(postData.language)}
+                                </span>
+                                <a
+                                    href="#"
+                                    class="to-pdf"
+                                />
+                                <img
+                                    src=""
+                                    alt=""
+                                />
+                            </div>
+                            <Content />
+                        </article>
+                    );
+                })
+            )
+        }
+    </div>
+
+    <div class="toc-container no-select">
+        <div class="toc-container no-select">
+            {
+                await Promise.all(
+                    postTocs.map(async ({ postData, toc }) => {
+                        if (!postData.visibility) return null; // skip hidden posts
+
+                        return (
+                            <>
+                                <div class="toc-title">
+                                    <span style="color: var(--col)">
+                                        <b>{postData.title}</b>
+                                    </span>
+                                </div>
+
+                                {toc.map((link) => (
+                                    <span
+                                        class={`toc-item toc-level-${link.depth}`}
+                                        style={`margin-left: ${
+                                            link.depth === 2
+                                                ? "0.5em"
+                                                : link.depth === 3
+                                                  ? "1.5em"
+                                                  : link.depth >= 4
+                                                    ? "2.5em"
+                                                    : "0"
+                                        };`}
+                                    >
+                                        <a
+                                            class="toc-content"
+                                            href={`#${link.slug}`}
+                                        >
+                                            {link.text}
+                                        </a>
+                                        <br />
+                                    </span>
+                                ))}
+                            </>
+                        );
+                    })
+                )
+            }
+        </div>
+    </div>
+</Layout>
+
+<style>
+    @import "../../styles/markdown.css";
+</style>
