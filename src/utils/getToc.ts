@@ -15,7 +15,7 @@ export function getToc(relativeFilePath: string): TocItem[] {
     // Resolve relative path from project root
     const filePath = path.resolve(relativeFilePath);
 
-    console.log("[DEBUG] Resolving file path:", filePath);
+    // console.log("[DEBUG] Resolving file path:", filePath);
 
     if (!fs.existsSync(filePath)) {
         console.warn(`MDX file not found: ${filePath}`);

@@ -1,51 +1,60 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { getToc } from "../../utils/getToc";
-import { getEntry, getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import fs from "node:fs";
+import { getCollection } from "astro:content";
 import path from "node:path";
 
-// Tell TypeScript what MDX files export
-interface PostEntry {
-    slug: string;
-    filePath: string; // NOT optional
+interface TocItem {
+    depth: number;
+    text: string;
+    slug?: string;
+}
+
+interface PostToc {
+    postData: {
+        title: string;
+        created: Date;
+        updated: Date;
+        revision: number;
+        language: string;
+        visibility: boolean;
+    };
+    toc: TocItem[];
+    slug: string; // <-- add this
 }
 
 const COLLECTION_NAME = "tutorials";
 
-// Load all entries from a folder
 const allEntries = await getCollection(COLLECTION_NAME);
-// Select all markdowns inside tutorials/slug/*
+
 const posts = allEntries.filter(
     (entry) => entry.id.endsWith(".md") || entry.id.endsWith(".mdx")
 );
 
-// guard
 if (!posts || posts.length === 0) {
     return new Response("No posts found", { status: 404 });
 }
 
 const baseDir = path.resolve("src/content/" + COLLECTION_NAME);
-const postTocs = await Promise.all(
+const postTocs: PostToc[] = await Promise.all(
     posts.map(async (post) => {
-        const filePath = path.join(baseDir, post.id); // full path
+        const filePath = path.join(baseDir, post.id);
+        const slug = post.slug ?? post.id.replace(/\.(md|mdx)$/, "");
         return {
-            postData: post.data,
-            toc: getToc(filePath),
+            postData: post.data as PostToc["postData"],
+            toc: await getToc(filePath),
+            slug,
         };
     })
 );
 
-// console.log(JSON.stringify(postTocs, null, 2));
-function formatDate(date: Date): String {
-    const options: any = {
+function formatDate(date: Date): string {
+    return new Date(date).toLocaleDateString("en-de", {
         weekday: "short",
         year: "numeric",
         month: "short",
         day: "numeric",
-    };
-    return new Date(date).toLocaleDateString("en-de", options);
+    });
 }
 
 function getLanguageDescription(languageCode: string): string {
@@ -53,9 +62,7 @@ function getLanguageDescription(languageCode: string): string {
         en: "This content is in English.",
         tr: "This content is in Turkish.",
         de: "This content is in German.",
-        // ... add more languages here
     };
-
     return languageMap[languageCode] ?? "";
 }
 ---
@@ -65,15 +72,15 @@ function getLanguageDescription(languageCode: string): string {
         {
             await Promise.all(
                 posts.map(async (post) => {
+                    const { Content } = await post.render();
                     const postData = post.data;
-
-                    // Skip hidden posts
                     if (!postData.visibility) return null;
 
-                    const { Content } = await post.render();
-
                     return (
-                        <article class="article content">
+                        <article
+                            class="article content"
+                            id={post.slug}
+                        >
                             <div class="article-meta">
                                 <h1>{postData.title}</h1>
                                 <span>
@@ -87,14 +94,6 @@ function getLanguageDescription(languageCode: string): string {
                                     Language:{" "}
                                     {getLanguageDescription(postData.language)}
                                 </span>
-                                <a
-                                    href="#"
-                                    class="to-pdf"
-                                />
-                                <img
-                                    src=""
-                                    alt=""
-                                />
                             </div>
                             <Content />
                         </article>
@@ -105,75 +104,110 @@ function getLanguageDescription(languageCode: string): string {
     </div>
 
     <div class="toc-container no-select">
-        <div class="toc-container no-select">
-            {
-                await Promise.all(
-                    postTocs.map(async ({ postData, toc }) => {
-                        if (!postData.visibility) return null; // skip hidden posts
+        {
+            postTocs.map(({ postData, toc, slug }) => {
+                if (!postData.visibility) return null;
+                return (
+                    <div
+                        class="toc-article"
+                        data-slug={slug}
+                    >
+                        <div class="toc-title">
+                            <span style="color: var(--col)">
+                                <b>{postData.title}</b>
+                            </span>
+                        </div>
 
-                        return (
-                            <>
-                                <div class="toc-title">
-                                    <span style="color: var(--col)">
-                                        <b>{postData.title}</b>
-                                    </span>
-                                </div>
-
-                                {toc.map((link) => (
-                                    <span
-                                        class={`toc-item toc-level-${link.depth}`}
-                                        style={`margin-left: ${
-                                            link.depth === 2
-                                                ? "0.5em"
-                                                : link.depth === 3
-                                                  ? "1.5em"
-                                                  : link.depth >= 4
-                                                    ? "2.5em"
-                                                    : "0"
-                                        };`}
+                        <div
+                            class="toc-sections"
+                            data-slug={slug}
+                        >
+                            {toc.map((link) => (
+                                <span
+                                    class={`toc-item toc-level-${link.depth}`}
+                                    style={`margin-left: ${
+                                        link.depth === 2
+                                            ? "0.5em"
+                                            : link.depth === 3
+                                              ? "1.5em"
+                                              : link.depth >= 4
+                                                ? "2.5em"
+                                                : "0"
+                                    };`}
+                                >
+                                    <a
+                                        class="toc-content"
+                                        href={`#${link.slug}`}
                                     >
-                                        <a
-                                            class="toc-content"
-                                            href={`#${link.slug}`}
-                                        >
-                                            {link.text}
-                                        </a>
-                                        <br />
-                                    </span>
-                                ))}
-                            </>
-                        );
-                    })
-                )
-            }
-        </div>
+                                        {link.text}
+                                    </a>
+                                    <br />
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                );
+            })
+        }
     </div>
 
+    <script is:inline>
+        let activeArticle = null;
 
-    <!-- adding comments -->
-    <div class="main">
-        <div id="comments-giscus">
-            <script
-                src="https://giscus.app/client.js"
-                data-repo="kutaycoskuner/blog"
-                data-repo-id="R_kgDOQT2KRQ"
-                data-category="Comments"
-                data-category-id="DIC_kwDOQT2KRc4Cx1Ia"
-                data-mapping="pathname"
-                data-strict="0"
-                data-reactions-enabled="1"
-                data-emit-metadata="0"
-                data-input-position="top"
-                data-theme="transparent_dark"
-                data-lang="en"
-                data-loading="lazy"
-                crossorigin="anonymous"
-                async
-            ></script>
-        </div>
-    </div>
+        const articles = document.querySelectorAll("article");
+        const tocSections = document.querySelectorAll(".toc-sections");
+        const tocTitles = document.querySelectorAll(".toc-title");
+
+        // Show/hide TOC sections on mouse enter
+        articles.forEach((article) => {
+            article.addEventListener("mouseenter", () => {
+                activeArticle = article.id;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Click TOC title to scroll & set active article
+        tocTitles.forEach((title) => {
+            title.addEventListener("click", () => {
+                const slug = title.parentElement.dataset.slug;
+                const targetArticle = document.getElementById(slug);
+                if (!targetArticle) return;
+
+                // scroll to top of the article
+                targetArticle.scrollIntoView({ behavior: "smooth" });
+
+                // set active article
+                activeArticle = slug;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll(".toc-content").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = document.getElementById(
+                    link.getAttribute("href").substring(1)
+                );
+                target?.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>
 </Layout>
 
 <style>
     @import "../../styles/markdown.css";
+    .toc-sections {
+        display: none;
+    }
 </style>

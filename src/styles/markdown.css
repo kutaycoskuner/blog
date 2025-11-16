@@ -407,6 +407,10 @@
     color: var(--col-link-active);
 }
 
+.toc-article {
+    margin-bottom: .8rem;
+}
+
 .code-title {
     position: absolute;
     display: flex;
