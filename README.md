@@ -1,12 +1,11 @@
 <h1 align="center">
-    Astro + Svelte Blog
+    Blog Template
 </h1>
 
 <p align="center">
     This is my blog template combining Astro, Svelte, KaTeX, and D3 for dynamic and interactive content. Designed for rendering Markdown, math notation, and interactive visualizations directly in the posts.
 </p>
-
-As I wanted to add more detailed functionality to my blog posts, I found a solution in this template that satisfies my needs. 
+ 
 
 <p align="right">
     <img alt="Start Date" src="https://img.shields.io/badge/project_start-12_Nov_2025-blue" />
@@ -20,7 +19,9 @@ As I wanted to add more detailed functionality to my blog posts, I found a solut
 - [x] Math notation rendering with KaTeX
 - [x] Embedding Svelte components inside Markdown
 - [x] Drawing graphs with D3.js
-- [x] Interactive sliders to change parameters dynamically
+- [x] Interactive components to visualize parameter changes dynamically
+- [x] Collapsable table of contents on multiple markdown renders
+- [x] Commenting on blog posts though [giscus](https://giscus.app/)
 
 
 ## Structure
@@ -39,8 +40,10 @@ blog_template/
 
 ## Run
 ```bash
+# Prerequisite: node, pnpm
+
 # Clone repository
-git clone <repository-url>
+git clone https://github.com/kutaycoskuner/blog.git
 cd blog
 
 # Install dependencies

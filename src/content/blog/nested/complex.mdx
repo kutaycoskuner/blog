@@ -1,0 +1,99 @@
+---
+template: 1.6
+revision: 0.5
+title: Nested
+description: KaTeX complex math statements tests using standard $$ delimiters
+category:
+    - sveltekit
+    - svelte
+tags:
+    - game-design
+    - draft
+created: 2025-10-30
+updated: 2025-11-11
+author: lichzelg
+language: en
+visibility: true
+sort_order: 1
+---
+
+import BarChart from '@components/TestBarChart.svelte'
+import LerpSlider from '@components/TestLerpSlider.svelte';
+
+
+
+
+# Testing KaTeX with Standard Markdown (MDX) Syntax
+
+<p>
+    If you were experiencing duplicate rendering before, this new format should resolve it, 
+    as it removes the ambiguity of the Svelte component wrapping the expression.
+</p>
+
+---
+## Some title
+
+### 1. Quadratic Formula (Display Mode)
+
+This shows complex fractions and roots. 
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+### 2. Logical Statements (Display Mode)
+
+An example of a conditional logical statement. $P \implies (Q \lor \neg R)$
+
+### 3. Matrix and Systems of Equations (Display Mode)
+
+An example of a 4x4 matrix.
+$$
+\det(A) = \begin{vmatrix}
+a & b & c & d \\
+e & f & g & h \\
+i & j & k & l \\
+m & n & o & p
+\end{vmatrix}
+$$
+
+### 4. Complex Integral with Limits (Display Mode)
+
+A definite integral example using a complex exponential function.
+$$
+\int_{-\infty}^{\infty} e^{-x^2/2} dx = \sqrt{2\pi}
+$$
+
+### 5. Piecewise Function (Display Mode)
+
+Showing how to define a function with multiple cases.
+$$
+f(x) =
+\left\{
+\begin{array}{ll}
+    -x & \text{if } x < 0 \\
+    x^2 & \text{if } 0 \le x < 2 \\
+    4 & \text{if } x \ge 2 
+\end{array}
+\right.
+$$
+
+
+---
+
+## 6. Component Test (Still works in MDX!)
+
+Even without the `<script>` block, standard MDX still lets you use imported components (if they are declared in your Astro config).
+
+## Interactive Component Examples
+
+
+<div style="display:flex; justify-content:center; margin-top:2rem;">
+<BarChart 
+    data={[100, 2200, 1800, 2900]}
+/>
+</div>
+
+
+<div style="display:flex; justify-content:center; margin-top:2rem;">
+  <LerpSlider client:load label="Primary Slider" min={0} max={3} step={0.01} />
+</div>

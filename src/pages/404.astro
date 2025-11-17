@@ -1,0 +1,71 @@
+---
+---
+<section class="not-found">
+    <h1>
+        404 <span class="sep">|</span> Post not found
+    </h1>
+    <p>Either not existed, work in progress, or removed.</p>
+
+    <a href="https://kutaycoskuner.github.io/content_tree" class="back-link">
+        Go back
+    </a>
+</section>
+
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* disables scrolling */
+        background: var(--bg, #060606);
+    }
+
+    .not-found {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: sans-serif;
+        color: var(--col, #f2f2f2);
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.6em;
+    }
+
+    .sep {
+        font-size: 2.4rem;
+        font-weight: 100;
+        margin: 0 0.4em;
+        color: var(--col, #f2f2f2);
+    }
+
+    p {
+        font-size: 1rem;
+        opacity: 0.75;
+        font-family: sans;
+        margin-bottom: 2em;
+    }
+
+    .back-link {
+        color: var(--col, #f2f2f2);
+        text-decoration: none;
+        border: 1px solid var(--col, #f2f2f2);
+        padding: 0.6em 1.4em;
+        font-size: 0.95rem;
+        transition: 0.25s ease;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+    .back-link:hover {
+        background: var(--col, #f2f2f2);
+        color: var(--bg, #060606);
+        opacity: 0.9;
+    }
+</style>
