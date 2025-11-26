@@ -1,0 +1,43 @@
+---
+import { readFileSync } from "node:fs";
+import { Code } from "astro/components"; // ← this is required
+import LayoutBlank from "../../layouts/LayoutBlank.astro";
+import SynxtaxHighlighterShiki from "../../components/SyntaxHighlighterShiki.svelte";
+import { createHighlighter } from "shiki";
+
+const highlighter = await createHighlighter({
+    themes: ["vitesse-dark"], // list of themes
+    langs: ["csharp"], // list of languages you need
+});
+
+const path = new URL(
+    "../../../public/code/PseudoIsometricCamera.cs",
+    import.meta.url
+);
+const scriptSource = readFileSync(path, "utf8");
+
+const highlightedCode = highlighter.codeToHtml(scriptSource, {
+    lang: "csharp",
+    theme: "vitesse-dark",
+});
+---
+
+<LayoutBlank>
+    <div
+        class="shiki-code"
+        set:html={highlightedCode}
+    />
+</LayoutBlank>
+
+<style>
+    .shiki-code {
+        overflow-x: auto;
+        padding: 1rem;
+        background-color: #121212; /* match theme */
+        font-family: "Fira Code", monospace;
+    }
+    pre {
+        margin: 0;
+        padding: 0;
+    }
+</style>

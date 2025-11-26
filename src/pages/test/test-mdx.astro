@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MyPost, { frontmatter, Content } from "../content/complex.mdx";
+import Layout from "../../layouts/Layout.astro";
+import MyPost, { frontmatter, Content } from "../../content/complex.mdx";
 
 function formatDate(date: Date): String {
     const options: any = {
@@ -53,5 +53,5 @@ function getLanguageDescription(languageCode: string): string {
 </Layout>
 
 <style>
-    @import "../styles/markdown.css";
+    @import "../../styles/markdown.css";
 </style>

@@ -57,8 +57,22 @@ export function getToc(relativeFilePath: string): TocItem[] {
             const text = match[2].trim(); // heading text
             const slug = text
                 .toLowerCase()
-                .replace(/[^\w]+/g, "-") // simple slug
-                .replace(/^-+|-+$/g, ""); // trim leading/trailing -
+                // 1. Allow dots and numbers, and convert spaces/non-word characters to hyphen
+                //    We allow the dot here temporarily so the "1.1." part doesn't get messed up.
+                .replace(/[^\w\.]+/g, "-")
+
+                // 2. Target only the dot *after* the leading number(s) and replace it with a hyphen
+                //    This turns "1.1.Standards..." into "1-1-Standards..."
+                //    It keeps the structure of the leading outline numbers.
+                .replace(/^(\d+)\.(\d+)\./, "$1-$2-")
+
+                // 3. Simple slug - converts any remaining non-word characters (if any) and dots to a hyphen.
+                .replace(/[^\w]+/g, "-")
+                .replace(/(\d)-(\d)/g, "$1$2")
+
+                // 4. Trim leading/trailing -
+                .replace(/^-+|-+$/g, "");
+                // console.log(slug)
             toc.push({ depth, text, slug });
         }
     }
