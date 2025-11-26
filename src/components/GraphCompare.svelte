@@ -80,7 +80,7 @@
         }
     };
 
-    // Rerender when KaTeX is ready or component updates 
+    // Rerender when KaTeX is ready or component updates
     $: if (katexReady) renderEquations();
 
     // Ensure KaTeX loads and renders on mount/hydrate
@@ -108,7 +108,7 @@
 
 <!-- Main Container for the entire visualization -->
 <div
-    class="vis-container"
+    class="vis-container equation-row"
     style="display:flex; flex-direction:column; align-items:center;"
 >
     <!-- Row for Graphs -->
@@ -139,6 +139,26 @@
                     stroke-opacity="0.5"
                 />
 
+                <text
+                    x="50%"
+                    y={height - 5}
+                    stroke="currentColor"
+                    text-anchor="middle"
+                    font-size="14"
+                >
+                    t (time)
+                </text>
+
+                <text
+                    x={padding - 25}
+                    y="50%"
+                    stroke="currentColor"
+                    text-anchor="middle"
+                    font-size="14"
+                    transform="rotate(-90, {padding - 25}, {height / 2})"
+                >
+                    value
+                </text>
                 <!-- Ticks and Labels -->
                 {#each ticks as tick}
                     <!-- X-Axis Tick & Label (Skipping X=0 label) -->
@@ -155,6 +175,7 @@
                             y={height - padding + 15}
                             font-size="12"
                             text-anchor="middle"
+                            stroke="currentColor"
                             stroke-opacity="0.5">{tick}</text
                         >
                     {/if}
@@ -171,6 +192,7 @@
                         x={padding - 10}
                         y={toSVG(0, tick).cy + 4}
                         font-size="12"
+                        stroke="currentColor"
                         text-anchor="end"
                         stroke-opacity="0.5">{tick}</text
                     >
@@ -200,7 +222,10 @@
                     stroke-width="1"
                 />
             </svg>
-            <sub class="caption" style="margin:0; font-size: 1.1em; font-weight: 500;">
+            <sub
+                class="caption"
+                style="margin:0; font-size: 1.1em; font-weight: 500;"
+            >
                 <b> Clamped Step Function [0.2, 0.8] </b>
             </sub>
         </div>
@@ -247,6 +272,7 @@
                             y={height - padding + 15}
                             font-size="12"
                             text-anchor="middle"
+                            stroke="currentColor"
                             stroke-opacity="0.5">{tick}</text
                         >
                     {/if}
@@ -264,6 +290,7 @@
                         y={toSVG(0, tick).cy + 4}
                         font-size="12"
                         text-anchor="end"
+                        stroke="currentColor"
                         stroke-opacity="0.5">{tick}</text
                     >
                 {/each}
@@ -282,6 +309,26 @@
                     {/if}
                 {/each}
 
+                <text
+                    x="50%"
+                    y={height - 5}
+                    stroke="currentColor"
+                    text-anchor="middle"
+                    font-size="14"
+                >
+                    t (time)
+                </text>
+
+                <text
+                    x={padding - 25}
+                    y="50%"
+                    stroke="currentColor"
+                    text-anchor="middle"
+                    font-size="14"
+                    transform="rotate(-90, {padding - 25}, {height / 2})"
+                >
+                    value
+                </text>
                 <!-- Slider marker (Green dot) -->
                 <circle
                     cx={toSVG(t, lerpY).cx}
@@ -292,7 +339,10 @@
                     stroke-width="1"
                 />
             </svg>
-            <sub class="caption" style="margin:0; font-size: 1.1em; font-weight: 500;">
+            <sub
+                class="caption"
+                style="margin:0; font-size: 1.1em; font-weight: 500;"
+            >
                 <b> Clamped Linear Interpolation [0.2, 0.8] </b>
             </sub>
         </div>
@@ -383,9 +433,9 @@
         height: 16px;
         width: 16px;
         border-radius: 50%;
-        background: var(--col-2); 
+        background: var(--col-2);
         cursor: pointer;
-        margin-top: -7.5px; 
+        margin-top: -7.5px;
     }
     input[type="range"]::-moz-range-thumb {
         border: 1px solid #000;
@@ -402,5 +452,48 @@
         border-radius: 50%;
         background: #3498db;
         cursor: pointer;
+    }
+    @media (max-width: 480px) {
+        .vis-container {
+            width: 100%;
+            padding: 1rem 0.5rem;
+        }
+
+        /* Stack the two graphs vertically */
+        .vis-container > div {
+            flex-direction: column !important;
+            gap: 20px !important;
+            width: 100% !important;
+        }
+
+        /* Each graph container becomes full width */
+        .vis-container > div > div {
+            width: 100% !important;
+        }
+
+        /* Make SVG scale and not overflow */
+        svg {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Equation row stacks vertically */
+        .equation-row {
+            flex-direction: column !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            gap: 20px !important;
+        }
+
+        /* Each equation expands to full width */
+        .equation {
+            width: 100% !important;
+        }
+
+        /* Make slider full width on mobile */
+        input[type="range"] {
+            width: 100% !important;
+            max-width: 320px;
+        }
     }
 </style>
