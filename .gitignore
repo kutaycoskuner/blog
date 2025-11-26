@@ -8,6 +8,8 @@ temp.*
 src/content/tutorials
 src/content/tutorials/
 src/
+linked_assets/
+linked_assets
 public/
 dist/
 

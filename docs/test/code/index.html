@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/blog/favicon-triangle.svg"><meta name="generator" content="Astro v5.15.5"><title>Blog | Kutay Coskuner</title><link rel="stylesheet" href="/blog/_astro/PseudoIsometricCamera.h2QlZvDV.css">
+<style>.shiki-code[data-astro-cid-lz5gqx5u]{overflow-x:auto;padding:1rem;background-color:#121212;font-family:Fira Code,monospace}pre[data-astro-cid-lz5gqx5u]{margin:0;padding:0}
+</style></head> <body> <div class="slot">  <div class="shiki-code" data-astro-cid-lz5gqx5u><pre class="shiki vitesse-dark" style="background-color:#121212;color:#dbd7caee" tabindex="0"><code><span class="line"><span style="color:#4D9375">using</span><span style="color:#5DA994"> System</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">using</span><span style="color:#5DA994"> UnityEngine</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">using</span><span style="color:#5DA994"> UnityEngine</span><span style="color:#666666">.</span><span style="color:#5DA994">InputSystem</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#CB7676"> class</span><span style="color:#5DA994"> PseudoIsometricCamera</span><span style="color:#666666"> :</span><span style="color:#5DA994"> MonoBehaviour</span></span>
+<span class="line"><span style="color:#666666">{</span></span>
+<span class="line"><span style="color:#666666">    [</span><span style="color:#5DA994">Header</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">References</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)]</span></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#5DA994"> Camera</span><span style="color:#80A665"> cam</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#5DA994"> Vector3</span><span style="color:#80A665"> camTarget</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#5DA994"> Vector3</span><span style="color:#80A665"> camPosition</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#5DA994"> Vector3</span><span style="color:#80A665"> camDistance</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> Vector3</span><span style="color:#80A665"> baseCamDistance</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#666666">    [</span><span style="color:#5DA994">Header</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Movement Settings</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)]</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> baseSpeed</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 5.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> Vector3</span><span style="color:#80A665"> planarMoveVector</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#666666">    [</span><span style="color:#5DA994">Header</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Rotation Settings</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)]</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> rotateStepDeg</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 30.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> currentUpRotationInDeg</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 0.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> targetUpRotationInDeg</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 0.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> rotationLerpSpeed</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 10.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> Quaternion</span><span style="color:#80A665"> currentRotationQuaternion</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#666666">    [</span><span style="color:#5DA994">Header</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Zoom Settings</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)]</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> minZoomMultiplier</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> .4f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> maxZoomMultiplier</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 2.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> zoomStep</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 0.2f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> currentZoomScale</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 1.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> targetZoomScale</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 1.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> float</span><span style="color:#80A665"> zoomLerpSpeed</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 10.0f</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#5DA994"> InputActionAsset</span><span style="color:#80A665"> inputAction</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> InputAction</span><span style="color:#80A665"> moveInputAction</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> InputAction</span><span style="color:#80A665"> rotateInputAction</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#5DA994"> InputAction</span><span style="color:#80A665"> zoomInputAction</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">    // Start is called once before the first execution of Update after the MonoBehaviour is created</span></span>
+<span class="line"><span style="color:#4D9375">    void</span><span style="color:#80A665"> Start</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#80A665">        setCameraParameters</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#80A665">        SetInputActions</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">    // Update is called once per frame</span></span>
+<span class="line"><span style="color:#4D9375">    void</span><span style="color:#80A665"> Update</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#80A665">        HandleZoom</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#80A665">        HandleRotation</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#80A665">        HandleMovement</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#80A665">        UpdateCamera</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> void</span><span style="color:#80A665"> HandleMovement</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">moveInputAction</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#666666">)</span><span style="color:#4D9375"> return</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#5DA994">        Vector2</span><span style="color:#80A665"> moveInput</span><span style="color:#666666"> =</span><span style="color:#BD976A"> moveInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">ReadValue</span><span style="color:#666666">&#x3C;</span><span style="color:#5DA994">Vector2</span><span style="color:#666666">>();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">        // safegauard</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">moveInput</span><span style="color:#666666">.</span><span style="color:#BD976A">magnitude</span><span style="color:#666666"> &#x3C;</span><span style="color:#4C9A91"> 0.02f</span><span style="color:#666666">)</span><span style="color:#4D9375"> return</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">        // move relative to camera rotation on XZ plane</span></span>
+<span class="line"><span style="color:#5DA994">        Vector3</span><span style="color:#80A665"> forward</span><span style="color:#666666"> =</span><span style="color:#BD976A"> cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">forward</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#5DA994">        Vector3</span><span style="color:#80A665"> right</span><span style="color:#666666"> =</span><span style="color:#BD976A"> cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">right</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        forward</span><span style="color:#666666">.</span><span style="color:#BD976A">y</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">        right</span><span style="color:#666666">.</span><span style="color:#BD976A">y</span><span style="color:#666666"> =</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        forward</span><span style="color:#666666">.</span><span style="color:#80A665">Normalize</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#BD976A">        right</span><span style="color:#666666">.</span><span style="color:#80A665">Normalize</span><span style="color:#666666">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        planarMoveVector</span><span style="color:#666666"> =</span><span style="color:#666666"> (</span><span style="color:#BD976A">right</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> moveInput</span><span style="color:#666666">.</span><span style="color:#BD976A">x</span><span style="color:#CB7676"> +</span><span style="color:#BD976A"> forward</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> moveInput</span><span style="color:#666666">.</span><span style="color:#BD976A">y</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#CB7676">                     *</span><span style="color:#BD976A"> baseSpeed</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> Time</span><span style="color:#666666">.</span><span style="color:#BD976A">deltaTime</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    void</span><span style="color:#80A665"> HandleRotation</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#758575DD">        // safeguard</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">rotateInputAction</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#666666">)</span><span style="color:#4D9375"> return</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">rotateInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">WasPressedThisFrame</span><span style="color:#666666">())</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#4D9375">            float</span><span style="color:#80A665"> rotateAxisSign</span><span style="color:#666666"> =</span><span style="color:#CB7676"> -</span><span style="color:#BD976A">rotateInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">ReadValue</span><span style="color:#666666">&#x3C;</span><span style="color:#4D9375">float</span><span style="color:#666666">>();</span></span>
+<span class="line"><span style="color:#4D9375">            float</span><span style="color:#80A665"> rotationInDeg</span><span style="color:#666666"> =</span><span style="color:#BD976A"> rotateStepDeg</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> rotateAxisSign</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            targetUpRotationInDeg</span><span style="color:#CB7676"> +=</span><span style="color:#BD976A"> rotationInDeg</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            targetUpRotationInDeg</span><span style="color:#CB7676"> %=</span><span style="color:#4C9A91"> 360.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        currentUpRotationInDeg</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Mathf</span><span style="color:#666666">.</span><span style="color:#80A665">LerpAngle</span><span style="color:#666666">(</span><span style="color:#BD976A">currentUpRotationInDeg</span><span style="color:#666666">,</span><span style="color:#BD976A"> targetUpRotationInDeg</span><span style="color:#666666">,</span><span style="color:#BD976A"> rotationLerpSpeed</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> Time</span><span style="color:#666666">.</span><span style="color:#BD976A">deltaTime</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#BD976A">        currentUpRotationInDeg</span><span style="color:#CB7676"> %=</span><span style="color:#4C9A91"> 360.0f</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">Mathf</span><span style="color:#666666">.</span><span style="color:#80A665">Abs</span><span style="color:#666666">(</span><span style="color:#BD976A">currentUpRotationInDeg</span><span style="color:#CB7676"> -</span><span style="color:#BD976A"> targetUpRotationInDeg</span><span style="color:#666666">)</span><span style="color:#666666"> &#x3C;</span><span style="color:#4C9A91"> 0.05f</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            currentUpRotationInDeg</span><span style="color:#666666"> =</span><span style="color:#BD976A"> targetUpRotationInDeg</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">            return</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    void</span><span style="color:#80A665"> HandleZoom</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#758575DD">        // safeguard</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">zoomInputAction</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#666666">)</span><span style="color:#4D9375"> return</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#758575DD">        // only react once per key scroll/press</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">zoomInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">WasPressedThisFrame</span><span style="color:#666666">())</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#4D9375">            float</span><span style="color:#80A665"> zoomDelta</span><span style="color:#666666"> =</span><span style="color:#BD976A"> zoomInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">ReadValue</span><span style="color:#666666">&#x3C;</span><span style="color:#4D9375">float</span><span style="color:#666666">>();</span></span>
+<span class="line"><span style="color:#BD976A">            targetZoomScale</span><span style="color:#CB7676"> -=</span><span style="color:#BD976A"> zoomDelta</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> zoomStep</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            targetZoomScale</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Mathf</span><span style="color:#666666">.</span><span style="color:#80A665">Clamp</span><span style="color:#666666">(</span><span style="color:#BD976A">targetZoomScale</span><span style="color:#666666">,</span><span style="color:#BD976A"> minZoomMultiplier</span><span style="color:#666666">,</span><span style="color:#BD976A"> maxZoomMultiplier</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">        // smoothly interpolate actual zoom</span></span>
+<span class="line"><span style="color:#BD976A">        currentZoomScale</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Mathf</span><span style="color:#666666">.</span><span style="color:#80A665">Lerp</span><span style="color:#666666">(</span><span style="color:#BD976A">currentZoomScale</span><span style="color:#666666">,</span><span style="color:#BD976A"> targetZoomScale</span><span style="color:#666666">,</span><span style="color:#BD976A"> zoomLerpSpeed</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> Time</span><span style="color:#666666">.</span><span style="color:#BD976A">deltaTime</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#758575DD">        //if no visible change, skip</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">Mathf</span><span style="color:#666666">.</span><span style="color:#80A665">Abs</span><span style="color:#666666">(</span><span style="color:#BD976A">currentZoomScale</span><span style="color:#CB7676"> -</span><span style="color:#BD976A"> targetZoomScale</span><span style="color:#666666">)</span><span style="color:#666666"> &#x3C;</span><span style="color:#4C9A91"> 0.02f</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            currentZoomScale</span><span style="color:#666666"> =</span><span style="color:#BD976A"> targetZoomScale</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">            return</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    void</span><span style="color:#80A665"> setCameraParameters</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#758575DD">        // safeguard to check if everything nicely assigned</span></span>
+<span class="line"><span style="color:#BD976A">        camTarget</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Vector3</span><span style="color:#666666">.</span><span style="color:#BD976A">zero</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">        camPosition</span><span style="color:#666666"> =</span><span style="color:#CB7676"> new</span><span style="color:#5DA994"> Vector3</span><span style="color:#666666">(</span><span style="color:#4C9A91">0</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 6</span><span style="color:#666666">,</span><span style="color:#CB7676"> -</span><span style="color:#4C9A91">10</span><span style="color:#666666">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">cam</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#CB7676"> ||</span><span style="color:#BD976A"> camTarget</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#CB7676"> ||</span><span style="color:#BD976A"> camPosition</span><span style="color:#CB7676"> ==</span><span style="color:#CB7676"> null</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            Debug</span><span style="color:#666666">.</span><span style="color:#80A665">LogError</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">CameraRig setup incomplete! Assign all references.</span><span style="color:#C98A7D77">"</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#4D9375">            return</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">position</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camPosition</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">        camDistance</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camTarget</span><span style="color:#CB7676"> -</span><span style="color:#BD976A"> camPosition</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">        baseCamDistance</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camDistance</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">        cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">forward</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camDistance</span><span style="color:#666666">.</span><span style="color:#BD976A">normalized</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">    public</span><span style="color:#4D9375"> void</span><span style="color:#80A665"> SetInputActions</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#CB7676">        var</span><span style="color:#80A665"> cameraMap</span><span style="color:#666666"> =</span><span style="color:#BD976A"> inputAction</span><span style="color:#666666">.</span><span style="color:#80A665">FindActionMap</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">CameraActionMap</span><span style="color:#C98A7D77">"</span><span style="color:#666666">,</span><span style="color:#4D9375"> true</span><span style="color:#666666">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        moveInputAction</span><span style="color:#666666"> =</span><span style="color:#BD976A"> cameraMap</span><span style="color:#666666">.</span><span style="color:#80A665">FindAction</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Movement</span><span style="color:#C98A7D77">"</span><span style="color:#666666">,</span><span style="color:#4D9375"> true</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#BD976A">        moveInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">Enable</span><span style="color:#666666">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        rotateInputAction</span><span style="color:#666666"> =</span><span style="color:#BD976A"> cameraMap</span><span style="color:#666666">.</span><span style="color:#80A665">FindAction</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Rotate</span><span style="color:#C98A7D77">"</span><span style="color:#666666">,</span><span style="color:#4D9375"> true</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#BD976A">        rotateInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">Enable</span><span style="color:#666666">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#BD976A">        zoomInputAction</span><span style="color:#666666"> =</span><span style="color:#BD976A"> cameraMap</span><span style="color:#666666">.</span><span style="color:#80A665">FindAction</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Zoom</span><span style="color:#C98A7D77">"</span><span style="color:#666666">,</span><span style="color:#4D9375"> true</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#BD976A">        zoomInputAction</span><span style="color:#666666">.</span><span style="color:#80A665">Enable</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">    private</span><span style="color:#4D9375"> void</span><span style="color:#80A665"> UpdateCamera</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">    {</span></span>
+<span class="line"><span style="color:#758575DD">        // change camera variables if there is rotation or zoom</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">currentUpRotationInDeg</span><span style="color:#CB7676"> !=</span><span style="color:#BD976A"> targetUpRotationInDeg</span><span style="color:#CB7676"> ||</span><span style="color:#BD976A"> currentZoomScale</span><span style="color:#CB7676"> !=</span><span style="color:#BD976A"> targetZoomScale</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            currentRotationQuaternion</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Quaternion</span><span style="color:#666666">.</span><span style="color:#80A665">Euler</span><span style="color:#666666">(</span><span style="color:#4C9A91">0</span><span style="color:#666666">,</span><span style="color:#BD976A"> currentUpRotationInDeg</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#BD976A">            camPosition</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camTarget</span><span style="color:#CB7676"> -</span><span style="color:#BD976A"> currentRotationQuaternion</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> baseCamDistance</span><span style="color:#CB7676"> *</span><span style="color:#BD976A"> currentZoomScale</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">        // change camera variable if there is movement</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">planarMoveVector</span><span style="color:#666666">.</span><span style="color:#BD976A">magnitude</span><span style="color:#666666"> ></span><span style="color:#4C9A91"> 0.02f</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            camTarget</span><span style="color:#CB7676"> +=</span><span style="color:#BD976A"> planarMoveVector</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            camPosition</span><span style="color:#CB7676"> +=</span><span style="color:#BD976A"> planarMoveVector</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            planarMoveVector</span><span style="color:#666666"> =</span><span style="color:#BD976A"> Vector3</span><span style="color:#666666">.</span><span style="color:#BD976A">zero</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">        // apply changes if there is change in camera position</span></span>
+<span class="line"><span style="color:#4D9375">        if</span><span style="color:#666666"> (</span><span style="color:#BD976A">cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">position</span><span style="color:#CB7676"> !=</span><span style="color:#BD976A"> camPosition</span><span style="color:#666666">)</span></span>
+<span class="line"><span style="color:#666666">        {</span></span>
+<span class="line"><span style="color:#BD976A">            camDistance</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camTarget</span><span style="color:#CB7676"> -</span><span style="color:#BD976A"> camPosition</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#BD976A">position</span><span style="color:#666666"> =</span><span style="color:#BD976A"> camPosition</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#BD976A">            cam</span><span style="color:#666666">.</span><span style="color:#BD976A">transform</span><span style="color:#666666">.</span><span style="color:#80A665">LookAt</span><span style="color:#666666">(</span><span style="color:#BD976A">camTarget</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#666666">        }</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span></code></pre></div>  </div> </body></html> 
