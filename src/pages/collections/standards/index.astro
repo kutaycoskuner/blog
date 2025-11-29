@@ -1,4 +1,4 @@
----
+<!-- ---
 import Layout from "../../../layouts/Layout.astro";
 import { getToc } from "../../../utils/getToc";
 import { getCollection } from "astro:content";
@@ -23,7 +23,7 @@ interface PostToc {
     slug: string; // <-- add this
 }
 
-const COLLECTION_NAME: string = "collections/lecture_notes-2025fall-analysis";
+const COLLECTION_NAME: string = "collections/standards";
 
 const allEntries = await getCollection(COLLECTION_NAME);
 
@@ -223,4 +223,4 @@ function getLanguageDescription(languageCode: string): string {
     .toc-sections {
         display: none;
     }
-</style>
+</style> -->

@@ -69,6 +69,7 @@ export function getToc(relativeFilePath: string): TocItem[] {
                 // 3. Simple slug - converts any remaining non-word characters (if any) and dots to a hyphen.
                 .replace(/[^\w]+/g, "-")
                 .replace(/(\d)-(\d)/g, "$1$2")
+                .replace(/(\d)(?:-(\d))+/g, (_, first, rest) => first + rest.replace(/-/g, ""))
 
                 // 4. Trim leading/trailing -
                 .replace(/^-+|-+$/g, "");
