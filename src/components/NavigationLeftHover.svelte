@@ -103,7 +103,7 @@
             on:keydown={(e) => e.key === "Enter" && closeLeft()}
             aria-label="Close navigation"
         >
-            <a href="https://kutaycoskuner.github.io/content_tree">blog</a>
+            <a href="https://kutaycoskuner.github.io/blog">blog</a>
         </div>
         <div
             on:click|stopPropagation={closeLeft}

@@ -1,6 +1,6 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import { getToc } from "../../../utils/getToc";
+import Layout from "../../layouts/Layout.astro";
+import { getToc } from "../../utils/getToc";
 import { getCollection } from "astro:content";
 import path from "node:path";
 
@@ -23,7 +23,7 @@ interface PostToc {
     slug: string; // <-- add this
 }
 
-const COLLECTION_NAME: string = "collections/standards";
+const COLLECTION_NAME: string = "collections/cpp";
 
 const allEntries = await getCollection(COLLECTION_NAME);
 
@@ -219,7 +219,7 @@ function getLanguageDescription(languageCode: string): string {
 </Layout>
 
 <style>
-    @import "../../../styles/markdown.css";
+    @import "../../styles/markdown.css";
     .toc-sections {
         display: none;
     }

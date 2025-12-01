@@ -21,4 +21,6 @@ export const collections = {
   "collections/lecture_notes-2025fall-analysis": blogCollection,
   "collections/standards": blogCollection,
   "collections/math": blogCollection,
+  "collections/cpp": blogCollection,
+
 };

@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContentTree from "../../components/ContentTree.svelte";
+import TestDispatch from "../../components/TestDispatch.svelte";
+
+function handleEvent() {
+    console.log("test");
+}
+---
+
+<Layout>
+    <div class="test-container">
+        <TestDispatch client:load />
+    </div>
+</Layout>
+
+<script>
+    // Simply listen for the event on the document level
+    document.addEventListener('myEvent', function(event) {
+        console.log('Event successfully caught:', event.detail);
+        console.log('Event target:', event.target);
+    });
+
+    console.log('Event listener attached to document');
+</script>
