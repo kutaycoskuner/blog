@@ -1,0 +1,1327 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/blog/favicon-triangle.svg"><meta name="generator" content="Astro v5.15.5"><title>Blog | Kutay Coskuner</title><link rel="stylesheet" href="/blog/_astro/index.T012VP1m.css">
+<link rel="stylesheet" href="/blog/_astro/index.Dr3Lx2g0.css"></head> <body> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1MDM6x" component-url="/blog/_astro/NavigationLeftHover.qKS1tYbE.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;NavigationLeftHover&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="navigation-container0 hover-control touch-control svelte-16y6g47"><div class="fixed-nav-icon hover-trans-invisible touch-menu-icon svelte-16y6g47" role="button" tabindex="0" aria-label="Open navigation"><img src="/blog/icons/menu-grid-256.png" alt="menu" class="svelte-16y6g47"/></div> <nav class="navigation hover-trans-visible touch-leftslide svelte-16y6g47"><div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/" class="svelte-16y6g47">architecture</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/port/computer_science" class="svelte-16y6g47">computer science</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/port/game_design" class="svelte-16y6g47">game design</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/blog" class="svelte-16y6g47">blog</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/about" class="svelte-16y6g47">about</a></div> <div class="touch-only svelte-16y6g47" role="button" tabindex="0" aria-label="Close navigation"><img src="/blog/icons/arrow_left-256.png" alt="arrow" class="svelte-16y6g47"/></div> <div class="navigation-icons hover-trans-visible svelte-16y6g47"></div></nav></div><!--]--><!--astro:end--></astro-island> <astro-island uid="Z1DDvuC" component-url="/blog/_astro/GotoTop.CD3cRqdB.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;GotoTop&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="goto-top svelte-3kvxk2" role="button" tabindex="0" aria-label="Go to top"><img src="/blog//icons/arrow_left-256.png" alt="arrow" class="svelte-3kvxk2"/></div><!--]--><!--astro:end--></astro-island> <astro-island uid="VOzTC" component-url="/blog/_astro/ColorMode.BC0Jh7Pe.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;ColorMode&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="ncolor-mode svelte-vukpr4" role="button" tabindex="0" aria-label="Toggle Color Mode (Current Mode: system)"><!--[--><div class="light-mode"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="square" stroke-linejoin="miter-clip" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path></svg></div><!--]--></div><!--]--><!--astro:end--></astro-island> <div class="slot">  <div class="main markdown" data-astro-cid-qionvmkx> <article class="article content" id="citation_standards" data-astro-cid-qionvmkx> <div class="article-meta" data-astro-cid-qionvmkx> <h1 data-astro-cid-qionvmkx>Citation Standards</h1> <span data-astro-cid-qionvmkx>
+Published: Tue, 18 Apr 2023 </span> <span data-astro-cid-qionvmkx>
+Revision: Sat, 25 Jan 2025, v
+1.4 </span> <span data-astro-cid-qionvmkx>
+Language:  This content is in English. </span> </div> <p>This is my self citation notation. I required to create this documents since I could not find both reliable syntactically coherent and citation guide.</p>
+<ul>
+<li>Citation might fully grammatical syntactic but might take long time to write and looks ugly.</li>
+<li>Citation might be elegant but consist of a lot of exceptions and problematic cases.</li>
+<li>Some aspect considered, consistency, readability, extensibility and aesthetics.</li>
+</ul>
+<p>Aim of this study to mix a set elegant and systatic citation setup that includes vast range of sources without question marks.</p>
+<ul>
+<li>referenc entry</li>
+<li>footnote</li>
+<li>in-text reference</li>
+</ul>
+<h2 id="types-of-citation">Types of Citation</h2>
+<p>Three types of citation is held in this work these are</p>
+<ul>
+<li><strong>In-text citation [WIP]</strong>           : Most compact form of citation. Not favored due to preventation of readability. However it is convenient on some cases.</li>
+<li><strong>Footnote/ Endnote citation [WIP]</strong> : Often contains explanation or specific information (ex. page in book)</li>
+<li><strong>Bibliography citation</strong>      : Contains full information about to source</li>
+</ul>
+<h2 id="semantics">Semantics</h2>
+<ol>
+<li>Citation gives minimum three of five <strong>metadata information</strong> about the source:
+<ul>
+<li><strong>Who</strong>: Who has created the work?</li>
+<li><strong>What</strong>: What is the name of work?</li>
+<li><strong>Where</strong>: If it is published where?</li>
+<li><strong>When</strong>: When it is published or settled as frozen entity in history?</li>
+<li><strong>How</strong>: How do we reach it? Access link / doi etc.</li>
+<li>The question why could be answered within the text or in footnotes but it is not a part of citation.</li>
+<li>ex. Who. <em>What</em>. Where. When. How</li>
+</ul>
+</li>
+<li>One or information might be missing or not included. However, the order of the information is always the same and a citation should contain minimum 3 of the metadata information.
+<ul>
+<li>ex. Author. <em>Book</em>. Publisher. Date.</li>
+</ul>
+</li>
+<li>Each metadata information is separated and ended by . (dot) from each other except for <strong>how</strong>.
+<ul>
+<li>ex. Author. <em>Book</em>. Publisher. Date.</li>
+</ul>
+</li>
+<li>If the metadata is not conventional type: dissertation, book, article, newspaper. It should be indicated with square braces.
+<ul>
+<li>ex. [Video], [Podcast]</li>
+</ul>
+</li>
+<li>The source of the work is written italic. It might be a chapter of book, article in journal or a book itself.
+<ul>
+<li>ex. Author. <em>A Book</em> . …</li>
+<li>ex. Author. “Article”. In <em>Journal</em>. …</li>
+</ul>
+</li>
+<li>Part of something relationships indicated through quotation marks.
+<ul>
+<li>ex. “Concept”. In <em>Dictionary</em>.</li>
+<li>ex. “Article” In <em>Journal</em>.</li>
+</ul>
+</li>
+<li>If the source name is in diffent language than article. The translation might be given in square braces after the name.
+<ul>
+<li>ex. Artikel [Article].</li>
+</ul>
+</li>
+<li>Page numbers are categorical exception handled as how. comes after date with : separation.</li>
+</ol>
+<p><strong>Example Book Citation:</strong></p>
+<p>Arendt, Hannah. <em>The Human Condition</em>. Chicago: University of Chicago Press. 1958.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Who</th><th align="left">What</th><th align="left">Where</th><th align="left">When</th><th align="left">How</th></tr></thead><tbody><tr><td align="left"><i class="who">Arendt, Hannah</i></td><td align="left"><i class="what"><em>The Human Condition</em></i></td><td align="left"><i class="where">Chicago: University of Chicago Press</i></td><td align="left"><i class="when">1958</i></td><td align="left">-</td></tr></tbody></table>
+<h1 id="parametrization">Parametrization</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Name</th><th align="left">Tag</th><th align="left">Description</th><th align="left">Example</th></tr></thead><tbody><tr><td align="left">Constant</td><td align="left">..</td><td align="left">Constant statement. That never changes.</td><td align="left">Original work published in 1899.</td></tr><tr><td align="left">Anything</td><td align="left">[]</td><td align="left">Indicates a selection between given options</td><td align="left">[ Master diss | PhD diss ]</td></tr><tr><td align="left">Discete</td><td align="left">&#x3C;></td><td align="left">Indicates a variable.</td><td align="left">&#x3C;LastName></td></tr><tr><td align="left">Numeric</td><td align="left">##</td><td align="left">Indicates a numeric value</td><td align="left">#PageNumbers#</td></tr></tbody></table>
+<h2 id="metadata-handling">Metadata Handling</h2>
+<ul>
+<li>
+<p><strong>Who</strong> Who produced the work? Author, editor, producer etc.</p>
+<ul>
+<li><strong>Occasions</strong>
+<ul>
+<li>Single author
+<ul>
+<li><strong>Desciption</strong> In bibliography reference last name is written first separated by comma (,)</li>
+<li><strong>Template</strong> Last Name, First Name.</li>
+<li><strong>Example</strong> Newton, Isaac.</li>
+<li><strong>Exception</strong> If author has more than one names, only first name is written full rest is shortened by first letter.
+<ul>
+<li>ex. Popper, Karl R.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Two Author
+<ul>
+<li><strong>Desciption</strong> In bibliography reference last name is written first separated by comma (,) First name or names written shortened by dot (.) at the end.</li>
+<li><strong>Template</strong> Last Name 1, First Name First Letter 1. and Last Name 2, First Name First Letter 2.</li>
+<li><strong>Example</strong> Acemoğlu, D. and Robinson, J. A.</li>
+</ul>
+</li>
+<li>Three or more author
+<ul>
+<li><strong>Desciption</strong> Only first author name and constant abbreviation et al. (Latin abbreviation means “and others”)</li>
+<li><strong>Template</strong> Last Name of First Author et al.</li>
+<li><strong>Example</strong> Berg et al.</li>
+</ul>
+</li>
+<li><strong>Pseudonym</strong>
+<ul>
+<li><strong>Desc</strong> Sometimes authors uses nicknames for anonymity. In such cases pseudonym is written as it is with (pseudonym) constant. But if the pseudonym is well known the constant might be avoided.</li>
+<li><strong>Template</strong> Pseudonym Name, (pseudonym).</li>
+<li><strong>Example</strong> Bulkhardt, Richard (pseudonym).</li>
+<li><strong>Example</strong> Le Corbusier.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>What</strong> What is the name or title of the work?</p>
+<ul>
+<li>Title of work</li>
+<li>Part of something</li>
+</ul>
+</li>
+<li>
+<p><strong>Where</strong> the work is produced?</p>
+<ul>
+<li><strong>Template</strong> City: Publisher</li>
+</ul>
+</li>
+<li>
+<p><strong>When</strong> When the work is produced or published?</p>
+<ul>
+<li><strong>Occasions</strong>
+<ul>
+<li>Year of publish</li>
+<li>Multiple publications in the same year</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>How</strong> How to find or accessed to the document</p>
+<ul>
+<li>Links: Accessed (DD MMM YYYY) <link></li>
+<li>Dois:</li>
+</ul>
+</li>
+</ul>
+<h2 id="--articles">- Articles</h2>
+<p>Articles are written text published in newspaper, journal, online platform or as book chapter. The most common type is appears as journal.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Journal Article</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what">“&#x3C;Name of the Article>”</i> <i class="sep">.</i> <i class="where"><em>&#x3C;Journal Name and Info in Italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Shannon, Claude E. “Mathematicla Theory of Communication”. <em>The Bell System Technical Journal, Vol. 27: 379–423, 623–656, July, October.</em> 1948. Accessed (6 Mar 2023) <a href="https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf">https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Article as a Book Chapter</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what">“&#x3C;Name of the Article>”</i> <i class="sep">.</i> <i class="where"><em>&#x3C;Book Name and Info in Italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Derrida, Jacques (interviewed by Eva Meyer, 1986). “Architecture where Desire can Live”. <em>In Kate Nesbitt, ed. Theorizing a New Agenda for Architecture, An Anthology of Architectural Theory 1965 - 1995</em>. New York: Princeton Architectural Press. 1996: 142-149.</td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Kılınç, Kıvanç. “Öncü Halk Sağlığı Projelerinin Kamusal Mekanı Olarak Sıhhiye [Sıhhiye as the Center of Progressive Public Health Projects]”. <em>In Güven Arif Sargın, ed. Başkent Üzerine Mekan-Politik Tezler: Ankara’nın Kamusal Yüzleri [The Public Faces of Ankara: Spatio-Political Theses on the Capital City]</em>. İstanbul: İletişim Yayınları. 2002: 119-156.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Newspaper Article</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what">&#x3C;Name of the Newspaper Article></i> <i class="sep">.</i> <i class="where"><em>&#x3C;Newspaper></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Feltman, Rachel. For the second time ever, scientists detected gravitational waves from colliding black holes. <em>The Washington Post</em>. 15 June 2016. Accessed (19 Apr 2023) <a href="https://www.washingtonpost.com/news/speaking-of-science/wp/2016/06/15/ligo-scientists-announce-their-second-detection-of-gravitational-waves/">https://www.washingtonpost.com/news/speaking-of-science/wp/2016/06/15/ligo-scientists-announce-their-second-detection-of-gravitational-waves/</a></td></tr></tbody></table>
+<h2 id="--books">- Books</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Basic</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic></em></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Arendt, Hannah. <em>The Human Condition</em>. Chicago: University of Chicago Press. 1958.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Reprint</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic></em></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Reprint Date></i> <i class="sep">.</i> Original work published in <i class="when">&#x3C;Original Date></i> <i class="sep">.</i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Darwin, Charles. <em>On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life</em>. London: John Murray. 1997. Original work published in 1859.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Old Books (opt. Translated)</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic></em></i> <i class="sep">.</i> Translated by <i class="who">&#x3C;Full name of translator></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Reprint Date></i> <i class="sep">.</i> Original work published in <i class="when">&#x3C;Original Date></i> <i class="sep">.</i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Plato. <em>Plato’s The Republic</em>. Translated by Allan Bloom. New York: Basicbooks Inc. 1968. Original work published in 375 BCE. Accessed (14 Oct 2020) <a href="https://mvlindsey.files.wordpress.com/2015/08/allen-bloom-the-republic.pdf">https://mvlindsey.files.wordpress.com/2015/08/allen-bloom-the-republic.pdf</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Book with Author and Editor and Translator</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic></em></i> <i class="sep">.</i> Edited by <i class="who">&#x3C;Full name of editor></i> <i class="sep">.</i> Translated by <i class="who">&#x3C;Full name of translator></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Reprint Date></i> <i class="sep">.</i> Original work published in <i class="when">&#x3C;Original Date></i> <i class="sep">.</i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Cerdà, Ildefons. <em>General Theory of Urbanization</em>. Edited by Guallart Vicente. Translated by Graham Thomson. Institute for Advanced Architecture of Catalonia, New York: Actar Publishers. 2018. Original work published in 1867.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Book without Author but Editors</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic></em></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Reprint Date></i> <i class="sep">.</i> Original work published in <i class="when">&#x3C;Original Date></i> <i class="sep">.</i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Ben-Habib, S., and Passerin d’Entrèves, M., eds. <em>Habermas and the Unfinished Project of Modernity: Critical Essays on The Philosophical Discourse of Modernity</em>. Massachusetts: MIT Press. 1997. Original work published in 1981.</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Book with multiple versions / editions</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Book in Italic nth Edition></em></i> <i class="sep">.</i> <i class="where"> &#x3C;City of Publish: Publisher></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Kleiner, Fred S. <em>Gardner’s Art Through the Ages: A Concise Global History Third Edition.</em> Boston: Clark Baxter. 2013.</td></tr></tbody></table>
+<h2 id="--dissertations">- Dissertations</h2>
+<p>Dissertations are student works that are completed to fulfill a study in a University.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Master Dissertation</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who">&#x3C;Last Name>, &#x3C;First Name></i><i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Dissertation in Italic></em></i><i class="sep">.</i> <i class="where">(&#x3C;Type of Dissertation>, &#x3C;Institution>)</i><i class="sep">.</i> <i class="when">&#x3C;Date></i><i class="sep">.</i><i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Coşkuner, Kutay <em>Abstract and Spatial Projections of Criticism: Analysis of Sıhhiye Ankara as Tolerance Space</em>. (Master diss, Middle East Technical University, Ankara). 2022. Accessed (02 Jun 2023) <a href="https://open.metu.edu.tr/handle/11511/96286">https://open.metu.edu.tr/handle/11511/96286</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">PhD or Doctoral Dissertation</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who">&#x3C;Last Name>, &#x3C;First Name></i><i class="sep">.</i> <i class="what"><em>&#x3C;Name of the Dissertation in Italic></em></i><i class="sep">.</i> <i class="where">(&#x3C;Type of Dissertation>, &#x3C;Institution>)</i><i class="sep">.</i> <i class="when">&#x3C;Date></i><i class="sep">.</i><i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Vidler, Anthony. <em>Histories of the immediate present inventing architectural modernism 1930-1975</em>. (PhD diss, Delft University of Technology, Delft). 2005. Accessed (02 Jun 2023) <a href="https://repository.tudelft.nl/islandora/object/uuid%3A73022250-54a2-4939-9f54-9a1a826ae080">https://repository.tudelft.nl/islandora/object/uuid%3A73022250-54a2-4939-9f54-9a1a826ae080</a></td></tr></tbody></table>
+<h2 id="--internet-websites-blogs-etc">- Internet (websites, blogs, etc.)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Website</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="where"> <em>&#x3C;Name of the website in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left"><em>Sha256Algorithm</em>. n.d. Accessed (15 Mar 2023) <a href="https://sha256algorithm.com/">https://sha256algorithm.com/</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Chapter in Website</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="what">&#x3C;Name of the Chapter in Quotation Marks></i> <i class="sep">.</i> <i class="where"> <em>&#x3C;Name of the website or organization in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">”Liberty, Equality, Fraternity”. In <em>Ministère de l’Europe et des Affaires étrangères</em>. n.d. Accessed (17 Oct 2020) <a href="https://www.diplomatie.gouv.fr/">https://www.diplomatie.gouv.fr/</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Open report on the internet (Formatted file like .pdf, .docx, etc.)</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Name of the Institution></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the work or report in Italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">International Labor Organization. <em>Social protection responses to the COVID-19 crisis: Country responses and policy considerations</em>. 2020. Accessed (20 Oct 2020) <a href="https://www.social-protection.org/gimi/RessourcePDF.action?id=56044">https://www.social-protection.org/gimi/RessourcePDF.action?id=56044</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Essay, Blog Article (html/css formatted)</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Name of the Author(s)></i> <i class="sep">.</i> <i class="what"><em>&#x3C;Name of the work in Italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Acemoğlu, D. and Robinson, J. A. <em>Inclusive and Extractive Institutions</em>. 2012. Accessed (18 Oct 2020) <a href="https://rampages.us/wpnecon491/inclusive-and-extractive-institutions/">https://rampages.us/wpnecon491/inclusive-and-extractive-institutions/</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Encyclopedia/Dictionary Entry with author</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Name of the Author(s)></i> <i class="sep">.</i> <i class="what">“&#x3C;Name of the article within quotation marks>”</i> <i class="sep">.</i> In <i class="where">  <em>&#x3C;Name of the Dictionary or Encyclopedia></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Adajian, Thomas. “The Definition of Art”. <em>In Stanford Encyclopedia of Philosophy</em>. 2018. Accessed (14 Oct 2020) <a href="https://plato.stanford.edu/entries/art-definition/">https://plato.stanford.edu/entries/art-definition/</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Encyclopedia/Dictionary Entry without author</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="what">”&#x3C;Name of the article within quotation marks>”</i> <i class="sep">.</i> In <i class="where">  <em>&#x3C;Name of the Dictionary or Encyclopedia></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">”Indoctrination”. <em>In Cambridge Dictionary</em>. n.d. Accessed (17 Oct 2020) <a href="https://dictionary.cambridge.org/dictionary/english/indoctrination">https://dictionary.cambridge.org/dictionary/english/indoctrination</a></td></tr></tbody></table>
+<h2 id="--news">- News</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">News</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name, First Name [if available]></i> <i class="sep">.</i> <i class="what">&#x3C;Title></i> <i class="sep">.</i> <i class="where">  <em>&#x3C;Source in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date [preferably full date]></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Ankara’da Eylem Günü [Day of Protest in Ankara]. <em>Hürriyet</em>. 9 November 2001. Accessed (27 Feb 2021) <a href="https://www.hurriyet.com.tr/gundem/ankarada-eylem-gunu-36129">https://www.hurriyet.com.tr/gundem/ankarada-eylem-gunu-36129</a></td></tr></tbody></table>
+<h2 id="--other-media-podcast-video-etc">- Other Media (podcast, video, etc.)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Video</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name></i> <i class="sep">.</i> <i class="what">“&#x3C;Name of the video within quotation marks [Type of Content]>”</i> <i class="sep">.</i> <i class="where">  <em>&#x3C;Uploaded by (if any), Source in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Mckechnie, Alexander. “Misery was” [Video File]. <em>Uploaded by exurb1a, Youtube</em>. 2019. Accessed (9 Nov 2020) <a href="https://youtu.be/n__42UNIhvU">https://youtu.be/n__42UNIhvU</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Podcast / Interview / Radioplay / Audioplay</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name (role)></i> <i class="sep">.</i> <i class="what">“&#x3C;Name of the work within quotation marks [Type of Content]>”</i> <i class="sep">.</i> <i class="where">  <em>&#x3C;Uploaded by (if any), Source in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Stoppard, Tom (writer). “Dark Side” [Radio Play]. <em>Uploaded by ThinkFloyd61, Dailymotion</em>. 2013. Accessed (14 Dec 2021) <a href="https://www.dailymotion.com/video/x14yvi7">https://www.dailymotion.com/video/x14yvi7</a></td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Online Presentation</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left"><i class="who"> &#x3C;Last Name>, &#x3C;First Name> &#x3C;if exists></i> <i class="sep">.</i> <i class="what">&#x3C;Name of the work [Type of Content]></i> <i class="sep">.</i> <i class="where">  <em>&#x3C;Source in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Das Totaltheater. [Online-Presentation] <em>In FH Münster</em>. n.d. Accessed (24 Jun 2021) <a href="https://www.fh-muenster.de/fb5/downloads/departments/Das_Totaltheater.pdf">https://www.fh-muenster.de/fb5/downloads/departments/Das_Totaltheater.pdf</a></td></tr></tbody></table>
+<h2 id="--personal-communication-lecture-event-etc">- Personal Communication (lecture, event, etc.)</h2>
+<p><strong>Who</strong> metadata of this type always implicity states the author (whoever is citing).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Lecture/ Contact Notes</th></tr></thead><tbody><tr><td align="left"><strong>Template</strong></td><td align="left">Notes from <i class="what">&#x3C;Name of the work / event></i> <i class="sep">.</i> <i class="where">  <em>&#x3C;Source in italic></em></i> <i class="sep">.</i> <i class="when">&#x3C;Date></i> <i class="sep">.</i> <i class="how">&#x3C;Access options [if available]></i></td></tr><tr><td align="left"><strong>Example</strong></td><td align="left">Notes from “Different Modes of Representation” lecture by Prof. Dr. Ayşen Savaş. <em>METU</em>. January 2019.</td></tr></tbody></table>
+<div class="hidden">
+todo: sheets uzerinde siniflari belirle hepsinden ornek cikar
+<p><a href="https://docs.google.com/spreadsheets/d/1meB-OAfvpmd5V5xb5LqpOclMYUpRVYJ8a03EePBeieE/edit#gid=348376362">https://docs.google.com/spreadsheets/d/1meB-OAfvpmd5V5xb5LqpOclMYUpRVYJ8a03EePBeieE/edit#gid=348376362</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left">Type</th></tr></thead><tbody><tr><td align="left"></td><td align="left"></td></tr></tbody></table>
+<p>— Category regulations
+On version 1.0 I have added 10 main categories with their variances those are: Dissertation, Book, Article, Web, Digital, Personal Communication</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Category</th><th align="left">Sub category</th><th align="left">Description</th><th align="left">Example</th></tr></thead><tbody><tr><td align="left">dissertation</td><td align="left">-master</td><td align="left">Master dissertation</td><td align="left"></td></tr><tr><td align="left">dissertation</td><td align="left">-phd</td><td align="left">PhD dissertation</td><td align="left"></td></tr><tr><td align="left">book</td><td align="left">normal</td><td align="left">Common book citation</td><td align="left"></td></tr><tr><td align="left">book</td><td align="left">edited</td><td align="left">No author but editor</td><td align="left"></td></tr><tr><td align="left">book</td><td align="left">+reprint</td><td align="left">Reprinted book in later</td><td align="left">Darwin, Charles. <em>On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life</em>. London: John Murray. 1997. Original work published in 1859.</td></tr><tr><td align="left">book</td><td align="left">*old</td><td align="left">Very old book</td><td align="left"></td></tr><tr><td align="left">book</td><td align="left">*translated</td><td align="left">Translated book</td><td align="left"></td></tr><tr><td align="left">book</td><td align="left">*edition</td><td align="left">Edition of a book</td><td align="left"></td></tr><tr><td align="left">article</td><td align="left">normal</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">article</td><td align="left">journal</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">article</td><td align="left">newspaper</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">web</td><td align="left">site</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">web</td><td align="left">report</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">web</td><td align="left">article</td><td align="left"></td><td align="left"></td></tr><tr><td align="left">web</td><td align="left">*no author</td><td align="left"></td><td align="left"></td></tr></tbody></table>
+<ul>
+<li>* Exceptions: Alters the the way citation:
+<ul>
+<li>ex.</li>
+</ul>
+</li>
+<li>+ Additions: Might added to the citation for additional information.
+<ul>
+<li>ex. reprint (Original work published in 1902).</li>
+</ul>
+</li>
+<li>- Extensions: Added to the category name
+<ul>
+<li>ex. Website = web + site</li>
+</ul>
+</li>
+</ul>
+<p>— Type examples</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Source Type</th><th align="left">Formulation</th><th align="left">Example</th></tr></thead><tbody><tr><td align="left">dissertation</td><td align="left"></td><td align="left"></td></tr></tbody></table>
+<h1 id="foot--endnotes">Foot- Endnotes</h1>
+<p>| Type</p>
+</div> </article><article class="article content" id="code_standards" data-astro-cid-qionvmkx> <div class="article-meta" data-astro-cid-qionvmkx> <h1 data-astro-cid-qionvmkx>Code Standards [Draft]</h1> <span data-astro-cid-qionvmkx>
+Published: Tue, 18 Apr 2023 </span> <span data-astro-cid-qionvmkx>
+Revision: Wed, 12 Mar 2025, v
+0.6 </span> <span data-astro-cid-qionvmkx>
+Language:  This content is in English. </span> </div> <p>This document is a self-defined standard developed from various sources and experiences to ensure cohesive and consistent code quality. It considers key parameters such as readability, consistency, aesthetics, writing/editing efficiency, and platform independence.</p>
+<hr>
+<h2 id="terminology">Terminology</h2>
+<ul>
+<li>
+<p>Naming Conventions</p>
+<ul>
+<li><strong>flatcase</strong>: <code>myvariablename</code></li>
+<li><strong>snake_case</strong>: <code>my_variable_name</code></li>
+<li><strong>PascalCase</strong>: <code>MyVariableName</code></li>
+<li><strong>camelCase</strong>: <code>myVariableName</code></li>
+<li><strong>kebab-case</strong>: <code>my-variable-name</code></li>
+<li><strong>mixed_caseNaming</strong>: <code>My_variableName</code></li>
+</ul>
+</li>
+<li>
+<p>Letter Cases</p>
+<ul>
+<li><strong>lower case</strong>: <code>all lowercase</code></li>
+<li><strong>upper case / capital case</strong>: <code>ALL UPPER CASE</code></li>
+<li><strong>proper case / title case</strong>: <code>All Proper Case</code></li>
+<li><strong>sentence case</strong>: <code>First word capitalized.</code></li>
+</ul>
+</li>
+<li>
+<p>Programming Languages and Abbreviations</p>
+<ul>
+<li><strong>C</strong> <code>c</code></li>
+<li><strong>C++</strong> <code>cpp</code></li>
+<li><strong>JavaScript</strong> <code>js</code></li>
+<li><strong>Python</strong> <code>py</code></li>
+<li><strong>Cascading Style Sheets</strong> <code>css</code></li>
+</ul>
+</li>
+<li>
+<p>Brackets</p>
+<ul>
+<li>() <code>Parantheses</code></li>
+<li>{} <code>Curly braces</code></li>
+<li>[] <code>Square braces</code></li>
+<li>&#x3C;> <code>Angle brackets</code></li>
+</ul>
+</li>
+<li>
+<p>Indentation Styles</p>
+<ul>
+<li>Allman (BSD Style)</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#5DA994">  function</span><span style="color:#80A665"> do_things</span><span style="color:#666666">()</span></span>
+<span class="line"><span style="color:#666666">  {</span></span>
+<span class="line"><span style="color:#666666">  }</span></span></code></pre>
+<ul>
+<li>K&#x26;R Style (Kernighan &#x26; Ritchie)</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#5DA994">  function</span><span style="color:#80A665"> do_things</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#666666">  }</span></span></code></pre>
+</li>
+<li>
+<p>Special Character Names</p>
+<ul>
+<li>- <code>dash</code></li>
+<li>; <code>semicolon</code></li>
+<li>` <code>backtick</code></li>
+<li>&#x26; <code>ampersand</code></li>
+<li>: <code>colon</code></li>
+<li>  <code>whitespace</code></li>
+<li>_ <code>underscore</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="broad-guidelines-for-naming-things">Broad Guidelines for Naming Things</h2>
+<ol>
+<li>
+<p><strong>Use U.S. English spelling and grammar in all code and comments.</strong></p>
+<ul>
+<li><strong>Good</strong>: <code>color</code>, <code>initialize</code></li>
+<li><strong>Bad</strong>: <code>colour</code>, <code>initialise</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Consider the reader’s perspective, not the writer’s.</strong></p>
+<ul>
+<li><strong>Good</strong>: <code>calculateDistance()</code> - clear and meaningful</li>
+<li><strong>Bad</strong>: <code>calcDst()</code> - too abbreviated</li>
+</ul>
+</li>
+<li>
+<p><strong>Avoid ambiguous names, analogies, or context-specific terms.</strong></p>
+<ul>
+<li><strong>Good</strong>: <code>totalUsers</code></li>
+<li><strong>Bad</strong>: <code>stuff</code> or <code>data123</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Use abbreviations only when the meaning is clear and consistent as it helps with aligned code editing.</strong></p>
+<ul>
+<li><strong>Good</strong>: <code>vrtx</code> for vertex</li>
+<li><strong>Bad</strong>: <code>col</code> for color (collision with “column”)</li>
+</ul>
+</li>
+<li>
+<p><strong>Prepositions are not included in capitalization or words separation.</strong></p>
+<ul>
+<li><strong>Good</strong>: <code>distancetoNextNode</code></li>
+<li><strong>Bad</strong>: <code>DistanceToNextNode</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="broad-guidelines-for-formatting">Broad Guidelines for Formatting</h2>
+<ol>
+<li>
+<p><strong>Be consistent on maximum character length on rows including comments.</strong><br>
+Reason: this will provide a standard view for various platforms and monitors.</p>
+</li>
+<li>
+<p><strong>Imports are on separate lines.</strong><br>
+Reason: allows code editing disabling / enabling.</p>
+<ul>
+<li><strong>Good</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#4D9375">import</span><span style="color:#DBD7CAEE"> os</span></span>
+<span class="line"><span style="color:#4D9375">import</span><span style="color:#DBD7CAEE"> sys</span></span></code></pre>
+</li>
+<li><strong>Bad</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#4D9375">import</span><span style="color:#DBD7CAEE"> os</span><span style="color:#666666">,</span><span style="color:#DBD7CAEE"> sys</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use 4 spaces or 8 spaces for indentation.</strong><br>
+Reason: Passively preventing you from over-indentation; thus increasing code readability.</p>
+<ul>
+<li><strong>Good</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#CB7676">def</span><span style="color:#80A665"> my_function</span><span style="color:#666666">():</span></span>
+<span class="line"><span style="color:#B8A965">    print</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Hello, world!</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)</span></span></code></pre>
+</li>
+<li><strong>Bad</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#CB7676">def</span><span style="color:#80A665"> my_function</span><span style="color:#666666">():</span></span>
+<span class="line"><span style="color:#B8A965">  print</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">Hello, world!</span><span style="color:#C98A7D77">"</span><span style="color:#666666">)</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use white space for readability.</strong><br>
+Reason: Increasing readability.</p>
+<ul>
+<li><strong>Good</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">int</span><span style="color:#DBD7CAEE"> result </span><span style="color:#666666">=</span><span style="color:#666666"> (</span><span style="color:#DBD7CAEE">value1 </span><span style="color:#CB7676">+</span><span style="color:#DBD7CAEE"> value2</span><span style="color:#666666">)</span><span style="color:#CB7676"> /</span><span style="color:#666666"> (</span><span style="color:#DBD7CAEE">total </span><span style="color:#CB7676">-</span><span style="color:#DBD7CAEE"> count</span><span style="color:#666666">);</span></span></code></pre>
+</li>
+<li><strong>Bad</strong>:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">int</span><span style="color:#DBD7CAEE"> result</span><span style="color:#666666">=</span><span style="color:#DBD7CAEE">value1</span><span style="color:#CB7676">+</span><span style="color:#DBD7CAEE">value2</span><span style="color:#CB7676">/</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">total</span><span style="color:#CB7676">-</span><span style="color:#DBD7CAEE">count</span><span style="color:#666666">);</span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Allman or K&#x26;D Style Indentation</strong><br>
+Reason: This is mainly personal preference. I find Allman much more readable but increasing code length as a trade off.</p>
+</li>
+<li>
+<p>Favor and use alignment for better readability.<br>
+Reason: Code is easier to read and edit.</p>
+</li>
+</ol>
+<h2 id="--commenting-and-commit-messages">- Commenting and Commit messages</h2>
+<p><strong>Commit messages</strong></p>
+<ul>
+<li>should be concise, descriptive, and written in <strong>lowercase</strong> separated by commas<br>
+Examples:<br>
+<code>fix memory leak, optimize loop</code><br>
+<code>add validation for user input; remove unused imports</code></li>
+</ul>
+<p><strong>Comments</strong></p>
+<ul>
+<li>Should follow <strong>lowercase</strong> or <strong>sentence case</strong>.</li>
+<li>Some suggested usage of comments <code>license, metadata, citation, link, descriptive, separator, marker or visual</code></li>
+</ul>
+<ol>
+<li><strong>Descriptive Comments</strong>:</li>
+</ol>
+<ul>
+<li>Used to explain the purpose of code blocks, algorithms, or logic.
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// Initialize the matrix with default values</span></span></code></pre>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Separator Comments</strong>:</li>
+</ol>
+<ul>
+<li>Used to visually group sections of code.
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// -----------------------------------------------------------------------------------</span></span>
+<span class="line"><span style="color:#758575DD">//         Data Preprocessing Section</span></span>
+<span class="line"><span style="color:#758575DD">// -----------------------------------------------------------------------------------</span></span></code></pre>
+</li>
+</ul>
+<ol start="3">
+<li><strong>Marker Comments</strong>:</li>
+</ol>
+<ul>
+<li>Highlights critical parts, such as TODOs or FIXMEs. Usually aimed to be searched.
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// TODO: Add validation for empty inputs</span></span>
+<span class="line"><span style="color:#758575DD">// todo: Add validation for empty inputs</span></span></code></pre>
+</li>
+</ul>
+<ol start="4">
+<li><strong>Visual Description Comments</strong>:</li>
+</ol>
+<ul>
+<li>Uses ASCII art or other visualization to represent concepts or improve code readability.
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#758575DD">#   Cosine function visualization</span></span>
+<span class="line"><span style="color:#758575DD">#</span></span>
+<span class="line"><span style="color:#758575DD">#                *</span></span>
+<span class="line"><span style="color:#758575DD">#             *     *</span></span>
+<span class="line"><span style="color:#758575DD">#           *         *</span></span>
+<span class="line"><span style="color:#758575DD">#         *             *</span></span>
+<span class="line"><span style="color:#758575DD">#       *                 *</span></span>
+<span class="line"><span style="color:#758575DD"># ---*---*---*---*---*---*---*--> x</span></span>
+<span class="line"><span style="color:#758575DD">#     0   π/2   π    3π/2  2π</span></span></code></pre>
+</li>
+</ul>
+<h2 id="--files-and-directories">- Files and Directories</h2>
+<p><strong>Directories / Folders</strong></p>
+<ol>
+<li>Use <strong>snake_case</strong> for folder names.<br>
+Examples:</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>user_profiles/</span></span>
+<span class="line"><span>data_processing/</span></span>
+<span class="line"><span>api_endpoints/</span></span></code></pre>
+<p><strong>File names</strong></p>
+<ol>
+<li>Use <strong>snake_case</strong> for simple code file names (slugs) unless they contain.<br>
+Examples:</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>user_profile_handler.py</span></span>
+<span class="line"><span>data_processing_service.cpp</span></span>
+<span class="line"><span>api_handler.js</span></span></code></pre>
+<ol start="2">
+<li>
+<p>Sometimes name of file could contain more various information about the data instead of just name or slug. In that case various metadata types should be separated by a dash (-)</p>
+<p><strong>Rationale</strong>: whitespace ( ) may cause some errors on commands. Underscore(_) does not allow to jump word to word by control and is already reserved for replacing white space ( ) on slug.
+Examples:</p>
+</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>1.3-axes-vrtx_shader.glsl               a name for shader file</span></span>
+<span class="line"><span>4.1-bloom-test_scene.cpp                a code file with metadata</span></span>
+<span class="line"><span>tex-linegrid_16-white-2k-color.jpg      a texture file metadata </span></span>
+<span class="line"><span>core-ui.cpp                             use dash if you are using prefix instead of directories</span></span>
+<span class="line"><span>(fileprefix-slug-detail-resolution-type)</span></span></code></pre>
+<ol start="3">
+<li>File names could hold <strong>prefix</strong> or <strong>abbreviated keywords</strong> to sort related file together.<br>
+Examples:</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>abst      abstract data types    (structs / classes)</span></span>
+<span class="line"><span>data      data                   (models, scenes, vertices, materials input in general)</span></span>
+<span class="line"><span>map       mapping                (how to associate data / mappings ex. shader with file names)</span></span>
+<span class="line"><span>core      core                   (main file)</span></span>
+<span class="line"><span>util      utililities            (self written library functions, parsers / calculators etc.)</span></span>
+<span class="line"><span>test      testing                (test files)</span></span></code></pre>
+<ol start="4">
+<li>For static third party library folders: version number attached via ”-“<br>
+Example(s):</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>glm-0.9.9.8</span></span></code></pre>
+<hr>
+<h2 id="--variables">- Variables</h2>
+<ul>
+<li>
+<p>Use <strong>snake_case</strong> for variables and constants.<br>
+Reason of choice over <code>camelCase</code> better readability and writing efficiency. Tradeoffs: long naming, unable to provide categorization on names.</p>
+<p>Single character prefixes avoided to use because it has collision for certain naming.</p>
+<p>Examples:</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">  int</span><span style="color:#DBD7CAEE"> user_age </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 25</span><span style="color:#666666">;</span></span></code></pre>
+</li>
+<li>
+<p>Certain data types could be marked with prefixes.  But not with single characters due to collision on naming such as <code>v_tex_coords</code> (vertex texture coordinates) <code>g_buffer</code> etc.<br>
+Examples:</p>
+</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>  global              : gl_variable                         (important for distinction)</span></span>
+<span class="line"><span>  bools               : is_visible, has_alpha, use_shadows  (has verb that answers yes/no question)</span></span>
+<span class="line"><span>  constants           : VARIABLE                            (CAPITALIZED_SNAKE_CASE)</span></span>
+<span class="line"><span>  pointers            : ptr_variable                        (important for distinction)</span></span>
+<span class="line"><span>  const char pointer  : PTR_VARIABLE                        (combination of const and pointer)       </span></span>
+<span class="line"><span>  private variable    : _private                            (underscore as prefix to indicate private variable)</span></span></code></pre>
+<h3 id="-constants">— Constants</h3>
+<ul>
+<li>Use <strong>snake_case</strong> with a leading underscore for private members.<br>
+Examples:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">const</span><span style="color:#CB7676"> int</span><span style="color:#DBD7CAEE"> MAX_LIGHT_COUNT </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 100</span><span style="color:#666666">;</span></span></code></pre>
+</li>
+</ul>
+<h3 id="-private-members">— Private Members</h3>
+<ul>
+<li>Use <strong>snake_case</strong> with a leading underscore for private members.<br>
+Examples:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> UserProfile</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">private</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">  std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">string _name</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">};</span></span></code></pre>
+</li>
+</ul>
+<h3 id="-enums">— Enums</h3>
+<ul>
+<li>Use <strong>UPPER_SNAKE_CASE</strong> for enum values.<br>
+Examples:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">enum</span><span style="color:#CB7676"> class</span><span style="color:#5DA994"> Color</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#BD976A">  RED</span><span style="color:#666666">,</span></span>
+<span class="line"><span style="color:#BD976A">  GREEN</span><span style="color:#666666">,</span></span>
+<span class="line"><span style="color:#BD976A">  BLUE</span></span>
+<span class="line"><span style="color:#666666">};</span></span></code></pre>
+</li>
+</ul>
+<h2 id="--functions">- Functions</h2>
+<ul>
+<li>Use <strong>snake_case</strong> for naming functions.</li>
+<li>Starts with verb, as functions reflect some action.</li>
+<li>Try to describe what function does precisely and shortly as much as possible.</li>
+<li>Avoid ambiguities, meaning dualities or names with context.
+Examples:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> calculate_total</span><span style="color:#666666">(</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> price</span><span style="color:#666666">,</span><span style="color:#CB7676"> int</span><span style="color:#BD976A"> quantity</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">  return</span><span style="color:#DBD7CAEE"> price </span><span style="color:#CB7676">*</span><span style="color:#DBD7CAEE"> quantity</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+</li>
+</ul>
+<h2 id="--data-structures-classes-structs">- Data Structures: Classes, Structs</h2>
+<ul>
+<li>Use <strong>PascalCase</strong> for data structures.</li>
+<li>Try to use phrases rather than single words if you are not using namespaces to avoid possible collisions.<br>
+Examples:
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> UserProfile</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">  UserProfile</span><span style="color:#666666">(</span><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#5DA994">string</span><span style="color:#BD976A"> name</span><span style="color:#666666">)</span><span style="color:#666666"> :</span><span style="color:#80A665"> name</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">name</span><span style="color:#666666">)</span><span style="color:#666666"> {}</span></span>
+<span class="line"><span style="color:#CB7676">private</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">  std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">string name</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">};</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ObjToDraw</span></span>
+<span class="line"><span>ShaderCompileData</span></span>
+<span class="line"><span>MyClass</span></span></code></pre>
+</li>
+</ul>
+<h2 id="sources-and-links">Sources and Links</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left"></th><th align="left"></th></tr></thead><tbody><tr><td align="left">pep 8 – style guide for python code</td><td align="left"><a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a></td></tr><tr><td align="left">google styles guide</td><td align="left"><a href="https://google.github.io/styleguide/">https://google.github.io/styleguide/</a></td></tr><tr><td align="left">nasa c style</td><td align="left"><a href="http://cnl.sogang.ac.kr/cnlab/lectures/programming/c/nasa-c-style_1994.pdf">http://cnl.sogang.ac.kr/cnlab/lectures/programming/c/nasa-c-style_1994.pdf</a></td></tr><tr><td align="left">gnu coding standards</td><td align="left"><a href="https://www.gnu.org/prep/standards/">https://www.gnu.org/prep/standards/</a></td></tr><tr><td align="left">linux kernel</td><td align="left"><a href="https://www.kernel.org/doc/html/v4.10/process/coding-style.html">https://www.kernel.org/doc/html/v4.10/process/coding-style.html</a></td></tr><tr><td align="left">epic games</td><td align="left"><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine">https://dev.epicgames.com/documentation/en-us/unreal-engine/epic-cplusplus-coding-standard-for-unreal-engine</a></td></tr></tbody></table>
+<p>Additionally, I recommend to use <a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format tool</a> for customizable, reproducable automated formatting for <code>cpp</code> code.</p> </article><article class="article content" id="asset_naming_standards" data-astro-cid-qionvmkx> <div class="article-meta" data-astro-cid-qionvmkx> <h1 data-astro-cid-qionvmkx>Asset Naming Standards [Draft]</h1> <span data-astro-cid-qionvmkx>
+Published: Sun, 6 Oct 2024 </span> <span data-astro-cid-qionvmkx>
+Revision: Tue, 28 Jan 2025, v
+0.3 </span> <span data-astro-cid-qionvmkx>
+Language:  This content is in English. </span> </div> <p>A guideline for organizing assets in digital projects.</p>
+<h2 id="broad-guidelines-for-asset-naming">Broad Guidelines for Asset Naming</h2>
+<ol>
+<li>
+<p>To prevent capitalization based problems and ensure platform independency use all <strong>lowercase</strong> notation for naming asset files.</p>
+<p>Examples:</p>
+<ul>
+<li><strong>Good</strong>: <code>potato</code></li>
+<li><strong>Bad</strong>: <code>Potato</code> <code>pOtAtO</code> <code>POTATO</code></li>
+</ul>
+</li>
+<li>
+<p>The unique identifier for an asset under categories called <code>identifier</code> or <code>slug</code>.</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>If slug has multiple words, they should be separated by dash (_) instead of white space ( ).</p>
+</li>
+<li>
+<p>If slug has collision with an other name, it should receive incremental two digit number followed by slug (slug01). Two digit is to ensure correct sorting on computers.</p>
+</li>
+<li>
+<p>If the distinction between two assets are too small it should receive a variation letter at the end of number instead of increment.</p>
+</li>
+<li>
+<p>A slug may consists of just name, name + two digit number or name + two digit number + variation letter.</p>
+<p>Examples:</p>
+<ul>
+<li><strong>Good</strong>: <code>potato-bags</code> <code>potato-bags-01</code> <code>potato-bags-01a</code></li>
+<li><strong>Bad</strong>: <code>potato_bags</code> <code>potato-bags-2</code> <code>potato-bags-001</code></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>Name of the file may contain various metadata information about the asset. Each metadata type should be separated by an underscore (_) and should be sorted in an order.</p>
+<p>Pattern: <code>*</code> required <code>:</code> optional</p>
+<ul>
+<li><code>*</code>[identifier] - <code>:</code>[detail] - <code>:</code>by-[author] - <code>:</code>[source] - <code>:</code>[license] . <code>:</code>[format]
+<ul>
+<li><strong>Detail</strong>                    (optional) A human identifiable identifier name for the object.
+<ul>
+<li>Detail information    : Such as block, hp (high poly), lp (low poly)</li>
+<li>Style                 : <code>voxel</code>, <code>stylized</code>, <code>realistic</code></li>
+<li>Resolution            : <code>512</code>, <code>1k</code>, <code>2k</code>, <code>3k</code>, <code>4k</code> (required for texture or texture using objects)</li>
+<li>Level of Detail       : <code>lod1</code>, <code>lod2</code>, <code>lod3</code></li>
+<li>Part                  : Part of combination <code>xp</code> <code>xn</code> (x positive, x negative), <code>color</code> (color map for textures), <code>ao</code> (ambient occlusion for textures)</li>
+</ul>
+</li>
+<li><strong>Author</strong>                    (optional) name of the author or owner recognized by <code>by-</code> tag could be person, organization or institute</li>
+<li><strong>Source</strong>                    (optional) name of the source tag could be person, organization or institute</li>
+<li><strong>License</strong>                   (optional) If asset has a commercial, attribution or preventing modification license it should be encapsulated within a folder with the license files.</li>
+</ul>
+</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><strong>Good</strong>: <code>potato-bags-01a_2k_by-berk-gedik_sketchfab.gltf</code>
+<code>linegrid-16_darkgray_2k_color.png</code>
+<code>nebula-blue_2k_xp.jpg</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="folder-structure-for-assets">Folder Structure for Assets</h2>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>:root:</span></span>
+<span class="line"><span>├── uncategorized/              assets are not fitting any of the description below for later categorization</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── asset 3d/                   </span></span>
+<span class="line"><span>│   ├── models/                 single object models</span></span>
+<span class="line"><span>│   └── scenes/                 scenes with multiple objects, animations, lighting ...</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── asset 2d/</span></span>
+<span class="line"><span>│   ├── icons/                  icons</span></span>
+<span class="line"><span>│   ├── overlays/               overlays such as lens flare, color filters</span></span>
+<span class="line"><span>│   ├── textures_simple/        single textures</span></span>
+<span class="line"><span>│   ├── textures_cubemap/       six piece cubemap textures</span></span>
+<span class="line"><span>|   ├── textures_hdri/          high dynamic range lighting textures</span></span>
+<span class="line"><span>│   └── textures_pbr/           physically based rendering textures with various maps such as normal, roughness etc.</span></span>
+<span class="line"><span>│</span></span>
+<span class="line"><span>├── asset shader-material/      .hlsl, .glsl, .slang shaders or materials with specific parameter inputs</span></span>
+<span class="line"><span>│                               could also contain binary materials such as blender material objects</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>└── asset binary-graphs/        graph based modifiers such as blender geometry nodes, rhino grasshopper files, </span></span>
+<span class="line"><span>|                               json based custom graphs etc.</span></span>
+<span class="line"><span>|</span></span>
+<span class="line"><span>└── fonts                       simply fonts</span></span></code></pre>
+<h2 id="other-sources-and-links">Other Sources and Links</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Name</th><th align="left">Link</th><th align="left">Access Date</th></tr></thead><tbody><tr><td align="left">Project Structure &#x26; Naming Conventions by Unreal Engnine</td><td align="left"><a href="https://dev.epicgames.com/community/learning/tutorials/mX6b/unreal-engine-project-structure-naming-conventions">Link</a></td><td align="left">2025-01-25</td></tr><tr><td align="left">Polyhaven Technical Standards</td><td align="left"><a href="https://docs.polyhaven.com/en/technical-standards/models">Link</a></td><td align="left">2025-01-28</td></tr></tbody></table>
+<!-- 
+    #### Examples: 
+    sm_env_fagus-sylvatica_01a-hr_commercial
+    - Static Model, environmental element, fagus-sylvatica_01a, high resolution, commercial use
+    t_cmap_nebula_01_4k-xp_free
+    - Texture, cube map, nebula_01, 4k texture size x positive pose, free of use
+
+    ```
+--> </article> </div> <div class="toc-container no-select" data-astro-cid-qionvmkx> <div class="toc-article" data-slug="citation_standards" data-astro-cid-qionvmkx> <div class="toc-title" data-astro-cid-qionvmkx> <span style="color: var(--col)" data-astro-cid-qionvmkx> <b data-astro-cid-qionvmkx>Citation Standards</b> </span> </div> <div class="toc-sections" data-slug="citation_standards" data-astro-cid-qionvmkx> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#types-of-citation" data-astro-cid-qionvmkx> Types of Citation </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#semantics" data-astro-cid-qionvmkx> Semantics </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#metadata-handling" data-astro-cid-qionvmkx> Metadata Handling </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#articles" data-astro-cid-qionvmkx> - Articles </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#books" data-astro-cid-qionvmkx> - Books </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#dissertations" data-astro-cid-qionvmkx> - Dissertations </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#internet-websites-blogs-etc" data-astro-cid-qionvmkx> - Internet (websites, blogs, etc.) </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#news" data-astro-cid-qionvmkx> - News </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#other-media-podcast-video-etc" data-astro-cid-qionvmkx> - Other Media (podcast, video, etc.) </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#personal-communication-lecture-event-etc" data-astro-cid-qionvmkx> - Personal Communication (lecture, event, etc.) </a> <br data-astro-cid-qionvmkx> </span> </div> </div><div class="toc-article" data-slug="code_standards" data-astro-cid-qionvmkx> <div class="toc-title" data-astro-cid-qionvmkx> <span style="color: var(--col)" data-astro-cid-qionvmkx> <b data-astro-cid-qionvmkx>Code Standards [Draft]</b> </span> </div> <div class="toc-sections" data-slug="code_standards" data-astro-cid-qionvmkx> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#terminology" data-astro-cid-qionvmkx> Terminology </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#broad-guidelines-for-naming-things" data-astro-cid-qionvmkx> Broad Guidelines for Naming Things </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#broad-guidelines-for-formatting" data-astro-cid-qionvmkx> Broad Guidelines for Formatting </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#commenting-and-commit-messages" data-astro-cid-qionvmkx> - Commenting and Commit messages </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#files-and-directories" data-astro-cid-qionvmkx> - Files and Directories </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#variables" data-astro-cid-qionvmkx> - Variables </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-3" style="margin-left: 1.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#constants" data-astro-cid-qionvmkx> -- Constants </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-3" style="margin-left: 1.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#private-members" data-astro-cid-qionvmkx> -- Private Members </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-3" style="margin-left: 1.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#enums" data-astro-cid-qionvmkx> -- Enums </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#functions" data-astro-cid-qionvmkx> - Functions </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#data-structures-classes-structs" data-astro-cid-qionvmkx> - Data Structures: Classes, Structs </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#sources-and-links" data-astro-cid-qionvmkx> Sources and Links </a> <br data-astro-cid-qionvmkx> </span> </div> </div><div class="toc-article" data-slug="asset_naming_standards" data-astro-cid-qionvmkx> <div class="toc-title" data-astro-cid-qionvmkx> <span style="color: var(--col)" data-astro-cid-qionvmkx> <b data-astro-cid-qionvmkx>Asset Naming Standards [Draft]</b> </span> </div> <div class="toc-sections" data-slug="asset_naming_standards" data-astro-cid-qionvmkx> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#broad-guidelines-for-asset-naming" data-astro-cid-qionvmkx> Broad Guidelines for Asset Naming </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#folder-structure-for-assets" data-astro-cid-qionvmkx> Folder Structure for Assets </a> <br data-astro-cid-qionvmkx> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-qionvmkx> <a class="toc-content" href="#other-sources-and-links" data-astro-cid-qionvmkx> Other Sources and Links </a> <br data-astro-cid-qionvmkx> </span> </div> </div> </div> <script>
+        let activeArticle = null;
+
+        const articles = document.querySelectorAll("article");
+        const tocSections = document.querySelectorAll(".toc-sections");
+        const tocTitles = document.querySelectorAll(".toc-title");
+
+        // Show/hide TOC sections on mouse enter
+        articles.forEach((article) => {
+            article.addEventListener("mouseenter", () => {
+                activeArticle = article.id;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Click TOC title to scroll & set active article
+        tocTitles.forEach((title) => {
+            title.addEventListener("click", () => {
+                const slug = title.parentElement.dataset.slug;
+                const targetArticle = document.getElementById(slug);
+                if (!targetArticle) return;
+
+                // scroll to top of the article
+                targetArticle.scrollIntoView({ behavior: "smooth" });
+
+                // set active article
+                activeArticle = slug;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll(".toc-content").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = document.getElementById(
+                    link.getAttribute("href").substring(1)
+                );
+                target?.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>  </div> </body></html> 

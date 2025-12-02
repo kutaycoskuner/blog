@@ -1,0 +1,800 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/blog/favicon-triangle.svg"><meta name="generator" content="Astro v5.15.5"><title>Blog | Kutay Coskuner</title><link rel="stylesheet" href="/blog/_astro/index.T012VP1m.css">
+<link rel="stylesheet" href="/blog/_astro/cpp.B9JFC5hd.css"></head> <body> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1MDM6x" component-url="/blog/_astro/NavigationLeftHover.qKS1tYbE.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;NavigationLeftHover&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="navigation-container0 hover-control touch-control svelte-16y6g47"><div class="fixed-nav-icon hover-trans-invisible touch-menu-icon svelte-16y6g47" role="button" tabindex="0" aria-label="Open navigation"><img src="/blog/icons/menu-grid-256.png" alt="menu" class="svelte-16y6g47"/></div> <nav class="navigation hover-trans-visible touch-leftslide svelte-16y6g47"><div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/" class="svelte-16y6g47">architecture</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/port/computer_science" class="svelte-16y6g47">computer science</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/port/game_design" class="svelte-16y6g47">game design</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/blog" class="svelte-16y6g47">blog</a></div> <div role="button" tabindex="0" aria-label="Close navigation"><a href="https://kutaycoskuner.github.io/about" class="svelte-16y6g47">about</a></div> <div class="touch-only svelte-16y6g47" role="button" tabindex="0" aria-label="Close navigation"><img src="/blog/icons/arrow_left-256.png" alt="arrow" class="svelte-16y6g47"/></div> <div class="navigation-icons hover-trans-visible svelte-16y6g47"></div></nav></div><!--]--><!--astro:end--></astro-island> <astro-island uid="Z1DDvuC" component-url="/blog/_astro/GotoTop.CD3cRqdB.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;GotoTop&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="goto-top svelte-3kvxk2" role="button" tabindex="0" aria-label="Go to top"><img src="/blog//icons/arrow_left-256.png" alt="arrow" class="svelte-3kvxk2"/></div><!--]--><!--astro:end--></astro-island> <astro-island uid="VOzTC" component-url="/blog/_astro/ColorMode.BC0Jh7Pe.js" component-export="default" renderer-url="/blog/_astro/client.svelte.D6871AHQ.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;ColorMode&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="ncolor-mode svelte-vukpr4" role="button" tabindex="0" aria-label="Toggle Color Mode (Current Mode: system)"><!--[--><div class="light-mode"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.4" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="square" stroke-linejoin="miter-clip" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"></path></svg></div><!--]--></div><!--]--><!--astro:end--></astro-island> <div class="slot">  <div class="main markdown" data-astro-cid-paqvxbhy> <article class="article content" id="inheritance" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Inheritance</h1> <span data-astro-cid-paqvxbhy>
+Published: Thu, 30 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Thu, 30 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>Inheritance is a fundamental concept in object-oriented programming (OOP) that allows one class (the derived class) to inherit the properties and behaviors (methods) of another class (the base class). This concept promotes code reuse, modularity, and the creation of class hierarchies.</p>
+<h2 id="key-concepts-of-inheritance">Key Concepts of Inheritance</h2>
+<h4 id="base-class-parent-class">Base Class (Parent Class)</h4>
+<p>The class whose properties and methods are inherited by another class.<br>
+<code>class Animal { ... };</code></p>
+<h4 id="derived-class-child-class">Derived Class (Child Class)</h4>
+<p>The class that inherits from the base class.<br>
+<code>class Dog : public Animal { ... };</code></p>
+<h4 id="access-specifiers">Access Specifiers</h4>
+<p>Inheritance can be controlled using access specifiers</p>
+<ul>
+<li><strong>public</strong> : Public and protected members of the base class remain public and protected in the derived class.</li>
+<li><strong>protected</strong> : Public and protected members of the base class become protected in the derived class.</li>
+<li><strong>private</strong> : Public and protected members of the base class become private in the derived class.</li>
+</ul>
+<h4 id="types-of-inheritance">Types of Inheritance</h4>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Single Inheritance: A derived class inherits from only one base class.</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Dog</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Multiple Inheritance: A derived class inherits from more than one base class.</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Dog</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666">,</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Multilevel Inheritance: A derived class inherits from another derived class.</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Dog</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Hybrid Inheritance: A combination of multiple and multilevel inheritance.</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Bird</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Bat</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Mammal</span><span style="color:#666666">,</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Bird</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> ... </span><span style="color:#666666">};</span></span></code></pre>
+<h4 id="constructor-and-destructor-in-inheritance">Constructor and Destructor in Inheritance</h4>
+<ul>
+<li>The base class constructor is called before the derived class constructor.</li>
+<li>The derived class destructor is called before the base class destructor.</li>
+</ul>
+<h2 id="function-overloading">Function overloading</h2>
+<p>The derived class can override methods of the base class to provide specific implementations.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    void</span><span style="color:#80A665"> speak</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Animal sound</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> endl</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Dog</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Animal</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    void</span><span style="color:#80A665"> speak</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Woof!</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> endl</span><span style="color:#666666">;</span><span style="color:#666666"> }</span><span style="color:#758575DD"> // Overriding</span></span>
+<span class="line"><span style="color:#666666">};</span></span></code></pre>
+<h2 id="practical-use-of-inheritance">Practical Use of Inheritance</h2>
+<dl>
+  <dt>Code Reusability</dt>
+  <dd>Inheritance allows you to reuse code from the base class, reducing redundancy and improving maintainability. Example: If multiple classes share common attributes (e.g., Animal class with name and age), you can define them once in the base class.</dd>
+  <dt>Polymorphism</dt>
+  <dd>Inheritance enables polymorphism, where a derived class object can be treated as a base class object. Example: A Dog object can be treated as an Animal object, allowing for flexible and extensible code.</dd>
+  <dt>Extensibility</dt>
+  <dd>You can extend the functionality of a base class without modifying it. Example: Add a new method fetch() to the Dog class without changing the Animal class.</dd>
+  <dt>Real-World Modeling</dt>
+  <dd>Inheritance helps model real-world relationships (e.g., a Dog is an Animal).</dd>
+</dl>
+<h4 id="cons">Cons</h4>
+<dl>
+  <dt>Tight Coupling</dt>
+  <dd>Changes in the base class can affect all derived classes, leading to fragile code.</dd>
+  <dt>Complexity</dt>
+  <dd>Deep inheritance hierarchies can make the code harder to understand and maintain.</dd>
+  <dt>Misuse</dt>
+  <dd>Overusing inheritance can lead to overly complex designs (e.g., "god objects").</dd>
+  <dt>Multiple Inheritance Issues</dt>
+  <dd>Multiple inheritance can lead to ambiguity (e.g., the "diamond problem").</dd>
+</dl> </article><article class="article content" id="meta_programming" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Meta Programming</h1> <span data-astro-cid-paqvxbhy>
+Published: Thu, 30 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Thu, 30 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>Template meta-programming (TMP) is a technique where templates are used to perform computations, generate code, or make decisions at compile time. It leverages the C++ compiler to evaluate expressions and generate code before the program runs.</p>
+<h2 id="idea">Idea</h2>
+<ul>
+<li>Templates are not just for generic programming (writing code that works with any type). They can also be used to perform compile-time computations and code generation.</li>
+<li>The compiler evaluates templates and generates code based on the rules of template instantiation.</li>
+</ul>
+<h2 id="--templates">- Templates</h2>
+<ul>
+<li>Templates are the foundation of meta-programming in C++. They allow you to write generic code that works with any data type.</li>
+<li>There are two types of templates:
+<ul>
+<li><strong>Function Templates</strong>  : Define generic functions.</li>
+<li><strong>Class Templates</strong>     : Define generic classes.</li>
+</ul>
+</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Function template example</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">string</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Renamed to avoid conflict with std::max</span></span>
+<span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;</span><span style="color:#CB7676">typename</span><span style="color:#5DA994"> T</span><span style="color:#666666">></span></span>
+<span class="line"><span style="color:#5DA994">T</span><span style="color:#80A665"> my_max</span><span style="color:#666666">(</span><span style="color:#CB7676">const</span><span style="color:#5DA994"> T</span><span style="color:#CB7676">&#x26;</span><span style="color:#BD976A"> a</span><span style="color:#666666">,</span><span style="color:#CB7676"> const</span><span style="color:#5DA994"> T</span><span style="color:#CB7676">&#x26;</span><span style="color:#BD976A"> b</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#666666"> (</span><span style="color:#DBD7CAEE">a </span><span style="color:#CB7676">></span><span style="color:#DBD7CAEE"> b</span><span style="color:#666666">)</span><span style="color:#CB7676"> ?</span><span style="color:#DBD7CAEE"> a </span><span style="color:#CB7676">:</span><span style="color:#DBD7CAEE"> b</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#758575DD">    // Example with integers</span></span>
+<span class="line"><span style="color:#CB7676">    int</span><span style="color:#DBD7CAEE"> intMax </span><span style="color:#666666">=</span><span style="color:#80A665"> my_max</span><span style="color:#666666">(</span><span style="color:#4C9A91">10</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 20</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Max of 10 and 20: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> intMax </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">    // Example with doubles</span></span>
+<span class="line"><span style="color:#CB7676">    double</span><span style="color:#DBD7CAEE"> doubleMax </span><span style="color:#666666">=</span><span style="color:#80A665"> my_max</span><span style="color:#666666">(</span><span style="color:#4C9A91">3.14</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 2.71</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Max of 3.14 and 2.71: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> doubleMax </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">    // Example with strings</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">string strMax </span><span style="color:#666666">=</span><span style="color:#80A665"> my_max</span><span style="color:#666666">(</span><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#80A665">string</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">apple</span><span style="color:#C98A7D77">"</span><span style="color:#666666">),</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#80A665">string</span><span style="color:#666666">(</span><span style="color:#C98A7D77">"</span><span style="color:#C98A7D">banana</span><span style="color:#C98A7D77">"</span><span style="color:#666666">));</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Max of 'apple' and 'banana': </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> strMax </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="--template-specialization">- Template specialization</h2>
+<ul>
+<li>Specialization allows you to define specific implementations of a template for particular types.</li>
+<li>This is useful when the generic implementation doesn’t work for certain types.</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Template specialization</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Primary template (generic case)</span></span>
+<span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;</span><span style="color:#CB7676">typename</span><span style="color:#5DA994"> T</span><span style="color:#666666">></span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> print</span><span style="color:#666666">(</span><span style="color:#5DA994">T</span><span style="color:#BD976A"> value</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">General template: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> value </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Specialization for `int`</span></span>
+<span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;></span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> print</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">int</span><span style="color:#666666">>(</span><span style="color:#CB7676">int</span><span style="color:#DBD7CAEE"> value</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Specialized template for int: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> value </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    print</span><span style="color:#666666">(</span><span style="color:#4C9A91">3.14</span><span style="color:#666666">);</span><span style="color:#758575DD">  // Uses the general template</span></span>
+<span class="line"><span style="color:#80A665">    print</span><span style="color:#666666">(</span><span style="color:#4C9A91">42</span><span style="color:#666666">);</span><span style="color:#758575DD">    // Uses the specialized template for int</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="--type-traits">- Type Traits</h2>
+<p>Type traits are a way to introspect and manipulate types at compile-time.</p>
+<p>They are often used in template meta-programming to make decisions based on the properties of types.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Type traits example</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">type_traits</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Function template using type traits</span></span>
+<span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;</span><span style="color:#CB7676">typename</span><span style="color:#5DA994"> T</span><span style="color:#666666">></span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> printType</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">    if</span><span style="color:#666666"> (</span><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#80A665">is_integral</span><span style="color:#666666">&#x3C;</span><span style="color:#5DA994">T</span><span style="color:#666666">>::</span><span style="color:#DBD7CAEE">value</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Integral type</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    }</span><span style="color:#4D9375"> else</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Non-integral type</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">int</span><span style="color:#666666">>();</span><span style="color:#758575DD">      // Integral type</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">double</span><span style="color:#666666">>();</span><span style="color:#758575DD">   // Non-integral type</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">char</span><span style="color:#666666">>();</span><span style="color:#758575DD">     // Integral type</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">float</span><span style="color:#666666">>();</span><span style="color:#758575DD">    // Non-integral type</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">long</span><span style="color:#666666">>();</span><span style="color:#758575DD">     // Integral type</span></span>
+<span class="line"><span style="color:#80A665">    printType</span><span style="color:#666666">&#x3C;</span><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#5DA994">string</span><span style="color:#666666">>();</span><span style="color:#758575DD"> // Non-integral type</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="--constexpr">- constexpr</h2>
+<p><code>constexpr</code> is a keyword in C++ that indicates that the value of a variable or function can be evaluated at compile time. This allows for optimizations and can improve performance by moving computations from runtime to compile time. It was introduced in C++11 and has been expanded in subsequent standards (C++14, C++17, and C++20).</p>
+<h4 id="key-concepts">Key Concepts</h4>
+<dl>
+  <dt><strong>constexpr Variables</strong></dt>
+  <dd>Variables whose values are known at compile time.</dd>
+  <dt><strong>constexpr Functions</strong></dt>
+  <dd>Functions that can be evaluated at compile time if their arguments are constant expressions.</dd>
+  <dt><strong>constexpr Constructors</strong></dt>
+  <dd>Allow the creation of constexpr objects.</dd>
+</dl>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Example constexpr function</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">constexpr</span><span style="color:#CB7676"> int</span><span style="color:#80A665"> factorial</span><span style="color:#666666">(</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> n</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">return</span><span style="color:#666666"> (</span><span style="color:#DBD7CAEE">n </span><span style="color:#CB7676">&#x3C;=</span><span style="color:#4C9A91"> 1</span><span style="color:#666666">)</span><span style="color:#CB7676"> ?</span><span style="color:#4C9A91"> 1</span><span style="color:#CB7676"> :</span><span style="color:#DBD7CAEE"> n \</span><span style="color:#CB7676">*</span><span style="color:#80A665"> factorial</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">n </span><span style="color:#CB7676">-</span><span style="color:#4C9A91"> 1</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">constexpr</span><span style="color:#CB7676"> int</span><span style="color:#DBD7CAEE"> value </span><span style="color:#666666">=</span><span style="color:#80A665"> factorial</span><span style="color:#666666">(</span><span style="color:#4C9A91">5</span><span style="color:#666666">);</span><span style="color:#758575DD"> // Computed at compile time</span></span>
+<span class="line"><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Factorial of 5: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> value </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#4D9375">return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h4 id="explanation">Explanation</h4>
+<p>factorial(5) is computed at compile time because it is marked as constexpr.
+The result is stored in the constexpr variable value.</p>
+<p><strong>When to Use constexpr</strong></p>
+<dl>
+  <dt><strong>Compile-Time Calculations</strong></dt>
+  <dd>Use constexpr for calculations that can be done at compile time to improve runtime performance.</dd>
+  <dt><strong>Constant Values</strong></dt>
+  <dd>Use constexpr for values that are known at compile time and will not change.</dd>
+  <dt><strong>Template Metaprogramming</strong></dt>
+  <dd>constexpr is often used in template metaprogramming to perform computations at compile time.</dd>
+  <dt><strong>Optimization</strong></dt>
+  <dd>Use constexpr to enable compiler optimizations and reduce runtime overhead.</dd>
+</dl>
+<h4 id="pros">Pros</h4>
+<dl>
+  <dt><strong>Performance</strong></dt>
+  <dd>Moves computations to compile time, reducing runtime overhead.</dd>
+  <dt><strong>Safety</strong></dt>
+  <dd>Ensures that values are constant and cannot be modified.</dd>
+  <dt><strong>Readability</strong></dt>
+  <dd>Makes it clear that a value or function is intended to be evaluated at compile time.</dd>
+  <dt><strong>Metaprogramming</strong></dt>
+  <dd>Enables powerful compile-time programming techniques.</dd>
+</dl>
+<h4 id="cons">Cons</h4>
+<dl>
+  <dt><strong>Restrictions</strong></dt>
+  <dd>Functions and constructors must adhere to strict rules (e.g., no I/O, no dynamic memory allocation).</dd>
+  <dt><strong>Complexity</strong></dt>
+  <dd>Can make code harder to understand for beginners.</dd>
+  <dt><strong>Compiler Support</strong></dt>
+  <dd>Older compilers may not fully support constexpr features.</dd>
+</dl>
+<h2 id="--variadic-templates">- Variadic Templates</h2>
+<ul>
+<li>Variadic templates allow you to define templates that accept a variable number of arguments.</li>
+<li>This is useful for creating generic functions or classes that work with any number of arguments.</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Variadic template example</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Base case: Stop recursion when no arguments remain</span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> print</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#758575DD">// Variadic template function</span></span>
+<span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;</span><span style="color:#CB7676">typename</span><span style="color:#5DA994"> First</span><span style="color:#666666">,</span><span style="color:#CB7676"> typename</span><span style="color:#666666">...</span><span style="color:#5DA994"> Rest</span><span style="color:#666666">></span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> print</span><span style="color:#666666">(</span><span style="color:#5DA994">First</span><span style="color:#BD976A"> first</span><span style="color:#666666">,</span><span style="color:#5DA994"> Rest</span><span style="color:#666666">...</span><span style="color:#BD976A"> rest</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> first </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D77"> "</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#80A665">    print</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">rest...</span><span style="color:#666666">);</span><span style="color:#758575DD"> // Recursive call with remaining arguments</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    print</span><span style="color:#666666">(</span><span style="color:#4C9A91">1</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 2.5</span><span style="color:#666666">,</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Hello</span><span style="color:#C98A7D77">"</span><span style="color:#666666">,</span><span style="color:#C98A7D77"> '</span><span style="color:#C98A7D">A</span><span style="color:#C98A7D77">'</span><span style="color:#666666">);</span><span style="color:#758575DD"> // Works with different types</span></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="practical-use-of-template-meta-programming">Practical Use of Template Meta-Programming</h2>
+<dl>
+  <dt>Generic Libraries</dt>
+  <dd>Template meta-programming is widely used in libraries like the Standard Template Library (STL) to create generic containers (e.g., std::vector, std::map) and algorithms (e.g., std::sort, std::find).</dd>
+  <dt>Compile-Time Computations</dt>
+  <dd>Template meta-programming allows you to perform computations at compile-time, which can lead to more efficient runtime performance.
+  <strong>Example:</strong> Calculating factorials, Fibonacci numbers, or other mathematical operations at compile-time.</dd>
+  <dt>Type Safety and Code Reusability</dt>
+  <dd>Templates enable you to write type-safe code that can be reused across different data types without duplicating code.</dd>
+  <dt>Domain-Specific Languages (DSLs)</dt>
+  <dd>Template meta-programming can be used to create embedded DSLs within C++, allowing for more expressive and concise code in specific domains.</dd>
+</dl>
+<h2 id="why-it-could-not-be-solved-other-way">Why It Could Not Be Solved Other Way</h2>
+<dl>
+  <dt>Runtime Overhead</dt>
+  <dd>Without templates, you would need to write separate functions or classes for each data type, leading to code duplication and increased runtime overhead.</dd>
+  <dt>Lack of Flexibility</dt>
+  <dd>Traditional approaches (e.g., function overloading) are limited in their ability to handle arbitrary types and compile-time logic.</dd>
+  <dt>Performance</dt>
+  <dd>Template meta-programming allows for compile-time optimizations that are not possible with runtime techniques.</dd>
+</dl>
+<h4 id="pros-1">Pros</h4>
+<dl>
+  <dt>Code Reusability</dt>
+  <dd>Write once, use with any type.</dd>
+  <dt>Performance</dt>
+  <dd>Compile-time computations reduce runtime overhead.</dd>
+  <dt>Type Safety</dt>
+  <dd>Templates ensure type correctness at compile-time.</dd>
+  <dt>Flexibility</dt>
+  <dd>Supports complex compile-time logic and type manipulation.</dd>
+</dl>
+<h4 id="cons-1">Cons</h4>
+<dl>
+  <dt>Complexity</dt>
+  <dd>Template meta-programming can be difficult to understand and debug.</dd>
+  <dt>Compile-Time Errors</dt>
+  <dd>Errors in templates can lead to cryptic and hard-to-debug messages.</dd>
+  <dt>Code Bloat</dt>
+  <dd>Excessive use of templates can lead to increased binary size due to code generation for each type.</dd>
+</dl> </article><article class="article content" id="functor_lambda" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Functor and Lambda</h1> <span data-astro-cid-paqvxbhy>
+Published: Thu, 30 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Thu, 30 Jan 2025, v
+0.2 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <h2 id="functors">Functors</h2>
+<p>A functor (or function object) in C++ is an object that can be used as if it were a function. This is achieved by overloading the operator() for a class. Functors are more powerful than regular functions because they can maintain state between calls and can be customized through their constructors. They could be passed as parameters to other functions.</p>
+<p><strong>Key Concepts</strong>:</p>
+<dl>
+  <dt>Overloading operator()</dt>
+  <dd>A class becomes a functor by defining the operator() method.</dd>
+  <dt>Stateful Behavior</dt>
+  <dd>Functors can store data as member variables, allowing them to maintain state across multiple calls.</dd>
+  <dt>Customization</dt>
+  <dd>Functors can be initialized with data, making them highly flexible.</dd>
+</dl>
+<h4 id="example">Example</h4>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">vector</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">algorithm</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">cmath</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">struct</span><span style="color:#5DA994"> CompareByProximity</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">    int</span><span style="color:#DBD7CAEE"> threshold</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#80A665">    CompareByProximity</span><span style="color:#666666">(</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> t</span><span style="color:#666666">)</span><span style="color:#666666"> :</span><span style="color:#80A665"> threshold</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">t</span><span style="color:#666666">)</span><span style="color:#666666"> {}</span><span style="color:#758575DD">  // Constructor to store extra parameter</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">    bool</span><span style="color:#4D9375"> operator</span><span style="color:#80A665">()</span><span style="color:#666666">(</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> a</span><span style="color:#666666">,</span><span style="color:#CB7676"> int</span><span style="color:#BD976A"> b</span><span style="color:#666666">)</span><span style="color:#CB7676"> const</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">        return</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#80A665">abs</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">a </span><span style="color:#CB7676">-</span><span style="color:#DBD7CAEE"> threshold</span><span style="color:#666666">)</span><span style="color:#CB7676"> &#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#80A665">abs</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">b </span><span style="color:#CB7676">-</span><span style="color:#DBD7CAEE"> threshold</span><span style="color:#666666">);</span></span>
+<span class="line"><span style="color:#666666">    }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">vector</span><span style="color:#CB7676">&#x3C;int></span><span style="color:#DBD7CAEE"> nums </span><span style="color:#666666">=</span><span style="color:#666666"> {</span><span style="color:#4C9A91">10</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 3</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 7</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 15</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 2</span><span style="color:#666666">};</span></span>
+<span class="line"><span style="color:#CB7676">    int</span><span style="color:#DBD7CAEE"> threshold </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 8</span><span style="color:#666666">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#80A665">sort</span><span style="color:#666666">(</span><span style="color:#BD976A">nums</span><span style="color:#666666">.</span><span style="color:#80A665">begin</span><span style="color:#666666">(),</span><span style="color:#BD976A"> nums</span><span style="color:#666666">.</span><span style="color:#80A665">end</span><span style="color:#666666">(),</span><span style="color:#80A665"> CompareByProximity</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">threshold</span><span style="color:#666666">));</span><span style="color:#758575DD">  // Works</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    for</span><span style="color:#666666"> (</span><span style="color:#CB7676">int</span><span style="color:#DBD7CAEE"> n </span><span style="color:#666666">:</span><span style="color:#DBD7CAEE"> nums</span><span style="color:#666666">)</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> n </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D77"> "</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<p><strong>With Normal Function</strong></p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>bool compare(int a, int b, int threshold) {  // Error: std::sort expects a function with two parameters only</span></span>
+<span class="line"><span>    return std::abs(a - threshold) &#x3C; std::abs(b - threshold);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>std::sort(nums.begin(), nums.end(), compare);  // ❌ Won't work: expects a function with (int, int)</span></span></code></pre>
+<h4 id="explanation">Explanation</h4>
+<p>A normal function cannot be used because std::sort requires a callable with exactly two parameters, while a functor (or lambda) can encapsulate additional state.</p>
+<h4 id="when-to-use-functors">When to use <code>functors</code></h4>
+<dl>
+  <dt><strong>Custom Behavior</strong></dt>
+  <dd>When you need custom logic that depends on state or parameters.</dd>
+  <dt><strong>STL Algorithms</strong></dt>
+  <dd>When working with STL algorithms like std::sort, std::count_if, etc.</dd>
+  <dt><strong>Stateful Functions</strong></dt>
+  <dd>When you need a function-like object that maintains state between calls.</dd>
+  <dt><strong>Performance</strong></dt>
+  <dd>Functors can be inlined by the compiler, potentially offering better performance than function pointers.</dd>
+</dl>
+<h4 id="pros">Pros</h4>
+<dl>
+  <dt><strong>Stateful</strong></dt>
+  <dd>Can maintain state between calls.</dd>
+  <dt><strong>Customizable</strong></dt>
+  <dd>Can be initialized with parameters for flexible behavior.</dd>
+  <dt><strong>Performance</strong></dt>
+  <dd>Often faster than function pointers due to inlining.</dd>
+  <dt><strong>Compatibility</strong></dt>
+  <dd>Works seamlessly with STL algorithms.</dd>
+</dl>
+<h4 id="cons">Cons</h4>
+<dl>
+  <dt><strong>Verbosity</strong></dt>
+  <dd>Requires defining a class, which can be overkill for simple tasks.</dd>
+  <dt><strong>Complexity</strong></dt>
+  <dd>Can make code harder to read for beginners.</dd>
+  <dt><strong>Object Overhead</strong></dt>
+  <dd>Requires creating an object, which may introduce slight overhead.</dd>
+</dl>
+<h4 id="additions">Additions</h4>
+<p>In modern C++ (C++11 and later), lambdas are often preferred over functors for simple tasks because they are more concise. However, functors are still useful for complex logic or when reusability is important.</p>
+<h2 id="lambda-functions">Lambda functions</h2>
+<p>Lambdas, introduced in C++11, are a concise way to define anonymous functions (i.e., functions without a name) directly in your code. They are particularly useful for short, one-off functions that are passed as arguments to higher-order functions like STL algorithms. Lambdas can capture variables from their surrounding scope, making them highly flexible and expressive.</p>
+<p><strong>Key Concepts</strong></p>
+<ol>
+<li><strong>Syntax</strong>: A lambda has the following general syntax:</li>
+</ol>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#666666">[</span><span style="color:#BD976A">capture</span><span style="color:#666666">](</span><span style="color:#5DA994">parameters</span><span style="color:#666666">)</span><span style="color:#666666"> -></span><span style="color:#CB7676"> return_type</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> body </span><span style="color:#666666">}</span></span></code></pre>
+<dl>
+  <dt>Capture</dt> <dd>Specifies which variables from the surrounding scope are accessible inside the lambda.</dd>
+  <dt>Parameters</dt> <dd>The input arguments for the lambda (similar to function parameters).</dd>
+  <dt>Return Type</dt> <dd>Optional; the compiler can often deduce it automatically.</dd>
+  <dt>Body</dt> <dd>The code that executes when the lambda is called.</dd>
+</dl>
+<ol start="2">
+<li>
+<p><strong>Capture Clauses</strong>:</p>
+<ul>
+<li>[]: Capture nothing.</li>
+<li>[&#x26;]: Capture all variables by reference.</li>
+<li>[=]: Capture all variables by value.</li>
+<li>[var]: Capture var by value.</li>
+<li>[&#x26;var]: Capture var by reference.</li>
+<li>[this]: Capture the this pointer (for member functions).</li>
+</ul>
+</li>
+<li>
+<p><strong>Mutable Lambdas</strong>: By default, variables captured by value are <code>const</code> inside the lambda. Use the <code>mutable</code> keyword to modify them.</p>
+</li>
+<li>
+<p><strong>Return Type</strong>: If the body contains multiple return statements or complex logic, you may need to explicitly specify the return type using <code>-> return_type</code>.</p>
+</li>
+</ol>
+<h4 id="example-1">Example</h4>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">vector</span><span style="color:#C98A7D77">></span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">algorithm</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">vector</span><span style="color:#CB7676">&#x3C;int></span><span style="color:#DBD7CAEE"> nums </span><span style="color:#666666">=</span><span style="color:#666666"> {</span><span style="color:#4C9A91">1</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 2</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 3</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 4</span><span style="color:#666666">,</span><span style="color:#4C9A91"> 5</span><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#80A665">for_each</span><span style="color:#666666">(</span><span style="color:#BD976A">nums</span><span style="color:#666666">.</span><span style="color:#80A665">begin</span><span style="color:#666666">(),</span><span style="color:#BD976A"> nums</span><span style="color:#666666">.</span><span style="color:#80A665">end</span><span style="color:#666666">(),</span><span style="color:#666666"> [](</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> n</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> n </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D77"> "</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    });</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span></code></pre>
+<h4 id="explanation-1">Explanation</h4>
+<p>This lambda simply takes an integer n and prints it, making it a clean and modern alternative to loops.</p>
+<h4 id="why-use-a-lambda-here">Why Use a Lambda Here?</h4>
+<dl>
+  <dt><strong>Concise</strong></dt>
+  <dd>No need to define a separate function.</dd>
+  <dt><strong>Inline Readability</strong></dt>
+  <dd>Keeps logic close to where it's used.</dd>
+  <dt><strong>No Boilerplate</strong></dt>
+  <dd>Avoids defining a named function or functor.</dd>
+</dl> </article><article class="article content" id="type_deduction" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Type Deduction</h1> <span data-astro-cid-paqvxbhy>
+Published: Thu, 30 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Thu, 30 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>Type deduction in C++ refers to the compiler’s ability to automatically infer the type of a variable or expression based on the context, without the programmer having to explicitly specify it. This feature simplifies code, enhances flexibility, and reduces redundancy.</p>
+<h2 id="--auto-keyword">- auto keyword</h2>
+<p>The auto keyword allows the compiler to automatically deduce the type of a variable from its initializer.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">auto</span><span style="color:#DBD7CAEE"> x </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 5</span><span style="color:#666666">;</span><span style="color:#758575DD">   // x is deduced to be of type int</span></span>
+<span class="line"><span style="color:#CB7676">auto</span><span style="color:#DBD7CAEE"> y </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 3.14</span><span style="color:#666666">;</span><span style="color:#758575DD"> // y is deduced to be of type double</span></span></code></pre>
+<h2 id="--decltype-keyword">- decltype Keyword</h2>
+<p>decltype is used to explicitly deduce the type of an expression without evaluating it.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">int</span><span style="color:#DBD7CAEE"> a </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 10</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">decltype</span><span style="color:#666666">(</span><span style="color:#DBD7CAEE">a</span><span style="color:#666666">)</span><span style="color:#DBD7CAEE"> b </span><span style="color:#666666">=</span><span style="color:#DBD7CAEE"> a</span><span style="color:#666666">;</span><span style="color:#758575DD">  // b is deduced to be of type int</span></span></code></pre>
+<h2 id="--function-return-type-deduction">- Function Return Type Deduction</h2>
+<p>C++14 introduced the ability to deduce the return type of a function using auto.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">auto</span><span style="color:#80A665"> add</span><span style="color:#666666">(</span><span style="color:#CB7676">int</span><span style="color:#BD976A"> a</span><span style="color:#666666">,</span><span style="color:#CB7676"> int</span><span style="color:#BD976A"> b</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#DBD7CAEE"> a </span><span style="color:#CB7676">+</span><span style="color:#DBD7CAEE"> b</span><span style="color:#666666">;</span><span style="color:#758575DD"> // deduces return type to be int</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="--template-type-deduction">- Template Type Deduction</h2>
+<p>Templates can use type deduction for function or class templates.</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">template</span><span style="color:#666666"> &#x3C;</span><span style="color:#CB7676">typename</span><span style="color:#5DA994"> T</span><span style="color:#666666">></span></span>
+<span class="line"><span style="color:#CB7676">void</span><span style="color:#80A665"> print</span><span style="color:#666666">(</span><span style="color:#5DA994">T</span><span style="color:#BD976A"> value</span><span style="color:#666666">)</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#DBD7CAEE"> value </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    print</span><span style="color:#666666">(</span><span style="color:#4C9A91">42</span><span style="color:#666666">);</span><span style="color:#758575DD"> // T is deduced to be int</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<h2 id="practical-use">Practical Use</h2>
+<ol>
+<li>Why Type Deduction is Useful</li>
+</ol>
+<p><strong>Code Simplification</strong>: Without type deduction, you’d have to explicitly declare types, which can be repetitive and error-prone, especially for complex types like iterators, lambdas, or template classes.</p>
+<p><strong>Generic Code</strong>: Type deduction is crucial when writing generic code (e.g., template functions or classes). It allows the compiler to infer the correct type for any provided argument without needing to write specific type overloads.</p>
+<p>Without type deduction, you’d need to explicitly write multiple overloads for different types, leading to code duplication and clutter.</p>
+<ol start="2">
+<li>Why It Could Not Be Solved Another Way</li>
+</ol>
+<p>Without type deduction, the programmer would have to manually specify types in many places, which could lead to cumbersome, error-prone, and less flexible code.</p>
+<p>For example, without auto, you would have to explicitly write complex iterator types for container elements:</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#80A665">std</span><span style="color:#666666">::</span><span style="color:#80A665">vector</span><span style="color:#666666">&#x3C;</span><span style="color:#CB7676">int</span><span style="color:#666666">>::</span><span style="color:#DBD7CAEE">iterator it </span><span style="color:#666666">=</span><span style="color:#BD976A"> vec</span><span style="color:#666666">.</span><span style="color:#80A665">begin</span><span style="color:#666666">();</span><span style="color:#758575DD">  // long and error-prone</span></span>
+<span class="line"><span style="color:#CB7676">auto</span><span style="color:#DBD7CAEE"> it </span><span style="color:#666666">=</span><span style="color:#BD976A"> vec</span><span style="color:#666666">.</span><span style="color:#80A665">begin</span><span style="color:#666666">();</span><span style="color:#758575DD">  // much more concise and clear</span></span></code></pre>
+<h4 id="pros">Pros</h4>
+<p><strong>Code Conciseness</strong>: It eliminates the need to explicitly declare types, leading to more readable and concise code.</p>
+<p><strong>Maintainability</strong>: Reduces code duplication, making it easier to modify, refactor, or extend code (e.g., changing a container type doesn’t require changing variable types everywhere).</p>
+<p><strong>Improved Generic Programming</strong>: Facilitates generic code where the types are automatically inferred, enabling better code reuse.</p>
+<h4 id="cons">Cons</h4>
+<p><strong>Loss of Explicitness</strong>: The type may be unclear to someone reading the code, especially for more complex expressions, which can reduce code clarity.</p>
+<p><strong>Compiler Errors</strong>: The compiler’s type deduction might not always work as expected, leading to confusing or complex error messages, particularly in complex template-based code.</p>
+<p><strong>Overuse of auto</strong>: If overused, it can hide the underlying type, leading to ambiguity, especially for function return types.</p> </article><article class="article content" id="virtual_destructors" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Virtual Destructors</h1> <span data-astro-cid-paqvxbhy>
+Published: Fri, 31 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Fri, 31 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>A virtual destructor ensures that the destructor of a derived class is called when an object is deleted through a base class pointer. It prevents resource leaks and undefined behavior.</p>
+<h4 id="polymorphism--base-class-pointer-behavior">Polymorphism &#x26; Base-Class Pointer Behavior</h4>
+<ul>
+<li>If a base class has a non-virtual destructor, deleting a derived class object via a base class pointer will cause only the base class destructor to execute, leading to resource leaks.</li>
+<li>A virtual destructor ensures that the derived class destructor runs first, followed by the base class destructor.</li>
+</ul>
+<h4 id="virtual-table-vtable-mechanism">Virtual Table (vtable) Mechanism</h4>
+<ul>
+<li>When a class has a virtual function (including a virtual destructor), the compiler generates a vtable for dynamic dispatch.</li>
+<li>The destructor call goes through this vtable to ensure the correct order of destruction.</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # example without virtual destructor</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">    ~Base</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Base Destructor</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Derived</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">    ~Derived</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Derived Destructor</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#DBD7CAEE">    Base</span><span style="color:#CB7676">*</span><span style="color:#DBD7CAEE"> obj </span><span style="color:#666666">=</span><span style="color:#CB7676"> new</span><span style="color:#80A665"> Derived</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#CB7676">    delete</span><span style="color:#DBD7CAEE"> obj</span><span style="color:#666666">;</span><span style="color:#758575DD"> // Undefined behavior! Only Base's destructor runs.</span></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # output incorrect leading to leaks</span></span>
+<span class="line"><span style="color:#758575DD">// Here, the Derived class destructor never executes, potentially causing memory/resource leaks.</span></span>
+<span class="line"><span style="color:#DBD7CAEE">Base Destructor</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Corrected Version Using a Virtual Destructor</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    virtual</span><span style="color:#80A665"> ~Base</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Base Destructor</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Derived</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#80A665">    ~Derived</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Derived Destructor</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#DBD7CAEE">    Base</span><span style="color:#CB7676">*</span><span style="color:#DBD7CAEE"> obj </span><span style="color:#666666">=</span><span style="color:#CB7676"> new</span><span style="color:#80A665"> Derived</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#CB7676">    delete</span><span style="color:#DBD7CAEE"> obj</span><span style="color:#666666">;</span><span style="color:#758575DD"> // Proper cleanup!</span></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span>
+<span class="line"></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Correct Output</span></span>
+<span class="line"><span style="color:#DBD7CAEE">Derived Destructor</span></span>
+<span class="line"><span style="color:#DBD7CAEE">Base Destructor</span></span></code></pre> </article><article class="article content" id="virrtual_table" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Virtual Table</h1> <span data-astro-cid-paqvxbhy>
+Published: Fri, 31 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Fri, 31 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>The virtual table (vtable) is a mechanism used in C++ to implement dynamic (runtime) polymorphism. It ensures that the correct function is called when a virtual function is invoked through a base class pointer.</p>
+<h4 id="what-is-a-vtable">What is a vtable?</h4>
+<ul>
+<li>A vtable is a table of function pointers maintained per class that contains entries for all virtual functions in that class.</li>
+<li>Each class with virtual functions has a single vtable.</li>
+</ul>
+<h4 id="vptr-virtual-table-pointer">vptr (Virtual Table Pointer)</h4>
+<ul>
+<li>Each object of a class that has at least one virtual function contains a hidden vptr (virtual table pointer).</li>
+<li>This vptr points to the class’s vtable.</li>
+<li>The compiler automatically manages vptr and updates it when needed.</li>
+</ul>
+<h4 id="how-it-works">How it Works</h4>
+<ul>
+<li>When a virtual function is called through a base class pointer or reference, the function call is resolved at runtime using the vtable.</li>
+<li>The program looks up the appropriate function address in the vtable and calls it.</li>
+</ul>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Without Virtual Functions (Compile-Time Binding)</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    void</span><span style="color:#80A665"> show</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Base class</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Derived</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    void</span><span style="color:#80A665"> show</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Derived class</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#DBD7CAEE">    Base</span><span style="color:#CB7676">*</span><span style="color:#DBD7CAEE"> obj </span><span style="color:#666666">=</span><span style="color:#CB7676"> new</span><span style="color:#80A665"> Derived</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#BD976A">    obj</span><span style="color:#666666">-></span><span style="color:#80A665">show</span><span style="color:#666666">();</span><span style="color:#758575DD"> // Calls Base::show() due to early binding</span></span>
+<span class="line"><span style="color:#CB7676">    delete</span><span style="color:#DBD7CAEE"> obj</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # output</span></span>
+<span class="line"><span style="color:#758575DD">// Even though obj is pointing to a Derived object, the base class function is called because compile-time binding is used.</span></span>
+<span class="line"><span style="color:#DBD7CAEE">Base </span><span style="color:#CB7676">class</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # With Virtual Functions (Runtime Binding Using vtable)</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    virtual</span><span style="color:#CB7676"> void</span><span style="color:#80A665"> show</span><span style="color:#666666">()</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Base class</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span><span style="color:#758575DD"> // Virtual function</span></span>
+<span class="line"><span style="color:#CB7676">    virtual</span><span style="color:#80A665"> ~Base</span><span style="color:#666666">()</span><span style="color:#666666"> {}</span><span style="color:#758575DD"> // Virtual destructor (important for cleanup)</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">class</span><span style="color:#5DA994"> Derived</span><span style="color:#666666"> :</span><span style="color:#CB7676"> public</span><span style="color:#5DA994"> Base</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">public</span><span style="color:#666666">:</span></span>
+<span class="line"><span style="color:#CB7676">    void</span><span style="color:#80A665"> show</span><span style="color:#666666">()</span><span style="color:#CB7676"> override</span><span style="color:#666666"> {</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Derived class</span><span style="color:#C99076">\n</span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span><span style="color:#666666"> }</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#DBD7CAEE">    Base</span><span style="color:#CB7676">*</span><span style="color:#DBD7CAEE"> obj </span><span style="color:#666666">=</span><span style="color:#CB7676"> new</span><span style="color:#80A665"> Derived</span><span style="color:#666666">();</span></span>
+<span class="line"><span style="color:#BD976A">    obj</span><span style="color:#666666">-></span><span style="color:#80A665">show</span><span style="color:#666666">();</span><span style="color:#758575DD"> // Calls Derived::show() due to vtable lookup</span></span>
+<span class="line"><span style="color:#CB7676">    delete</span><span style="color:#DBD7CAEE"> obj</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # output</span></span>
+<span class="line"><span style="color:#DBD7CAEE">Derived </span><span style="color:#CB7676">class</span></span></code></pre>
+<p>Here’s what happens behind the scenes:</p>
+<ul>
+<li>The Derived class overrides show(), so its vtable entry replaces Base::show().</li>
+<li>obj->show() triggers a vtable lookup, calling Derived::show().</li>
+</ul>
+<h4 id="practical-uses-of-vtable">Practical Uses of vtable</h4>
+<p><strong>Runtime Polymorphism</strong><br>
+Enables dynamic dispatch, allowing function calls to be determined at runtime.
+Example: GUI frameworks, where different widgets (buttons, labels) override a common draw() function.</p>
+<p><strong>Abstract Base Classes (Interfaces)</strong><br>
+Pure virtual functions (= 0) ensure derived classes provide implementations.
+Example: std::ostream in C++ uses virtual functions for polymorphic output handling.</p>
+<p><strong>Plugin Architectures</strong><br>
+Applications use base class interfaces and dynamically load different implementations at runtime.</p> </article><article class="article content" id="multithreading" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Multithreading</h1> <span data-astro-cid-paqvxbhy>
+Published: Fri, 31 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Fri, 31 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>Multithreading in C++ allows a program to execute multiple tasks concurrently by running them in separate threads within the same process. It helps in utilizing multi-core processors efficiently.</p>
+<ul>
+<li><strong>Thread</strong>: A lightweight unit of execution that runs independently.</li>
+<li><strong>std::thread</strong>: A C++ standard library class that provides support for creating and managing threads.</li>
+<li><strong>Synchronization</strong>
+<ul>
+<li><strong>Mutex</strong> (<code>std::mutex</code>): Used to prevent multiple threads from accessing shared resources simultaneously. (Mutual exclusivity)</li>
+<li><strong>Lock</strong> (<code>std::unique_lock</code>, <code>std::lock_guard</code>): Ensures proper locking and unlocking of mutexes.</li>
+<li><strong>Condition Variables</strong> (<code>std::condition_variable</code>): Helps in synchronization by allowing threads to wait for some condition to be met.</li>
+</ul>
+</li>
+<li><strong>Thread Safety</strong> Ensuring that shared data is accessed correctly in a multithreaded environment.</li>
+<li><strong>Atomic Operations</strong> (<code>std::atomic</code>): Provides operations that are inherently thread-safe without requiring locks.</li>
+<li><strong>Thread Communication</strong>: Threads can communicate via shared variables, message passing, or synchronization primitives.</li>
+<li><strong>Thread Lifecycle</strong>
+<ul>
+<li>Creation: Using std::thread to start a new thread.</li>
+<li>Joining (join()): Waiting for a thread to complete execution.</li>
+<li>Detaching (detach()): Running a thread independently without waiting for completion.</li>
+</ul>
+</li>
+</ul>
+<h2 id="use-cases">Use Cases</h2>
+<dl>
+    <dt><strong>Parallel Computing</strong></dt>
+    <dd>Running independent computations simultaneously (e.g., matrix multiplication, image processing).</dd>
+    <dt><strong>Asynchronous Tasks</strong></dt>
+    <dd>Using <code>std::async</code> for background computations.</dd>
+    <dt><strong>GUI Applications</strong></dt>
+    <dd>Keeping UI responsive while performing background operations.</dd>
+    <dt><strong>I/O Operations</strong></dt>
+    <dd>Handling multiple network requests, file operations, etc.</dd>
+    <dt><strong>Gaming and Simulations</strong></dt>
+    <dd>Running physics calculations, AI, and rendering separately.</dd>
+</dl>
+<h4 id="cons">Cons</h4>
+<dl>
+    <dt><strong>Complexity</strong></dt>
+    <dd>Harder to debug and maintain.</dd>
+    <dt><strong>Race Conditions</strong></dt>
+    <dd>If multiple threads access shared data incorrectly.</dd>
+    <dt><strong>Deadlocks</strong></dt>
+    <dd>Occurs when two or more threads wait indefinitely for each other.</dd>
+    <dt><strong>Increased Memory Usage</strong></dt>
+    <dd>Each thread has its own stack, leading to more memory consumption.</dd>
+</dl> </article><article class="article content" id="named_member_initialization" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Named member initialization</h1> <span data-astro-cid-paqvxbhy>
+Published: Fri, 31 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Fri, 31 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>Named member initialization is a feature in C++ that allows you to initialize specific data members of a class or struct by name during object construction. This is particularly useful for clarity and flexibility, especially when dealing with classes or structs that have many members or default values.</p>
+<h4 id="syntax">Syntax</h4>
+<p>Named member initialization uses the . or -> operator to specify which member to initialize:</p>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#CB7676">struct</span><span style="color:#5DA994"> Point</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#CB7676">    int</span><span style="color:#DBD7CAEE"> x</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#CB7676">    int</span><span style="color:#DBD7CAEE"> y</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#DBD7CAEE">Point p </span><span style="color:#666666">=</span><span style="color:#666666"> {</span><span style="color:#DBD7CAEE"> .x </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 10</span><span style="color:#666666">,</span><span style="color:#DBD7CAEE"> .y </span><span style="color:#666666">=</span><span style="color:#4C9A91"> 20</span><span style="color:#666666"> };</span></span>
+<span class="line"></span></code></pre>
+<h4 id="order-of-initialization">Order of Initialization:</h4>
+<p>Members must be initialized in the order they are declared in the class or struct. Skipping members or changing the order will result in a compilation error.</p>
+<h4 id="default-values">Default Values</h4>
+<p>Members not explicitly initialized will retain their default values (if provided) or be default-initialized.</p>
+<p><strong>Summary</strong><br>
+Named member initialization allows you to initialize specific members of a class or struct by name, improving code clarity and flexibility.</p>
+<p>Introduced in C++20, it is particularly useful for structs with many members or when partial initialization is desired.</p>
+<p>While it offers many advantages, it is limited to aggregates and requires C++20 or later.</p> </article><article class="article content" id="resources" data-astro-cid-paqvxbhy> <div class="article-meta" data-astro-cid-paqvxbhy> <h1 data-astro-cid-paqvxbhy>Resources</h1> <span data-astro-cid-paqvxbhy>
+Published: Thu, 30 Jan 2025 </span> <span data-astro-cid-paqvxbhy>
+Revision: Thu, 30 Jan 2025, v
+0.1 </span> <span data-astro-cid-paqvxbhy>
+Language:  This content is in English. </span> </div> <p>These are my notes to study cpp concepts as well as to look back to remember things. As well as to share with other people as well.</p>
+<p>You can use online cpp compiler to tinker with isolated examples of this work in such as<br>
+<a href="https://godbolt.org/">https://godbolt.org/</a><br>
+I use gcc 14.2, with flag <code>  -std=c++20</code> for 2020 standard.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th align="left">Type</th><th align="left">Name</th><th align="left">Link</th><th align="left">Last Access</th></tr></thead><tbody><tr><td align="left">website</td><td align="left">cppreference</td><td align="left"><a href="https://en.cppreference.com/w/cpp">https://en.cppreference.com/w/cpp</a></td><td align="left">2025-01-30</td></tr><tr><td align="left">website</td><td align="left">learncpp</td><td align="left"><a href="https://www.learncpp.com/">https://www.learncpp.com/</a></td><td align="left">2025-01-30</td></tr><tr><td align="left">video</td><td align="left">lambda expressions in modern c++ by codebeauty(youtube)</td><td align="left"><a href="https://www.youtube.com/watch?v=MH8mLFqj-n8">https://www.youtube.com/watch?v=MH8mLFqj-n8</a></td><td align="left">2025-01-30</td></tr><tr><td align="left">video</td><td align="left">CppCon 2014: Scott Meyers “Type Deduction and Why You Care” ccpcon(youtube)</td><td align="left"><a href="https://youtu.be/wQxj20X-tIU">https://youtu.be/wQxj20X-tIU</a></td><td align="left">2025-01-31</td></tr></tbody></table>
+<pre class="astro-code vitesse-dark" style="background-color:#121212;color:#dbd7caee; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#758575DD">// # Use this code to know which cpp standard that your compiler using</span></span>
+<span class="line"><span style="color:#666666">#</span><span style="color:#4D9375">include</span><span style="color:#C98A7D77"> &#x3C;</span><span style="color:#C98A7D">iostream</span><span style="color:#C98A7D77">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#CB7676">int</span><span style="color:#80A665"> main</span><span style="color:#666666">()</span><span style="color:#666666"> {</span></span>
+<span class="line"><span style="color:#80A665">    std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++ Standard: </span><span style="color:#C98A7D77">"</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#DBD7CAEE">    </span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">if</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 202302</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++23</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">elif</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 202002</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++20</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">elif</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 201703</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++17</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">elif</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 201402</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++14</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">elif</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 201103</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++11</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">elif</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> ==</span><span style="color:#4C9A91"> 199711</span><span style="color:#CB7676">L</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">C++98</span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">else</span></span>
+<span class="line"><span style="color:#80A665">        std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">cout </span><span style="color:#CB7676">&#x3C;&#x3C;</span><span style="color:#C98A7D77"> "</span><span style="color:#C98A7D">Pre-standard C++ or unknown version: </span><span style="color:#C98A7D77">"</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> __cplusplus</span><span style="color:#CB7676"> &#x3C;&#x3C;</span><span style="color:#80A665"> std</span><span style="color:#666666">::</span><span style="color:#DBD7CAEE">endl</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">    #</span><span style="color:#4D9375">endif</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#4D9375">    return</span><span style="color:#4C9A91"> 0</span><span style="color:#666666">;</span></span>
+<span class="line"><span style="color:#666666">}</span></span></code></pre> </article> </div> <div class="toc-container no-select" data-astro-cid-paqvxbhy> <div class="toc-article" data-slug="inheritance" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Inheritance</b> </span> </div> <div class="toc-sections" data-slug="inheritance" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#key-concepts-of-inheritance" data-astro-cid-paqvxbhy> Key Concepts of Inheritance </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#base-class-parent-class" data-astro-cid-paqvxbhy> Base Class (Parent Class) </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#derived-class-child-class" data-astro-cid-paqvxbhy> Derived Class (Child Class) </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#access-specifiers" data-astro-cid-paqvxbhy> Access Specifiers </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#types-of-inheritance" data-astro-cid-paqvxbhy> Types of Inheritance </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#constructor-and-destructor-in-inheritance" data-astro-cid-paqvxbhy> Constructor and Destructor in Inheritance </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#function-overloading" data-astro-cid-paqvxbhy> Function overloading </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#practical-use-of-inheritance" data-astro-cid-paqvxbhy> Practical Use of Inheritance </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="meta_programming" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Meta Programming</b> </span> </div> <div class="toc-sections" data-slug="meta_programming" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#idea" data-astro-cid-paqvxbhy> Idea </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#templates" data-astro-cid-paqvxbhy> - Templates </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#template-specialization" data-astro-cid-paqvxbhy> - Template specialization </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#type-traits" data-astro-cid-paqvxbhy> - Type Traits </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#constexpr" data-astro-cid-paqvxbhy> - constexpr </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#key-concepts" data-astro-cid-paqvxbhy> Key Concepts </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#explanation" data-astro-cid-paqvxbhy> Explanation </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#pros" data-astro-cid-paqvxbhy> Pros </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#variadic-templates" data-astro-cid-paqvxbhy> - Variadic Templates </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#practical-use-of-template-meta-programming" data-astro-cid-paqvxbhy> Practical Use of Template Meta-Programming </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#why-it-could-not-be-solved-other-way" data-astro-cid-paqvxbhy> Why It Could Not Be Solved Other Way </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#pros" data-astro-cid-paqvxbhy> Pros </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="functor_lambda" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Functor and Lambda</b> </span> </div> <div class="toc-sections" data-slug="functor_lambda" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#functors" data-astro-cid-paqvxbhy> Functors </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#example" data-astro-cid-paqvxbhy> Example </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#explanation" data-astro-cid-paqvxbhy> Explanation </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#when-to-use-functors" data-astro-cid-paqvxbhy> When to use `functors` </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#pros" data-astro-cid-paqvxbhy> Pros </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#additions" data-astro-cid-paqvxbhy> Additions </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#lambda-functions" data-astro-cid-paqvxbhy> Lambda functions </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#example" data-astro-cid-paqvxbhy> Example </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#explanation" data-astro-cid-paqvxbhy> Explanation </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#why-use-a-lambda-here" data-astro-cid-paqvxbhy> Why Use a Lambda Here? </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="type_deduction" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Type Deduction</b> </span> </div> <div class="toc-sections" data-slug="type_deduction" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#auto-keyword" data-astro-cid-paqvxbhy> - auto keyword </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#decltype-keyword" data-astro-cid-paqvxbhy> - decltype Keyword </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#function-return-type-deduction" data-astro-cid-paqvxbhy> - Function Return Type Deduction </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#template-type-deduction" data-astro-cid-paqvxbhy> - Template Type Deduction </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#practical-use" data-astro-cid-paqvxbhy> Practical Use </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#pros" data-astro-cid-paqvxbhy> Pros </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="virtual_destructors" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Virtual Destructors</b> </span> </div> <div class="toc-sections" data-slug="virtual_destructors" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#polymorphism-base-class-pointer-behavior" data-astro-cid-paqvxbhy> Polymorphism &amp; Base-Class Pointer Behavior </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#virtual-table-vtable-mechanism" data-astro-cid-paqvxbhy> Virtual Table (vtable) Mechanism </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="virrtual_table" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Virtual Table</b> </span> </div> <div class="toc-sections" data-slug="virrtual_table" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#what-is-a-vtable" data-astro-cid-paqvxbhy> What is a vtable? </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#vptr-virtual-table-pointer" data-astro-cid-paqvxbhy> vptr (Virtual Table Pointer) </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#how-it-works" data-astro-cid-paqvxbhy> How it Works </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#practical-uses-of-vtable" data-astro-cid-paqvxbhy> Practical Uses of vtable </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="multithreading" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Multithreading</b> </span> </div> <div class="toc-sections" data-slug="multithreading" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-2" style="margin-left: 0.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#use-cases" data-astro-cid-paqvxbhy> Use Cases </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#cons" data-astro-cid-paqvxbhy> Cons </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="named_member_initialization" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Named member initialization</b> </span> </div> <div class="toc-sections" data-slug="named_member_initialization" data-astro-cid-paqvxbhy> <span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#syntax" data-astro-cid-paqvxbhy> Syntax </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#order-of-initialization" data-astro-cid-paqvxbhy> Order of Initialization: </a> <br data-astro-cid-paqvxbhy> </span><span class="toc-item toc-level-4" style="margin-left: 2.5em;" data-astro-cid-paqvxbhy> <a class="toc-content" href="#default-values" data-astro-cid-paqvxbhy> Default Values </a> <br data-astro-cid-paqvxbhy> </span> </div> </div><div class="toc-article" data-slug="resources" data-astro-cid-paqvxbhy> <div class="toc-title" data-astro-cid-paqvxbhy> <span style="color: var(--col)" data-astro-cid-paqvxbhy> <b data-astro-cid-paqvxbhy>Resources</b> </span> </div> <div class="toc-sections" data-slug="resources" data-astro-cid-paqvxbhy>  </div> </div> </div> <script>
+        let activeArticle = null;
+
+        const articles = document.querySelectorAll("article");
+        const tocSections = document.querySelectorAll(".toc-sections");
+        const tocTitles = document.querySelectorAll(".toc-title");
+
+        // Show/hide TOC sections on mouse enter
+        articles.forEach((article) => {
+            article.addEventListener("mouseenter", () => {
+                activeArticle = article.id;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Click TOC title to scroll & set active article
+        tocTitles.forEach((title) => {
+            title.addEventListener("click", () => {
+                const slug = title.parentElement.dataset.slug;
+                const targetArticle = document.getElementById(slug);
+                if (!targetArticle) return;
+
+                // scroll to top of the article
+                targetArticle.scrollIntoView({ behavior: "smooth" });
+
+                // set active article
+                activeArticle = slug;
+                tocSections.forEach((section) => {
+                    section.style.display =
+                        section.dataset.slug === activeArticle
+                            ? "block"
+                            : "none";
+                });
+            });
+        });
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll(".toc-content").forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const target = document.getElementById(
+                    link.getAttribute("href").substring(1)
+                );
+                target?.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    </script>  </div> </body></html> 
