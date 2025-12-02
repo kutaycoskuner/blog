@@ -277,10 +277,7 @@
     </div>
 </div>
 
-<ContentTreePreview
-    client:load
-    {selectedContent}
-/>
+<ContentTreePreview {selectedContent} />
 
 <style scoped>
     .expand-collapse {
