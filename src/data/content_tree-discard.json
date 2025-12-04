@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "category": ["Blog", "Lecture Notes"],
+            "name": "Fall 2025 | Discrete Structures",
+            "to": "https://kutaycoskuner.github.io/blog/collections/2025fall-discrete_structures",
+            "created": "2025-12-04T00:00:00Z",
+            "updated": "2025-12-04T00:00:00Z",
+            "keywords": ["mathematics", "discrete structures"],
+            "author": "Kutay Coskuner",
+            "abstract": "Lectures notes on Discrete Structures by Prof. Lukasz Grabowski held on Fall semester 2025 in University of Leipzig.",
+            "image": "",
+            "image-credit": "",
+            "visibility": false,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        }
+    ]
+}

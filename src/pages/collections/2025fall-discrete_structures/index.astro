@@ -27,14 +27,25 @@ const COLLECTION_NAME: string = "collections/lecture_notes-2025fall-discrete_str
 
 const allEntries = await getCollection(COLLECTION_NAME);
 
-const posts = allEntries.filter(
-    (entry) => entry.id.endsWith(".md") || entry.id.endsWith(".mdx")
-);
+const posts = (
+    allEntries.filter(
+        (entry) => entry.id.endsWith(".md") || entry.id.endsWith(".mdx")
+    ) as any[]
+) // <-- Temporary type assertion if TypeScript is confused
+    .sort((a, b) => {
+        // ... sorting logic ...
+        const orderA = a.data.sort_order ?? 9999;
+        const orderB = b.data.sort_order ?? 9999;
+        return orderA - orderB;
+    });
+
 
 if (!posts || posts.length === 0) {
-    return new Response("Post not found. Removed, not existed, or work in progress.", { status: 404 });
+    return new Response(
+        "Post not found. Removed, not existed, or work in progress.",
+        { status: 404 }
+    );
 }
-
 
 const baseDir = path.resolve("src/content/" + COLLECTION_NAME);
 const postTocs: PostToc[] = await Promise.all(
@@ -66,6 +77,7 @@ function getLanguageDescription(languageCode: string): string {
     };
     return languageMap[languageCode] ?? "";
 }
+
 ---
 
 <Layout>
@@ -85,11 +97,10 @@ function getLanguageDescription(languageCode: string): string {
                             <div class="article-meta">
                                 <h1>{postData.title}</h1>
                                 <span>
-                                    Published: {formatDate(postData.created)}
+                                    Created at: {formatDate(postData.created)}
                                 </span>
                                 <span>
-                                    Revision: {formatDate(postData.updated)}, v
-                                    {postData.revision}
+                                    Last Revision: {formatDate(postData.updated)}, v{postData.revision}
                                 </span>
                                 <span>
                                     Language:{" "}

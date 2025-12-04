@@ -94,7 +94,7 @@
         {
             "category": ["Blog", "Tutorials"],
             "name": "Rendering Mathematical Expressions on Markdown",
-            "to": "https://kutaycoskuner.github.io/old_blog/tutorials/20251030-katex_in_markdown",
+            "to": "https://kutaycoskuner.github.io/blog/tutorials/20251030-katex_in_markdown",
             "created": "2025-10-30T00:00:00Z",
             "updated": "2025-10-31T00:00:00Z",
             "keywords": ["math", "blogging", "markdown"],
