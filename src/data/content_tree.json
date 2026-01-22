@@ -46,7 +46,7 @@
         {
             "category": ["Blog", "Notes"],
             "name": "Notes on C++ Advanced Concepts",
-            "to": "https://kutaycoskuner.github.io/old_blog/notes/cpp",
+            "to": "https://kutaycoskuner.github.io/blog/collections/cpp",
             "created": "2025-01-30T00:00:00Z",
             "updated": "2025-01-30T00:00:00Z",
             "keywords": ["cpp", "computer science"],
@@ -62,7 +62,7 @@
         {
             "category": ["Blog", "Standards"],
             "name": "Citation Standards",
-            "to": "https://kutaycoskuner.github.io/old_blog/standards/",
+            "to": "https://kutaycoskuner.github.io/blog/collections/standards/",
             "created": "2023-04-18T00:00:00Z",
             "updated": "2023-04-18T00:00:00Z",
             "keywords": ["citation", "standards", "writing"],
@@ -78,7 +78,7 @@
         {
             "category": ["Blog", "Standards"],
             "name": "Code Standards",
-            "to": "https://kutaycoskuner.github.io/old_blog/standards/#code-standards",
+            "to": "https://kutaycoskuner.github.io/blog/collections/standards/#code-standards",
             "created": "2023-04-18T00:00:00Z",
             "updated": "2024-01-26T00:00:00Z",
             "keywords": ["naming", "conventions", "coding"],
