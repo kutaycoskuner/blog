@@ -5,6 +5,26 @@
                 "Blog",
                 "Essays"
             ],
+            "name": "Phenomenon, Representation and Image",
+            "to": "https://drive.google.com/file/d/18TkX5JtPPnc0qobxifEorDAIKWwvn2Od/view?usp=sharing",
+            "created": "2026-03-10T00:00:00Z",
+            "updated": "2026-03-10T00:00:00Z",
+            "keywords": [
+            ],
+            "author": "Kutay Coskuner",
+            "abstract": "Arch 513 / Fall 2018-2019 / Term Paper | Exploring the impact of fictionalized perception on reality and human understanding.",
+            "image": "https://kutaycoskuner.github.io/nuxt_content/dichotomies/player_placement.png",
+            "image-credit": "",
+            "visibility": false,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Blog",
+                "Essays"
+            ],
             "name": "The Void of Fictionalized Perception",
             "to": "https://drive.google.com/file/d/18TkX5JtPPnc0qobxifEorDAIKWwvn2Od/view?usp=sharing",
             "created": "2019-01-01T00:00:00Z",
@@ -122,6 +142,29 @@
                 "Blog",
                 "Tutorials"
             ],
+            "name": "Implemeting transform functions for peseudo-isometric camera in Unity",
+            "to": "https://kutaycoskuner.github.io/blog/tutorials/20251114-unity_pseudoisometric/",
+            "created": "2025-11-26T00:00:00Z",
+            "updated": "2025-11-26T00:00:00Z",
+            "keywords": [
+                "unity",
+                "camera",
+                "isometric"
+            ],
+            "author": "Kutay Coskuner",
+            "abstract": "A method to implement transform functions for pseudo-isometric camera.",
+            "image": "https://kutaycoskuner.github.io/blog//linked_assets/20251113-blog-unity_pseudoisometric/20251125-init.gif",
+            "image-credit": "",
+            "visibility": true,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Blog",
+                "Tutorials"
+            ],
             "name": "Rendering Mathematical Expressions on Markdown",
             "to": "https://kutaycoskuner.github.io/blog/tutorials/20251030-katex_in_markdown",
             "created": "2025-10-30T00:00:00Z",
@@ -142,24 +185,47 @@
         },
         {
             "category": [
-                "Blog",
-                "Tutorials"
+                "Library",
+                "Curated Internet Articles"
             ],
-            "name": "Implemeting transform functions for peseudo-isometric camera in Unity",
-            "to": "https://kutaycoskuner.github.io/blog/tutorials/20251114-unity_pseudoisometric/",
-            "created": "2025-11-26T00:00:00Z",
-            "updated": "2025-11-26T00:00:00Z",
+            "name": "2001'den Günümüze: Türkiye Ekonomisinin Nasıl Bu Hale Geldiğinin Detaylı Anlatımı",
+            "to": "https://eksiseyler.com/2001den-gunumuze-turkiye-ekonomisinin-nasil-bu-hale-geldiginin-detayli-anlatimi",
+            "created": "2020-01-10T00:00:00Z",
+            "updated": "2020-01-10T00:00:00Z",
             "keywords": [
-                "unity",
-                "camera",
-                "isometric"
+                "economy",
+                "Turkey",
+                "finance"
             ],
-            "author": "Kutay Coskuner",
-            "abstract": "A method to implement transform functions for pseudo-isometric camera.",
-            "image": "https://kutaycoskuner.github.io/blog//linked_assets/20251113-blog-unity_pseudoisometric/20251125-init.gif",
+            "author": "gentoure [eksisozluk.com]",
+            "abstract": "2001'deki ekonomik krizden sonra bir süre toparlanan ancak özellikle 2013'ten beri bir çöküş içinde olan Türkiye ekonomisi nasıl bu hale geldi?",
+            "image": "",
             "image-credit": "",
             "visibility": true,
-            "language": "en",
+            "language": "tr",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Library",
+                "Curated Internet Articles"
+            ],
+            "name": "Iskandinav Ulkelerindeki Insanlar Neden Mutlu",
+            "to": "https://eksiseyler.com/iskandinav-ulkelerindeki-insanlar-neden-dunyanin-en-mutlu-insanlari-oluyor",
+            "created": "2019-04-13T00:00:00Z",
+            "updated": "2019-04-13T00:00:00Z",
+            "keywords": [
+                "happiness",
+                "Scandinavia",
+                "culture"
+            ],
+            "author": "diesel1907 [eksisozluk.com]",
+            "abstract": "iskandinav ulkeleri her zaman \"dunya'nin en mutlu insanlari\" anketinde en basa oynarlar. cogu zaman iskandinav ulkelerinin tamami ilk 10'da kendilerine yer bulurlar. bunun sebebi olarak da hep bu ulkelerdeki muthis refah duzeyi ve zenginlik anlatilir ama ...",
+            "image": "https://seyler.ekstat.com/img/max/800/e/eInyo8WvL0EVjYTD-636074822004558720.jpg",
+            "image-credit": "istock.com",
+            "visibility": true,
+            "language": "tr",
             "translator": "",
             "editor": ""
         },
@@ -214,29 +280,6 @@
                 "Library",
                 "Curated Internet Articles"
             ],
-            "name": "Iskandinav Ulkelerindeki Insanlar Neden Mutlu",
-            "to": "https://eksiseyler.com/iskandinav-ulkelerindeki-insanlar-neden-dunyanin-en-mutlu-insanlari-oluyor",
-            "created": "2019-04-13T00:00:00Z",
-            "updated": "2019-04-13T00:00:00Z",
-            "keywords": [
-                "happiness",
-                "Scandinavia",
-                "culture"
-            ],
-            "author": "diesel1907 [eksisozluk.com]",
-            "abstract": "iskandinav ulkeleri her zaman \"dunya'nin en mutlu insanlari\" anketinde en basa oynarlar. cogu zaman iskandinav ulkelerinin tamami ilk 10'da kendilerine yer bulurlar. bunun sebebi olarak da hep bu ulkelerdeki muthis refah duzeyi ve zenginlik anlatilir ama ...",
-            "image": "https://seyler.ekstat.com/img/max/800/e/eInyo8WvL0EVjYTD-636074822004558720.jpg",
-            "image-credit": "istock.com",
-            "visibility": true,
-            "language": "tr",
-            "translator": "",
-            "editor": ""
-        },
-        {
-            "category": [
-                "Library",
-                "Curated Internet Articles"
-            ],
             "name": "Orta Ust Sinifin Kapagi Baska Ulkeye Atma Istegi",
             "to": "https://eksiseyler.com/orta-ust-sinifin-kapagi-bir-baska-ulkeye-atma-mevzusu-hakkinda-guzel-bir-sorgulama",
             "created": "2017-08-02T00:00:00Z",
@@ -281,20 +324,20 @@
         {
             "category": [
                 "Library",
-                "Curated Internet Articles"
+                "Curated Video Essays"
             ],
-            "name": "2001'den Günümüze: Türkiye Ekonomisinin Nasıl Bu Hale Geldiğinin Detaylı Anlatımı",
-            "to": "https://eksiseyler.com/2001den-gunumuze-turkiye-ekonomisinin-nasil-bu-hale-geldiginin-detayli-anlatimi",
-            "created": "2020-01-10T00:00:00Z",
-            "updated": "2020-01-10T00:00:00Z",
+            "name": "Jane Goodall, \"İnsan\" Tanımını Nasıl Değiştirdi?",
+            "to": "https://www.youtube.com/watch?v=9wEsP87Wmgo",
+            "created": "2025-10-12T00:00:00Z",
+            "updated": "2026-03-13T00:00:00Z",
             "keywords": [
-                "economy",
-                "Turkey",
-                "finance"
+                "science",
+                "philosophy",
+                "humanity"
             ],
-            "author": "gentoure [eksisozluk.com]",
-            "abstract": "2001'deki ekonomik krizden sonra bir süre toparlanan ancak özellikle 2013'ten beri bir çöküş içinde olan Türkiye ekonomisi nasıl bu hale geldi?",
-            "image": "",
+            "author": "Evrim Ağacı (youtube.com)",
+            "abstract": "İnsanlık, geçtiğimiz hafta en büyük değerlerinden birini kaybetti: Bizimle, \"onlar\" arasındaki çizgiyi muğlaklaştıran bir dehayı… Jane Goodall'ı… Ve bana kalırsa, kendine \"bilimsever\" diyen her fertin Goodall'ın öyküsünü bilmesi şart.",
+            "image": "https://img.youtube.com/vi/9wEsP87Wmgo/sddefault.jpg",
             "image-credit": "",
             "visibility": true,
             "language": "tr",
@@ -306,18 +349,42 @@
                 "Library",
                 "Curated Video Essays"
             ],
-            "name": "Misery Was",
-            "to": "https://www.youtube.com/watch?v=n__42UNIhvU",
-            "created": "2019-03-10T00:00:00Z",
-            "updated": "2025-01-20T00:00:00Z",
+            "name": "The Strange Math That Predicts (Almost) Anything",
+            "to": "https://youtu.be/KZeIEiBrT_w",
+            "created": "2025-03-09T00:00:00Z",
+            "updated": "2026-03-09T00:00:00Z",
             "keywords": [
-                "life",
+                "mathematics",
                 "philosophy",
                 "technology"
             ],
-            "author": "exurb1a (youtube.com)",
-            "abstract": "Goodbye to closed-source human history. Maybe.",
-            "image": "https://img.youtube.com/vi/n__42UNIhvU/sddefault.jpg",
+            "author": "Veritasium (youtube.com)",
+            "abstract": "How complex systems can be predicted using surprisingly simple probability rules.",
+            "image": "https://img.youtube.com/vi/KZeIEiBrT_w/sddefault.jpg",
+            "image-credit": "",
+            "visibility": false,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Library",
+                "Curated Video Essays"
+            ],
+            "name": "This game theory problem will change the way you see the world",
+            "to": "https://www.youtube.com/watch?v=mScpHTIi-kM ",
+            "created": "2023-12-23T00:00:00Z",
+            "updated": "2026-03-09T00:00:00Z",
+            "keywords": [
+                "mathematics",
+                "economy",
+                "philosophy",
+                "sociology"
+            ],
+            "author": "Veritasium (youtube.com)",
+            "abstract": "What happens when 'perfectly' rational people make decisions that lead to bad outcomes for everyone?",
+            "image": "https://img.youtube.com/vi/mScpHTIi-kM/sddefault.jpg",
             "image-credit": "",
             "visibility": true,
             "language": "en",
@@ -352,65 +419,18 @@
                 "Library",
                 "Curated Video Essays"
             ],
-            "name": "This game theory problem will change the way you see the world",
-            "to": "https://www.youtube.com/watch?v=mScpHTIi-kM ",
-            "created": "2023-12-23T00:00:00Z",
-            "updated": "2026-03-09T00:00:00Z",
+            "name": "Misery Was",
+            "to": "https://www.youtube.com/watch?v=n__42UNIhvU",
+            "created": "2019-03-10T00:00:00Z",
+            "updated": "2025-01-20T00:00:00Z",
             "keywords": [
-                "mathematics",
-                "economy",
-                "philosophy",
-                "sociology"
-            ],
-            "author": "Veritasium (youtube.com)",
-            "abstract": "What happens when 'perfectly' rational people make decisions that lead to bad outcomes for everyone?",
-            "image": "https://img.youtube.com/vi/mScpHTIi-kM/sddefault.jpg",
-            "image-credit": "",
-            "visibility": true,
-            "language": "en",
-            "translator": "",
-            "editor": ""
-        },
-        {
-            "category": [
-                "Library",
-                "Curated Video Essays"
-            ],
-            "name": "The Strange Math That Predicts (Almost) Anything",
-            "to": "https://youtu.be/KZeIEiBrT_w",
-            "created": "2025-03-09T00:00:00Z",
-            "updated": "2026-03-09T00:00:00Z",
-            "keywords": [
-                "mathematics",
+                "life",
                 "philosophy",
                 "technology"
             ],
-            "author": "Veritasium (youtube.com)",
-            "abstract": "How complex systems can be predicted using surprisingly simple probability rules.",
-            "image": "https://img.youtube.com/vi/KZeIEiBrT_w/sddefault.jpg",
-            "image-credit": "",
-            "visibility": true,
-            "language": "en",
-            "translator": "",
-            "editor": ""
-        },
-        {
-            "category": [
-                "Library",
-                "Learning"
-            ],
-            "name": "Mathematics - Linear Algebra [Video Series]",
-            "to": "https://www.3blue1brown.com/topics/linear-algebra",
-            "created": "2016-04-02T00:00:00Z",
-            "updated": "2016-04-02T00:00:00Z",
-            "keywords": [
-                "mathematics",
-                "linear algebra",
-                "vector math"
-            ],
-            "author": "Grant Sanderson",
-            "abstract": "A visually intuitive course that explains vectors, matrices, and transformations through animations, making linear algebra concepts easy to grasp.",
-            "image": "https://img.youtube.com/vi/fNk_zzaMoSs/maxresdefault.jpg",
+            "author": "exurb1a (youtube.com)",
+            "abstract": "Goodbye to closed-source human history. Maybe.",
+            "image": "https://img.youtube.com/vi/n__42UNIhvU/sddefault.jpg",
             "image-credit": "",
             "visibility": true,
             "language": "en",
@@ -445,6 +465,29 @@
                 "Library",
                 "Learning"
             ],
+            "name": "Mathematics - Linear Algebra [Video Series]",
+            "to": "https://www.3blue1brown.com/topics/linear-algebra",
+            "created": "2016-04-02T00:00:00Z",
+            "updated": "2016-04-02T00:00:00Z",
+            "keywords": [
+                "mathematics",
+                "linear algebra",
+                "vector math"
+            ],
+            "author": "Grant Sanderson",
+            "abstract": "A visually intuitive course that explains vectors, matrices, and transformations through animations, making linear algebra concepts easy to grasp.",
+            "image": "https://img.youtube.com/vi/fNk_zzaMoSs/maxresdefault.jpg",
+            "image-credit": "",
+            "visibility": true,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Library",
+                "Learning"
+            ],
             "name": "Physics - OpenCourseWare MIT [Mixed Material]",
             "to": "https://ocw.mit.edu/search/?d=Physics&s=department_course_numbers.sort_coursenum",
             "created": "2008-04-02T00:00:00Z",
@@ -464,3 +507,4 @@
         }
     ]
 }
+
