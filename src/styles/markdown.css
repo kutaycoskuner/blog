@@ -3,8 +3,8 @@
 --------------------------------------------------------------------------------------- */
 /*
     Description : CSS for markdown rendering
-    Version     : 1.4
-    Last Update : 2025-12-04
+    Version     : 1.6
+    Last Update : 16-Mar-2026
     Author      : lichzelg
     License     : MIT
     License URL : https://www.tldrlegal.com/license/mit-license
@@ -517,6 +517,30 @@ article.article.content pre.astro-code.github-dark {
 }
 
 /* ------------------------------------------------------------------------------------ */
+/*        quote block                                                                   */
+/* ------------------------------------------------------------------------------------ */
+
+.quote-block {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin: 4rem 0;
+    padding-left: 4rem;       
+}
+
+.quote-main {
+    grid-column: 1 / 11;
+    text-align: center;       
+    font-style: italic;
+    width: 100%;
+}
+
+.quote-cite {
+    grid-column: 6 / 11;
+    font-style: normal; 
+}
+
+
+/* ------------------------------------------------------------------------------------ */
 /*        astro overrides                                                               */
 /* ------------------------------------------------------------------------------------ */
 
@@ -542,7 +566,6 @@ article.article.content pre.astro-code.github-dark {
     border-radius: var(--border-radius);
     box-shadow: 0px 0px 6px var(--col-border);
     border-left: 4px solid var(--accent-color, var(--col-border));
-    
 }
 
 /* ------------------------------------------------------------------------------------ */

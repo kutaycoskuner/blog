@@ -6,16 +6,16 @@
                 "Essays"
             ],
             "name": "Phenomenon, Representation and Image",
-            "to": "https://drive.google.com/file/d/18TkX5JtPPnc0qobxifEorDAIKWwvn2Od/view?usp=sharing",
+            "to": "https://kutaycoskuner.github.io/blog/essays/20230203-imge_ve_olgu",
             "created": "2026-03-10T00:00:00Z",
             "updated": "2026-03-10T00:00:00Z",
             "keywords": [
             ],
             "author": "Kutay Coskuner",
             "abstract": "Arch 513 / Fall 2018-2019 / Term Paper | Exploring the impact of fictionalized perception on reality and human understanding.",
-            "image": "https://kutaycoskuner.github.io/nuxt_content/dichotomies/player_placement.png",
-            "image-credit": "",
-            "visibility": false,
+            "image": "https://i.pinimg.com/736x/38/ba/a8/38baa8cbffa74283311b91eb77b676ce.jpg",
+            "image-credit": "valeriyazadoroznaya [pinterest.com]",
+            "visibility": true,
             "language": "en",
             "translator": "",
             "editor": ""
@@ -408,6 +408,29 @@
             "author": "Veritasium (youtube.com)",
             "abstract": "A general solution to the cubic equation was long considered impossible, until we gave up the requirement that math reflect reality.",
             "image": "https://img.youtube.com/vi/cUzklzVXJwo/sddefault.jpg",
+            "image-credit": "",
+            "visibility": true,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Library",
+                "Curated Video Essays"
+            ],
+            "name": "Should Knowledge Be Free?",
+            "to": "https://www.youtube.com/watch?v=PriwCi6SzLo",
+            "created": "2020-10-14T00:00:00Z",
+            "updated": "2026-03-16T00:00:00Z",
+            "keywords": [
+                "life",
+                "science",
+                "history"
+            ],
+            "author": "Medlife Crisis (youtube.com)",
+            "abstract": "Should academic research be behind paywalls? Researchers and peer reviewers earn nothing for their work, and yet academic publishers boast enormous profit margins every year from subscription fees to journals.",
+            "image": "https://img.youtube.com/vi/PriwCi6SzLo/sddefault.jpg",
             "image-credit": "",
             "visibility": true,
             "language": "en",

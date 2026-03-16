@@ -532,7 +532,7 @@ a:hover {
 .sub-desc:hover ~ .sub-src,
 .sub-year:hover ~ .sub-src,
 .sub-num:hover ~ .sub-src {
-    opacity: 1;
+    opacity: 0.6;
 	pointer-events: auto;
 
 }
