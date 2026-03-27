@@ -16,3 +16,6 @@ export const getSystemTheme = () => {
     }
     return "light";
 };
+
+
+export const displayMode = writable<"linear" | "selection">("linear");

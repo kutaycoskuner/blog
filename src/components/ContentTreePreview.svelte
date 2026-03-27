@@ -1,16 +1,28 @@
-<script>
+<script lang="ts">
     import { onMount } from "svelte";
-    import {getLanguageDescription, formatDate} from "../utils/utils"
+    import { getLanguageDescription, formatDate } from "../utils/utils";
 
-    export let selectedContent = null;
+    import type { ContentDetails } from "../types";
 
+    export let selectedContent: ContentDetails | null = null;
+
+    // $: console.log("selectedContent changed:", selectedContent);
     // Listen to global event
     onMount(() => {
-        document.addEventListener("browseArticle", (event) => {
+        const handler = (event: CustomEvent<ContentDetails>) => {
             if (event.detail) {
                 selectedContent = event.detail;
             }
-        });
+        };
+
+        document.addEventListener("browseArticle", handler as EventListener);
+
+        return () => {
+            document.removeEventListener(
+                "browseArticle",
+                handler as EventListener,
+            );
+        };
     });
 </script>
 
@@ -54,7 +66,7 @@
                 {/if}
 
                 {selectedContent.author},
-                {formatDate(selectedContent.created, 'yyyy')}
+                {formatDate(selectedContent.created, "yyyy")}
             </div>
         {/if}
     {/if}

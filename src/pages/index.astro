@@ -3,21 +3,25 @@ import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import ContentTree from "../components/ContentTree.svelte";
 import TestDispatch from "../components/TestDispatch.svelte";
+import DisplayMode from "../components/DisplayMode.svelte";
+import BlogApp from "../components/BlogApp.svelte";
 
 interface ContentDetails {
     name: string;
     author: string;
-    created: string; // <-- Added
-    updated: string; // <-- Added
-    translator: string; // <-- Added
-    editor: string; // <-- Added
+    created: string;
+    updated: string;
+    translator: string;
+    editor: string;
     abstract: string;
     keywords: string[];
-    language: string; // <-- Added
-    visibility: boolean; // <-- Added
-    image: string; // <-- Added
-    imagecredit: string; // <-- Added
+    language: string;
+    visibility: boolean;
+    image: string;
+    imagecredit: string;
 }
+
+let displayMode: "linear" | "selection" = "selection";
 
 // 2. Define the reactive state using 'let'
 let selectedContent: ContentDetails = {
@@ -41,32 +45,6 @@ function updateSelectedContent(event: CustomEvent<ContentDetails | null>) {
     const content = event.detail;
 }
 
-// function updateSelectedContent(event: CustomEvent<ContentDetails | null>) {
-//     console.log("asdf");
-//     return;
-//     const content = event.detail;
-
-//     if (content) {
-//         selectedContent = content;
-//     } else {
-//         // Re-initialize the state when content is null
-//         selectedContent = {
-//             name: "",
-//             author: "",
-//             created: "",
-//             updated: "",
-//             translator: "",
-//             editor: "",
-//             abstract: "",
-//             keywords: [],
-//             language: "",
-//             visibility: false,
-//             image: "",
-//             imagecredit: "",
-//         };
-//     }
-//     console.log("test");
-// }
 function handleEvent() {
     console.log("test");
 }
@@ -74,124 +52,105 @@ function handleEvent() {
 
 <Layout>
     <div class="main">
-        <ContentTree client:load />
+
+        <BlogApp client:load />
+
     </div>
 </Layout>
 
-    <!-- <script type="module" define:vars={{ selectedContent }}>
-            // Make a mutable copy
-    let currentContent = selectedContent;
-
-    function updateContent(newValue) {
-        currentContent = newValue;
-        document.getElementsByClassName("content-title")?[0].innerHTML = currentContent;
+<style scoped>
+    .center-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        text-align: center;
+        color: var(--col);
     }
 
-    document.addEventListener("browseArticle", (event) => {
-        if (event.detail) {
-            currentContent = event.detail;
-            updateContent(event.detail.name);
-            console.log("Updated content:", currentContent);
-        }
-    });
+    .main {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        gap: 0px;
+    }
 
-    console.log("Initial content:", currentContent);
-</script> -->
+    .main-navigation {
+        grid-column: -1 / 1;
+    }
 
-    <style scoped>
-        .center-text {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            text-align: center;
-            color: var(--col);
-        }
+    .content-navigator {
+        margin: auto;
+        grid-column: 4 / 8;
+        display: grid;
+        place-items: center;
+    }
 
-        .main {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(16, 1fr);
-            gap: 0px;
-        }
+    .preview {
+        width: auto;
+        position: relative;
+        padding: 0.2em;
+        grid-column: 9 / 13;
+        margin: auto;
+        border-radius: 2px;
+    }
 
-        .main-navigation {
-            grid-column: -1 / 1;
-        }
+    .preview img {
+        object-fit: contain;
+        width: 100%;
+        max-width: 860px;
+        max-height: 480px;
+        max-width: 100%;
+        z-index: -1;
+        opacity: 0.6;
+    }
 
+    .preview .content-title {
+        font-family: monospace;
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .preview .content-abstract {
+        font-style: italic;
+        font-family: monospace;
+        margin-top: 2em;
+    }
+
+    .preview .content-language,
+    .preview .content-editor,
+    .content-translator {
+        font-style: italic;
+        opacity: 0.6;
+    }
+
+    .preview .content-author {
+        text-align: right;
+        margin-top: 4em;
+        font-family: monospace;
+        bottom: 0;
+        right: 0;
+    }
+
+    @media (max-width: 480px) {
         .content-navigator {
-            margin: auto;
-            grid-column: 4 / 8;
+            margin: 0 auto;
+            grid-column: 2 / 16;
             display: grid;
             place-items: center;
         }
+    }
 
-        .preview {
-            width: auto;
-            position: relative;
-            padding: 0.2em;
-            grid-column: 9 / 13;
-            margin: auto;
-            border-radius: 2px;
+    @media (min-width: 481px) and (max-width: 1024px) {
+        .content-navigator {
+            margin: 0 auto;
+            grid-column: 2 / 16;
+            display: grid;
+            place-items: center;
+            height: 80vh;
         }
-
-        .preview img {
-            object-fit: contain;
-            width: 100%;
-            max-width: 860px;
-            max-height: 480px;
-            max-width: 100%;
-            z-index: -1;
-            opacity: 0.6;
-        }
-
-        .preview .content-title {
-            font-family: monospace;
-            font-weight: bold;
-            font-size: 2em;
-        }
-
-        .preview .content-abstract {
-            font-style: italic;
-            font-family: monospace;
-            margin-top: 2em;
-        }
-
-        .preview .content-language,
-        .preview .content-editor,
-        .content-translator {
-            font-style: italic;
-            opacity: 0.6;
-        }
-
-        .preview .content-author {
-            text-align: right;
-            margin-top: 4em;
-            font-family: monospace;
-            bottom: 0;
-            right: 0;
-        }
-
-        @media (max-width: 480px) {
-            .content-navigator {
-                margin: 0 auto;
-                grid-column: 2 / 16;
-                display: grid;
-                place-items: center;
-            }
-        }
-
-        @media (min-width: 481px) and (max-width: 1024px) {
-            .content-navigator {
-                margin: 0 auto;
-                grid-column: 2 / 16;
-                display: grid;
-                place-items: center;
-                height: 80vh;
-            }
-        }
-    </style>
-</Layout>
+    }
+</style>
