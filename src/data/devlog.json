@@ -1,8 +1,20 @@
 [
+    {
+    "date": "2026-04-04",
+    "title": "Custom Shader Grass Meadow",
+    "slug": "devlog/20260404-immersion-pixel-1",
+    "category": "devlog",
+    "keywords": [
+      "graphics",
+      "webgl",
+      "real-time-rendering",
+      "three.js"
+    ]
+  },
   {
     "date": "2025-11-25",
     "title": "Implemeting transform functions for peseudo-isometric camera in Unity",
-    "slug": "20251114-unity_pseudoisometric",
+    "slug": "tutorials/20251114-unity_pseudoisometric",
     "category": "tutorial",
     "keywords": [
       "graphics",

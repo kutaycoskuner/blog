@@ -21,17 +21,20 @@
     $: categories = ["all", ...new Set(entries.map((e) => e.category))];
 
     function goToPost(slug: string) {
-        window.location.href = `${import.meta.env.BASE_URL}devlog/${slug}`;
+        window.location.href = `${import.meta.env.BASE_URL}${slug}`;
     }
 
     const categoryColors: Record<string, string> = {
         all: "#9aa4b2", // soft slate
         default: "#7c7c7c", // neutral gray
+
         devlog: "#7fd1ae", // soft mint green
         opinion: "#d8a0ff", // lavender
         essay: "#f2c48d", // warm peach
         tutorial: "#8ecbff", // soft sky blue
         post: "#c8c8c8", // light gray
+
+        curated: "#f5d76e", // soft yellow (external content / inspiration)
     };
 
     function getColor(cat: string) {
@@ -134,7 +137,7 @@
     /* TITLE */
     .title {
         font-size: 2rem;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.4rem;
         opacity: 0.9;
         margin-bottom: 0.3rem;
     }
@@ -161,13 +164,6 @@
 
     .filters button.selected {
         background: rgba(255, 255, 255, 0.08);
-    }
-
-    .dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--cat-color);
     }
 
     /* CENTER CONTENT */

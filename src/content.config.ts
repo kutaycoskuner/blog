@@ -18,6 +18,7 @@ export const collections = {
     blog: blogCollection,
     essays: blogCollection,
     tutorials: blogCollection,
+    devlog: blogCollection,
     "collections/lecture_notes-2026spring-logic": blogCollection,
     "collections/lecture_notes-2026spring-linear_algebra": blogCollection,
     "collections/lecture_notes-2025fall-discrete_structures": blogCollection,
