@@ -16,16 +16,18 @@ export default defineConfig({
 
         syntaxHighlight: "shiki",
         shikiConfig: {
-            theme: 'vitesse-dark',
+            theme: "vitesse-dark",
             // themes: {                   // https://shiki.style/
             //     light: "vitesse-light",   // vitesse-light
             //     sepia: "rose-pine-dawn",
             //     dark: "vitesse-dark",
             // },
-            
-
         },
     },
+
+    // devToolbar: {
+    //     enabled: false,
+    // },
 
     // for static site rendering
     site: "https://kutaycoskuner.github.io",
