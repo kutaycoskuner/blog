@@ -9,8 +9,7 @@
             "to": "http://localhost:4321/blog/essays/20230203-imge_ve_olgu",
             "created": "2026-03-10T00:00:00Z",
             "updated": "2026-03-10T00:00:00Z",
-            "keywords": [
-            ],
+            "keywords": [],
             "author": "Kutay Coskuner",
             "abstract": "A reflective essay on how understanding the difference between image and fact shapes our perception of the world and nurtures critical thinking.",
             "image": "https://i.pinimg.com/736x/38/ba/a8/38baa8cbffa74283311b91eb77b676ce.jpg",
@@ -63,6 +62,29 @@
             "author": "Kutay Coskuner",
             "abstract": "Arch 513 / Fall 2018-2019 / Term Paper | A dive into the changing roles and responsibilities of modern architects.",
             "image": "",
+            "image-credit": "",
+            "visibility": true,
+            "language": "en",
+            "translator": "",
+            "editor": ""
+        },
+        {
+            "category": [
+                "Blog",
+                "Notes"
+            ],
+            "name": "Lecture Notes: Linear Algebra",
+            "to": "https://kutaycoskuner.github.io/blog/collections/2026spring-linear_algebra",
+            "created": "2026-04-22T00:00:00Z",
+            "updated": "2026-04-22T00:00:00Z",
+            "keywords": [
+                "mathematics",
+                "geometrys",
+                "linear algebra"
+            ],
+            "author": "Kutay Coskuner",
+            "abstract": "My (work in progress) lecture notes on linear algebra.",
+            "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b9d228d4-55ec-4e94-8c93-31da98f3878b/dlwnf68-b75e2305-8c4c-4e76-8d00-d565f2c0f895.jpg/v1/fill/w_1032,h_774,q_70,strp/pxl_20260422_143554980_by_orthrin_dlwnf68-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTYwIiwicGF0aCI6Ii9mL2I5ZDIyOGQ0LTU1ZWMtNGU5NC04YzkzLTMxZGE5OGYzODc4Yi9kbHduZjY4LWI3NWUyMzA1LThjNGMtNGU3Ni04ZDAwLWQ1NjVmMmMwZjg5NS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.hfq7F6CTG-h98EsrHW3XKYRv2-diThf2KoceapAf-zY",
             "image-credit": "",
             "visibility": true,
             "language": "en",
@@ -530,4 +552,3 @@
         }
     ]
 }
-
