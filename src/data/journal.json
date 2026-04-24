@@ -1,0 +1,15 @@
+[
+    {
+        "visibility": true,
+        "date": "2026-04-24",
+        "category": "opinion",
+        "content": [
+            "I increasingly prefer data-driven UI systems over deeply nested component architectures.",
+            "It reduces complexity when scaling applications and makes state flow more predictable.",
+            "In systems like Svelte or React, too many components often create abstraction noise instead of clarity."
+        ],
+        "links": [
+            ""
+        ]
+    }
+]

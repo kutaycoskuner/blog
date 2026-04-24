@@ -234,4 +234,58 @@
     .entry:hover .tag {
         opacity: 1;
     }
+
+    @media (max-width: 480px) {
+        .devlog {
+            margin: 0 auto;
+            padding: 0.5rem;
+        }
+
+        .entry {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto auto auto;
+            column-gap: 0.6rem;
+            row-gap: 0.15rem;
+
+            padding: 0.6rem 0.35rem;
+            border-left: 2px solid var(--col-border);
+            cursor: pointer;
+            transition: 0.15s;
+        }
+
+        /* title row */
+        .name {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            font-weight: bold;
+        }
+
+        /* date + category row */
+        .date {
+            grid-column: 1;
+            grid-row: 2;
+            font-size: 0.72rem;
+            opacity: 0.6;
+        }
+
+        .category {
+            grid-column: 2;
+            grid-row: 2;
+            font-size: 0.72rem;
+        }
+
+        /* keywords row */
+        .keywords {
+            grid-column: 1 / span 2;
+            grid-row: 3;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+
+            font-size: 0.72rem;
+            opacity: 0.7;
+        }
+    }
 </style>

@@ -1,0 +1,26 @@
+[
+    {
+        "visibility": true,
+        "created": "2026-04-24",
+        "title": "Kamila Szewczyk Website",
+        "url": "https://iczelia.net/about/",
+        "category": "personal website",
+        "keywords": [
+            "graphics",
+            "deferred-rendering",
+            "opengl",
+            "real-time-rendering"
+        ],
+        "notes": "Good explanation of G-buffer layout and lighting pass."
+    },
+    {
+        "visibility": true,
+        "created": "2026-04-24",
+        "title": "Radek Koziel Website",
+        "url": "https://rkoziel.com/",
+        "category": "personal website",
+        "keywords": [
+        ],
+        "notes": ""
+    }
+]

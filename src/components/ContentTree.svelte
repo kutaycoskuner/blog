@@ -170,7 +170,9 @@
 </script>
 
 {#if displayMode === "selection"}
-    <div class="linear-display">this is sekret not implemented linear display.</div>
+    <div class="linear-display">
+        this is sekret not implemented linear display.
+    </div>
 {:else}
     <div class="content-navigator no-select">
         <div class="tree-container">
@@ -301,9 +303,10 @@
 
 <ContentTreePreview
     {selectedContent}
-    style="display: {displayMode === 'selection' && selectedContent ? 'block' : 'none'}"
+    style="display: {displayMode === 'selection' && selectedContent
+        ? 'block'
+        : 'none'}"
 />
-
 
 <style scoped>
     .expand-collapse {
@@ -368,5 +371,26 @@
         grid-column: 4 / 8;
         display: grid;
         place-items: center;
+    }
+
+    @media (max-width: 480px) {
+        .content-navigator {
+            margin: 0 auto;
+            padding: 0 .5rem;
+            padding-top: 4rem;
+            grid-column: 1 / -1;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 1024px) {
+        .content-navigator {
+            margin: 0 auto;
+            grid-column: 2 / 16;
+            display: grid;
+            place-items: center;
+            height: 80vh;
+        }
     }
 </style>
