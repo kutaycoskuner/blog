@@ -1,5 +1,5 @@
 <h1 align="center">
-    Blog Template
+    Blog 
 </h1>
 
 <p align="center">
@@ -39,12 +39,13 @@ blog_template/
 ```
 
 ## Run
+If you want to use my blog as template you can:
+
 ```bash
 # Prerequisite: node, pnpm
 
 # Clone repository
 git clone https://github.com/kutaycoskuner/blog.git
-cd blog
 
 # Install dependencies
 pnpm install
@@ -55,3 +56,4 @@ pnpm dev
 # Open your browser
 # Visit: http://localhost:3000/test-toc to inspect structure
 ```
+
