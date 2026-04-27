@@ -8,8 +8,56 @@
             "It reduces complexity when scaling applications and makes state flow more predictable.",
             "In systems like Svelte or React, too many components often create abstraction noise instead of clarity."
         ],
+        "visuals": [
+            null,
+            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
+            null
+        ],
         "links": [
-            ""
+            {
+                "label": "React docs on composition",
+                "url": "https://react.dev/learn/thinking-in-react"
+            }
+        ]
+    },
+    {
+        "visibility": true,
+        "date": "2026-04-23",
+        "category": "opinion",
+        "content": [
+            "I increasingly prefer data-driven UI systems over deeply nested component architectures.",
+            "It reduces complexity when scaling applications and makes state flow more predictable.",
+            "In systems like Svelte or React, too many components often create abstraction noise instead of clarity."
+        ],
+        "visuals": [
+            null,
+            "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
+            null
+        ],
+        "links": [
+            {
+                "label": "React docs on composition",
+                "url": "https://react.dev/learn/thinking-in-react"
+            }
+        ]
+    },
+    {
+        "visibility": true,
+        "date": "2026-03-29",
+        "category": "essay",
+        "content": [
+            "Systems are not just tools for execution, but also tools for thought.",
+            "The structure of your code influences how you think about problems."
+        ],
+        "visuals": [
+            null,
+            null
+        ],
+        "links": [
+            {
+                "label": "Design of Everyday Things",
+                "url": "https://example.com/book"
+            }
         ]
     }
 ]

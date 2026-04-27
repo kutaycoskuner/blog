@@ -1,0 +1,16 @@
+---
+import Welcome from "../../components/Welcome.astro";
+import Layout from "../../layouts/Layout.astro";
+import Journal from "../../components/Journal.svelte";
+
+---
+
+<Layout>
+    <div class="main">
+        <Journal client:load />
+    </div>
+</Layout>
+
+<style scoped>
+
+</style>
