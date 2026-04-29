@@ -106,11 +106,21 @@
     }
 
     .entry {
+        position: relative;
         width: 100%;
         box-sizing: border-box;
-        padding: 0.8rem;
-        border-left: 2px solid var(--col-border);
+        padding: 0.8rem 0.8rem 0.8rem 1.6rem; /* extra left space for > */
         transition: 0.15s;
+    }
+
+    .entry::before {
+        content: ">";
+        position: absolute;
+        left: 0.4rem;
+        top: 0.8rem;
+        font-weight: bold;
+        opacity: 0.6;
+        color: var(--col-text);
     }
 
     .entry:hover {

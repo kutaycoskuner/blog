@@ -180,12 +180,21 @@
     }
 
     .entry {
+        position: relative;
         display: grid;
         grid-template-columns: 15% 15% 1fr;
         grid-template-rows: auto auto;
-        padding: 0.8rem 0.5rem;
-        border-left: 2px solid var(--col-border);
+        padding: 0.8rem 0.5rem 0.8rem 1.4rem; /* extra left space for > */
         cursor: pointer;
+        transition: 0.15s;
+    }
+
+    .entry::before {
+        content: ">";
+        position: absolute;
+        left: 0.35rem;
+        top: 0.8rem; /* aligns with first row */
+        opacity: 0.45;
         transition: 0.15s;
     }
 
