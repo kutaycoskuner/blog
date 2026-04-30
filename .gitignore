@@ -7,9 +7,12 @@ _documentation/
 temp.*
 src/content/tutorials
 src/content/tutorials/
+src/content/essays
+src/content/essays/
 src/
 linked_assets/
 linked_assets
+
 public/
 dist/
 
