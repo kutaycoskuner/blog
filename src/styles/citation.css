@@ -1,0 +1,58 @@
+/* ------------------------------ */
+/* predefined                     */
+/* ------------------------------ */
+
+i {
+  font-style: normal;
+}
+
+/* ------------------------------ */
+/* predefined                     */
+/* ------------------------------ */
+.const {
+}
+
+.sep {
+  color: var(--s-col-blac);
+  background-color: var(--s-col-hl-blac);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
+
+/* ------------------------------ */
+/* parts of c                     */
+/* ------------------------------ */
+.who {
+  background-color: var(--s-col-hl-oliv);
+  color: var(--s-col-oliv);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
+
+.what {
+  background-color: var(--s-col-hl-teal);
+  color: var(--s-col-teal);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
+
+.where {
+  background-color: var(--s-col-hl-mage);
+  color: var(--s-col-mage);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
+
+.when {
+  background-color: var(--s-col-hl-oran);
+  color: var(--s-col-oran);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
+
+.how {
+  background-color: var(--s-col-hl-sea);
+  color: var(--s-col-sea);
+  border-radius: var(--highlight-border-radius);
+  padding: 0.1em 0.1em;
+}
