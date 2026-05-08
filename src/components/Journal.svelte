@@ -6,7 +6,8 @@
         date: string;
         category: string;
         content: string[];
-        links?: string[];
+        visuals?: (string | null)[];
+        links?: any[];
     };
 
     let entries: JournalEntry[] = raw;
@@ -61,8 +62,19 @@
                         </div>
 
                         <div class="content">
-                            {#each entry.content as paragraph}
+                            {#each entry.content as paragraph, i}
                                 <p>{paragraph}</p>
+
+                                {#if entry.visuals?.[i]}
+                                    {#if entry.visuals[i] !== ""}
+                                        <div class="visual">
+                                            <img
+                                                src={entry.visuals[i]}
+                                                alt="visual"
+                                            />
+                                        </div>
+                                    {/if}
+                                {/if}
                             {/each}
                         </div>
                     </div>
@@ -84,12 +96,14 @@
     .title {
         font-size: 2rem;
         letter-spacing: 0.3rem;
+        margin-bottom: 1rem;
     }
 
     .month {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        margin-bottom: 2rem;
     }
 
     .month-title {
@@ -109,7 +123,7 @@
         position: relative;
         width: 100%;
         box-sizing: border-box;
-        padding: 0.8rem 0.8rem 0.8rem 1.6rem; /* extra left space for > */
+        padding: 0.8rem 0.8rem 0.8rem 1.6rem;
         transition: 0.15s;
     }
 
@@ -145,5 +159,23 @@
         margin: 0 0 0.6rem 0;
         line-height: 1.4;
         opacity: 0.85;
+    }
+
+    .visual {
+        margin: 0.8rem 0 1.2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .visual img {
+        max-width: 50%;
+        max-height: 50%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        opacity: 0.95;
+        display: block;
     }
 </style>
