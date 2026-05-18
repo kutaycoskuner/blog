@@ -38,6 +38,7 @@
 :global(.markdown pre span) {
     padding: 0 !important;
     text-transform: normal;
+    color: var(--col);
     font-size: calc(var(--font-size));
 }
 
@@ -575,3 +576,4 @@ article.article.content pre.astro-code.github-dark {
 :global(#comments-giscus) {
     grid-column: 1/10 !important;
 }
+

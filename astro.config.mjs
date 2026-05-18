@@ -16,6 +16,10 @@ export default defineConfig({
 
         syntaxHighlight: "shiki",
         shikiConfig: {
+            themes: {
+                light: "vitesse-light",
+                dark: "vitesse-dark",
+            },
             theme: "vitesse-dark",
             // themes: {                   // https://shiki.style/
             //     light: "vitesse-light",   // vitesse-light
