@@ -34,9 +34,9 @@
         tutorial: "#8ecbff", // soft sky blue
         post: "#c8c8c8", // light gray
 
-        curated: "#f5d76e", // soft yellow (external content / inspiration)
+        curated: "#a8cfa8", // soft yellow (external content / inspiration)
 
-       study: "#a8cfa8", // muted sage green
+        study: "#f5d76e", // muted sage green
     };
 
     function getColor(cat: string) {
