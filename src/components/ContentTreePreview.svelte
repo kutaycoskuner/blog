@@ -35,6 +35,13 @@
                 alt={selectedContent.name || "Article preview background"}
                 class="preview-image"
             />
+
+            {#if selectedContent["imagecredit"]}
+                <div class="image-credit">
+                    source: 
+                    {selectedContent["imagecredit"]}
+                </div>
+            {/if}
         {/if}
 
         {#if selectedContent.name !== ""}
@@ -138,6 +145,15 @@
         font-family: monospace;
         bottom: 0;
         right: 0;
+    }
+
+    .preview .image-credit {
+        margin-top: -0.4em;
+        text-align: right;
+        font-size: 0.75em;
+        font-style: italic;
+        opacity: 0.5;
+        font-family: monospace;
     }
 
     @media (max-width: 480px) {
