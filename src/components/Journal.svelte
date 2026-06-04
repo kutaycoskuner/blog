@@ -1,18 +1,22 @@
 <script lang="ts">
     import raw from "../data/journal.json";
 
+    type Asset = {
+        type: "image" | "link";
+        value: string;
+        position: number;
+    };
+
     type JournalEntry = {
         visibility: boolean;
         date: string;
         category: string;
         content: string[];
-        visuals?: (string | null)[];
-        links?: any[];
+        assets?: Asset[];
     };
 
     let entries: JournalEntry[] = raw;
 
-    // only visible entries
     $: visibleEntries = entries.filter((e) => e.visibility);
 
     function sortByDateDesc(a: JournalEntry, b: JournalEntry) {
@@ -21,24 +25,28 @@
 
     function formatMonthYear(dateStr: string) {
         const date = new Date(dateStr);
-        const month = date.toLocaleString("en-US", { month: "long" });
-        const year = date.getFullYear();
-        return `${month} ${year}`;
+        return `${date.toLocaleString("en-US", { month: "long" })} ${date.getFullYear()}`;
     }
 
-    // group by month/year
+    function getAssetsAt(entry: JournalEntry, position: number) {
+        return entry.assets?.filter((a) => a.position === position) ?? [];
+    }
+
+    function getEndAssets(entry: JournalEntry) {
+        return getAssetsAt(entry, -1);
+    }
+
+    function getStartAssets(entry: JournalEntry) {
+        return getAssetsAt(entry, 0);
+    }
+
     $: grouped = (() => {
         const sorted = [...visibleEntries].sort(sortByDateDesc);
-
         const map = new Map<string, JournalEntry[]>();
 
         for (const entry of sorted) {
             const key = formatMonthYear(entry.date);
-
-            if (!map.has(key)) {
-                map.set(key, []);
-            }
-
+            if (!map.has(key)) map.set(key, []);
             map.get(key)!.push(entry);
         }
 
@@ -62,19 +70,65 @@
                         </div>
 
                         <div class="content">
+                            <!-- ASSETS AT START (position 0) -->
+                            {#each getStartAssets(entry) as asset}
+                                <div class="asset">
+                                    {#if asset.type === "image"}
+                                        <img
+                                            src={asset.value}
+                                            alt="asset"
+                                        />
+                                    {:else if asset.type === "link"}
+                                        <a
+                                            href={asset.value}
+                                            target="_blank"
+                                        >
+                                            {asset.value}
+                                        </a>
+                                    {/if}
+                                </div>
+                            {/each}
+
+                            <!-- CONTENT WITH INJECTED ASSETS -->
                             {#each entry.content as paragraph, i}
                                 <p>{paragraph}</p>
 
-                                {#if entry.visuals?.[i]}
-                                    {#if entry.visuals[i] !== ""}
-                                        <div class="visual">
+                                {#each getAssetsAt(entry, i + 1) as asset}
+                                    <div class="asset">
+                                        {#if asset.type === "image"}
                                             <img
-                                                src={entry.visuals[i]}
-                                                alt="visual"
+                                                src={asset.value}
+                                                alt="asset"
                                             />
-                                        </div>
+                                        {:else if asset.type === "link"}
+                                            <a
+                                                href={asset.value}
+                                                target="_blank"
+                                            >
+                                                {asset.value}
+                                            </a>
+                                        {/if}
+                                    </div>
+                                {/each}
+                            {/each}
+
+                            <!-- END ASSETS (position -1) -->
+                            {#each getEndAssets(entry) as asset}
+                                <div class="asset">
+                                    {#if asset.type === "image"}
+                                        <img
+                                            src={asset.value}
+                                            alt="asset"
+                                        />
+                                    {:else if asset.type === "link"}
+                                        <a
+                                            href={asset.value}
+                                            target="_blank"
+                                        >
+                                            {asset.value}
+                                        </a>
                                     {/if}
-                                {/if}
+                                </div>
                             {/each}
                         </div>
                     </div>
@@ -172,6 +226,23 @@
         max-width: 50%;
         max-height: 50%;
         width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 6px;
+        opacity: 0.95;
+        display: block;
+    }
+
+    .asset {
+        margin: 0.8rem 0 1.2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .asset img {
+        max-width: 50%;
         height: auto;
         object-fit: contain;
         border-radius: 6px;
