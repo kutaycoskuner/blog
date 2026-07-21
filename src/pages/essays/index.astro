@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import DevEssays from "../../components/DevEssays.svelte";
+
+const essays = (await getCollection("essays"))
+    .filter((e) => e.data.visibility)
+    .sort((a, b) =>
+        b.data.created.getTime() - a.data.created.getTime()
+    );
+---
+
+<!-- <Layout>
+    <div class="main">
+        <DevLog client:load />
+    </div>
+</Layout> -->
+
+
+
+
+<DevEssays essays={essays} client:load/>
