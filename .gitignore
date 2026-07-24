@@ -5,13 +5,23 @@ _documentation
 _documentation/
 */temp.*
 temp.*
+
+# symbolic links
 src/content/tutorials
 src/content/tutorials/
+src/content/collections
+src/content/collections/
+src/content/devlog
+src/content/devlog/
 src/content/essays
 src/content/essays/
-src/
-linked_assets/
+src/data
+src/data/
 linked_assets
+linked_assets/
+
+src
+src/
 
 public/
 dist/
