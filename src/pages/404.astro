@@ -1,12 +1,15 @@
 ---
+/* src/pages/404.astro */
 ---
+
 <section class="not-found">
     <h1>
         404 <span class="sep">|</span> Post not found
     </h1>
     <p>Either not existed, work in progress, or removed.</p>
 
-    <a href="https://kutaycoskuner.github.io/content_tree" class="back-link">
+    <!-- import.meta.env.BASE_URL automatically handles your configured base path -->
+    <a href={import.meta.env.BASE_URL} class="back-link">
         Go back
     </a>
 </section>
