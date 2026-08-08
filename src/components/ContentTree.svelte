@@ -6,6 +6,8 @@
     import type { ContentDetails } from "../types";
 
     export let displayMode: "selection" | "linear";
+    const BASE_URL = import.meta.env.BASE_URL;
+    const PROD_URL = "kutaycoskuner.github.io";
 
     interface TreeNode {
         name: string;
@@ -44,6 +46,38 @@
     let allCollapsed: boolean;
     $: allCollapsed = tree.length > 0 ? checkAllCollapsed(tree) : false;
 
+    function formatLink(url?: string): string {
+        if (!url) return "#";
+
+        // 1. Keep external links (YouTube, external sites) untouched
+        if (url.startsWith("http://") || url.startsWith("https://")) {
+            const isSelfDomain = url.includes(PROD_URL); // or your specific production domain
+            if (!isSelfDomain) return url;
+        }
+
+        // 2. Extract pathname (e.g., "https://domain.github.io/blog/scrolls/blogroll" -> "/blog/scrolls/blogroll")
+        let pathname = url;
+        try {
+            pathname = new URL(url, "http://localhost").pathname;
+        } catch {
+            // Fallback for relative paths without protocols
+            if (!pathname.startsWith("/")) pathname = "/" + pathname;
+        }
+
+        // 3. Normalize BASE_URL (ensure leading slash, strip trailing slash)
+        const baseClean = ("/" + BASE_URL)
+            .replace(/\/+/g, "/")
+            .replace(/\/$/, "");
+
+        // 4. Strip base path from pathname if already present to prevent duplication
+        if (baseClean && pathname.startsWith(baseClean)) {
+            pathname = pathname.slice(baseClean.length);
+        }
+
+        // 5. Combine base path and pathname, removing duplicate slashes
+        return `${baseClean}${pathname}`.replace(/\/+/g, "/");
+    }
+
     /**
      * Builds a hierarchical tree structure from the data
      */
@@ -64,7 +98,7 @@
             // Add the actual item as a leaf node
             currentLevel.push({
                 name: item.name,
-                link: item.to,
+                link: formatLink(item.to),
                 details: {
                     ...item,
                     imagecredit: item["image-credit"], // map dash to camelCase
@@ -376,7 +410,7 @@
     @media (max-width: 480px) {
         .content-navigator {
             margin: 0 auto;
-            padding: 0 .5rem;
+            padding: 0 0.5rem;
             padding-top: 4rem;
             grid-column: 1 / -1;
             display: grid;
