@@ -4,7 +4,6 @@ import GotoTop from "../components/GotoTop.svelte";
 import ColorMode from "../components/ColorMode.svelte";
 import DevlogNav from "../components/DevlogNav.svelte";
 
-
 const BASE_URL = import.meta.env.BASE_URL;
 ---
 
@@ -16,6 +15,11 @@ const BASE_URL = import.meta.env.BASE_URL;
             name="viewport"
             content="width=device-width"
         />
+        <script
+            defer
+            src="https://analytics.archrium.net/script.js"
+            data-website-id="46199731-2117-40f5-93fa-d74ecf1ac920"
+        ></script>
         <link
             rel="icon"
             type="image/svg+xml"
@@ -37,7 +41,7 @@ const BASE_URL = import.meta.env.BASE_URL;
         <!-- Top-right fixed icons -->
         <ColorMode client:load />
         <DevlogNav client:load />
-        
+
         <!-- Main body -->
         <div class="slot">
             <slot />
