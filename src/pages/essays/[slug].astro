@@ -88,13 +88,20 @@ function getLanguageDescription(languageCode: string): string {
                 <article class="article content">
                     <div class="article-meta">
                         <h1>{data.title}</h1>
-                        <span>Published : {formatDate(data.created)}</span>
+                        {data.published && (
+                            <span>Created : {formatDate(data.created)}</span>
+                        )}
+                        <span>
+                            Published :{" "}
+                            {formatDate(data.published ?? data.created)}
+                        </span>
                         <span>
                             Revision : {formatDate(data.updated)}, v
                             {data.revision}{" "}
                         </span>
                         <span>
-                            Language : {getLanguageDescription(data.language)}{" "}
+                            Language :{" "}
+                            {getLanguageDescription(data.language)}{" "}
                         </span>
                         <a
                             href="#"
