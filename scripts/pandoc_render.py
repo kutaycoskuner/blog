@@ -51,6 +51,11 @@ def prepare_markdown(source: Path) -> Path:
         closing = len(
             re.findall(r"</div\s*>", line, re.IGNORECASE)
         )
+        
+            # Remove indentation from Markdown footnote definitions.
+        if re.match(r"^\s+\[\^[^\]]+\]:", line):
+            output.append(line.lstrip())
+            continue
 
         if not inside_html_block:
             if opening > 0:
